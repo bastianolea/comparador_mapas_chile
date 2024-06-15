@@ -1,0 +1,1381 @@
+cut_comuna;comuna;cut_region;region;opciones;votos
+1107;Alto Hospicio;1;Tarapacá;A FAVOR;24231
+1107;Alto Hospicio;1;Tarapacá;EN CONTRA;28564
+1107;Alto Hospicio;1;Tarapacá;VOTOS EN BLANCO;NA
+1107;Alto Hospicio;1;Tarapacá;VOTOS NULOS;2594
+1402;Camiña;1;Tarapacá;A FAVOR;890
+1402;Camiña;1;Tarapacá;EN CONTRA;417
+1402;Camiña;1;Tarapacá;VOTOS EN BLANCO;10
+1402;Camiña;1;Tarapacá;VOTOS NULOS;37
+1403;Colchane;1;Tarapacá;A FAVOR;792
+1403;Colchane;1;Tarapacá;EN CONTRA;166
+1403;Colchane;1;Tarapacá;VOTOS EN BLANCO;1
+1403;Colchane;1;Tarapacá;VOTOS NULOS;7
+1404;Huara;1;Tarapacá;A FAVOR;1366
+1404;Huara;1;Tarapacá;EN CONTRA;1060
+1404;Huara;1;Tarapacá;VOTOS EN BLANCO;20
+1404;Huara;1;Tarapacá;VOTOS NULOS;117
+1101;Iquique;1;Tarapacá;A FAVOR;56856
+1101;Iquique;1;Tarapacá;EN CONTRA;66216
+1101;Iquique;1;Tarapacá;VOTOS EN BLANCO;NA
+1101;Iquique;1;Tarapacá;VOTOS NULOS;4648
+1405;Pica;1;Tarapacá;A FAVOR;2127
+1405;Pica;1;Tarapacá;EN CONTRA;2220
+1405;Pica;1;Tarapacá;VOTOS EN BLANCO;66
+1405;Pica;1;Tarapacá;VOTOS NULOS;140
+1401;Pozo Almonte;1;Tarapacá;A FAVOR;4104
+1401;Pozo Almonte;1;Tarapacá;EN CONTRA;4712
+1401;Pozo Almonte;1;Tarapacá;VOTOS EN BLANCO;NA
+1401;Pozo Almonte;1;Tarapacá;VOTOS NULOS;353
+2101;Antofagasta;2;Antofagasta;A FAVOR;93648
+2101;Antofagasta;2;Antofagasta;EN CONTRA;138986
+2101;Antofagasta;2;Antofagasta;VOTOS EN BLANCO;NA
+2101;Antofagasta;2;Antofagasta;VOTOS NULOS;9972
+2201;Calama;2;Antofagasta;A FAVOR;44658
+2201;Calama;2;Antofagasta;EN CONTRA;54405
+2201;Calama;2;Antofagasta;VOTOS EN BLANCO;NA
+2201;Calama;2;Antofagasta;VOTOS NULOS;4495
+2302;María Elena;2;Antofagasta;A FAVOR;990
+2302;María Elena;2;Antofagasta;EN CONTRA;2084
+2302;María Elena;2;Antofagasta;VOTOS EN BLANCO;39
+2302;María Elena;2;Antofagasta;VOTOS NULOS;162
+2102;Mejillones;2;Antofagasta;A FAVOR;2874
+2102;Mejillones;2;Antofagasta;EN CONTRA;5245
+2102;Mejillones;2;Antofagasta;VOTOS EN BLANCO;120
+2102;Mejillones;2;Antofagasta;VOTOS NULOS;348
+2202;Ollagüe;2;Antofagasta;A FAVOR;364
+2202;Ollagüe;2;Antofagasta;EN CONTRA;435
+2202;Ollagüe;2;Antofagasta;VOTOS EN BLANCO;14
+2202;Ollagüe;2;Antofagasta;VOTOS NULOS;17
+2203;San Pedro de Atacama;2;Antofagasta;A FAVOR;1811
+2203;San Pedro de Atacama;2;Antofagasta;EN CONTRA;3910
+2203;San Pedro de Atacama;2;Antofagasta;VOTOS EN BLANCO;100
+2203;San Pedro de Atacama;2;Antofagasta;VOTOS NULOS;249
+2103;Sierra Gorda;2;Antofagasta;A FAVOR;408
+2103;Sierra Gorda;2;Antofagasta;EN CONTRA;690
+2103;Sierra Gorda;2;Antofagasta;VOTOS EN BLANCO;7
+2103;Sierra Gorda;2;Antofagasta;VOTOS NULOS;37
+2104;Taltal;2;Antofagasta;A FAVOR;2582
+2104;Taltal;2;Antofagasta;EN CONTRA;4921
+2104;Taltal;2;Antofagasta;VOTOS EN BLANCO;145
+2104;Taltal;2;Antofagasta;VOTOS NULOS;363
+2301;Tocopilla;2;Antofagasta;A FAVOR;5255
+2301;Tocopilla;2;Antofagasta;EN CONTRA;10722
+2301;Tocopilla;2;Antofagasta;VOTOS EN BLANCO;NA
+2301;Tocopilla;2;Antofagasta;VOTOS NULOS;842
+3302;Alto del Carmen;3;Atacama;A FAVOR;1510
+3302;Alto del Carmen;3;Atacama;EN CONTRA;2245
+3302;Alto del Carmen;3;Atacama;VOTOS EN BLANCO;94
+3302;Alto del Carmen;3;Atacama;VOTOS NULOS;221
+3102;Caldera;3;Atacama;A FAVOR;4658
+3102;Caldera;3;Atacama;EN CONTRA;8055
+3102;Caldera;3;Atacama;VOTOS EN BLANCO;NA
+3102;Caldera;3;Atacama;VOTOS NULOS;547
+3201;Chañaral;3;Atacama;A FAVOR;2808
+3201;Chañaral;3;Atacama;EN CONTRA;5797
+3201;Chañaral;3;Atacama;VOTOS EN BLANCO;127
+3201;Chañaral;3;Atacama;VOTOS NULOS;367
+3101;Copiapó;3;Atacama;A FAVOR;41809
+3101;Copiapó;3;Atacama;EN CONTRA;60415
+3101;Copiapó;3;Atacama;VOTOS EN BLANCO;NA
+3101;Copiapó;3;Atacama;VOTOS NULOS;3975
+3202;Diego de Almagro;3;Atacama;A FAVOR;2408
+3202;Diego de Almagro;3;Atacama;EN CONTRA;5360
+3202;Diego de Almagro;3;Atacama;VOTOS EN BLANCO;124
+3202;Diego de Almagro;3;Atacama;VOTOS NULOS;384
+3303;Freirina;3;Atacama;A FAVOR;1531
+3303;Freirina;3;Atacama;EN CONTRA;3383
+3303;Freirina;3;Atacama;VOTOS EN BLANCO;86
+3303;Freirina;3;Atacama;VOTOS NULOS;224
+3304;Huasco;3;Atacama;A FAVOR;2207
+3304;Huasco;3;Atacama;EN CONTRA;4522
+3304;Huasco;3;Atacama;VOTOS EN BLANCO;87
+3304;Huasco;3;Atacama;VOTOS NULOS;331
+3103;Tierra Amarilla;3;Atacama;A FAVOR;3723
+3103;Tierra Amarilla;3;Atacama;EN CONTRA;5929
+3103;Tierra Amarilla;3;Atacama;VOTOS EN BLANCO;197
+3103;Tierra Amarilla;3;Atacama;VOTOS NULOS;542
+3301;Vallenar;3;Atacama;A FAVOR;13842
+3301;Vallenar;3;Atacama;EN CONTRA;22812
+3301;Vallenar;3;Atacama;VOTOS EN BLANCO;635
+3301;Vallenar;3;Atacama;VOTOS NULOS;1801
+4103;Andacollo;4;Coquimbo;A FAVOR;2984
+4103;Andacollo;4;Coquimbo;EN CONTRA;6262
+4103;Andacollo;4;Coquimbo;VOTOS EN BLANCO;190
+4103;Andacollo;4;Coquimbo;VOTOS NULOS;444
+4202;Canela;4;Coquimbo;A FAVOR;2784
+4202;Canela;4;Coquimbo;EN CONTRA;4440
+4202;Canela;4;Coquimbo;VOTOS EN BLANCO;206
+4202;Canela;4;Coquimbo;VOTOS NULOS;304
+4302;Combarbalá;4;Coquimbo;A FAVOR;3187
+4302;Combarbalá;4;Coquimbo;EN CONTRA;6065
+4302;Combarbalá;4;Coquimbo;VOTOS EN BLANCO;256
+4302;Combarbalá;4;Coquimbo;VOTOS NULOS;504
+4102;Coquimbo;4;Coquimbo;A FAVOR;60623
+4102;Coquimbo;4;Coquimbo;EN CONTRA;90162
+4102;Coquimbo;4;Coquimbo;VOTOS EN BLANCO;NA
+4102;Coquimbo;4;Coquimbo;VOTOS NULOS;7217
+4201;Illapel;4;Coquimbo;A FAVOR;7553
+4201;Illapel;4;Coquimbo;EN CONTRA;14834
+4201;Illapel;4;Coquimbo;VOTOS EN BLANCO;462
+4201;Illapel;4;Coquimbo;VOTOS NULOS;1067
+4104;La Higuera;4;Coquimbo;A FAVOR;1515
+4104;La Higuera;4;Coquimbo;EN CONTRA;2050
+4104;La Higuera;4;Coquimbo;VOTOS EN BLANCO;95
+4104;La Higuera;4;Coquimbo;VOTOS NULOS;219
+4101;La Serena;4;Coquimbo;A FAVOR;64682
+4101;La Serena;4;Coquimbo;EN CONTRA;93187
+4101;La Serena;4;Coquimbo;VOTOS EN BLANCO;NA
+4101;La Serena;4;Coquimbo;VOTOS NULOS;6457
+4203;Los Vilos;4;Coquimbo;A FAVOR;5437
+4203;Los Vilos;4;Coquimbo;EN CONTRA;9876
+4203;Los Vilos;4;Coquimbo;VOTOS EN BLANCO;296
+4203;Los Vilos;4;Coquimbo;VOTOS NULOS;720
+4303;Monte Patria;4;Coquimbo;A FAVOR;8778
+4303;Monte Patria;4;Coquimbo;EN CONTRA;13230
+4303;Monte Patria;4;Coquimbo;VOTOS EN BLANCO;525
+4303;Monte Patria;4;Coquimbo;VOTOS NULOS;1043
+4301;Ovalle;4;Coquimbo;A FAVOR;32294
+4301;Ovalle;4;Coquimbo;EN CONTRA;44772
+4301;Ovalle;4;Coquimbo;VOTOS EN BLANCO;1423
+4301;Ovalle;4;Coquimbo;VOTOS NULOS;3469
+4105;Paiguano;4;Coquimbo;A FAVOR;1851
+4105;Paiguano;4;Coquimbo;EN CONTRA;2296
+4105;Paiguano;4;Coquimbo;VOTOS EN BLANCO;87
+4105;Paiguano;4;Coquimbo;VOTOS NULOS;170
+4304;Punitaqui;4;Coquimbo;A FAVOR;3555
+4304;Punitaqui;4;Coquimbo;EN CONTRA;5182
+4304;Punitaqui;4;Coquimbo;VOTOS EN BLANCO;NA
+4304;Punitaqui;4;Coquimbo;VOTOS NULOS;455
+4305;Río Hurtado;4;Coquimbo;A FAVOR;1766
+4305;Río Hurtado;4;Coquimbo;EN CONTRA;1896
+4305;Río Hurtado;4;Coquimbo;VOTOS EN BLANCO;85
+4305;Río Hurtado;4;Coquimbo;VOTOS NULOS;200
+4204;Salamanca;4;Coquimbo;A FAVOR;7442
+4204;Salamanca;4;Coquimbo;EN CONTRA;11925
+4204;Salamanca;4;Coquimbo;VOTOS EN BLANCO;437
+4204;Salamanca;4;Coquimbo;VOTOS NULOS;939
+4106;Vicuña;4;Coquimbo;A FAVOR;8016
+4106;Vicuña;4;Coquimbo;EN CONTRA;11872
+4106;Vicuña;4;Coquimbo;VOTOS EN BLANCO;389
+4106;Vicuña;4;Coquimbo;VOTOS NULOS;1038
+5402;Cabildo;5;Valparaíso;A FAVOR;5475
+5402;Cabildo;5;Valparaíso;EN CONTRA;9659
+5402;Cabildo;5;Valparaíso;VOTOS EN BLANCO;274
+5402;Cabildo;5;Valparaíso;VOTOS NULOS;639
+5502;Calera;5;Valparaíso;A FAVOR;13770
+5502;Calera;5;Valparaíso;EN CONTRA;23379
+5502;Calera;5;Valparaíso;VOTOS EN BLANCO;517
+5502;Calera;5;Valparaíso;VOTOS NULOS;1570
+5302;Calle Larga;5;Valparaíso;A FAVOR;4120
+5302;Calle Larga;5;Valparaíso;EN CONTRA;6490
+5302;Calle Larga;5;Valparaíso;VOTOS EN BLANCO;115
+5302;Calle Larga;5;Valparaíso;VOTOS NULOS;347
+5702;Catemu;5;Valparaíso;A FAVOR;4453
+5702;Catemu;5;Valparaíso;EN CONTRA;6133
+5702;Catemu;5;Valparaíso;VOTOS EN BLANCO;207
+5702;Catemu;5;Valparaíso;VOTOS NULOS;423
+5503;Hijuelas;5;Valparaíso;A FAVOR;6444
+5503;Hijuelas;5;Valparaíso;EN CONTRA;7553
+5503;Hijuelas;5;Valparaíso;VOTOS EN BLANCO;213
+5503;Hijuelas;5;Valparaíso;VOTOS NULOS;695
+5504;La Cruz;5;Valparaíso;A FAVOR;7095
+5504;La Cruz;5;Valparaíso;EN CONTRA;8386
+5504;La Cruz;5;Valparaíso;VOTOS EN BLANCO;167
+5504;La Cruz;5;Valparaíso;VOTOS NULOS;631
+5401;La Ligua;5;Valparaíso;A FAVOR;11023
+5401;La Ligua;5;Valparaíso;EN CONTRA;16387
+5401;La Ligua;5;Valparaíso;VOTOS EN BLANCO;475
+5401;La Ligua;5;Valparaíso;VOTOS NULOS;1105
+5802;Limache;5;Valparaíso;A FAVOR;15790
+5802;Limache;5;Valparaíso;EN CONTRA;19694
+5802;Limache;5;Valparaíso;VOTOS EN BLANCO;559
+5802;Limache;5;Valparaíso;VOTOS NULOS;1452
+NA;NA;NA;NA;A FAVOR;7019
+NA;NA;NA;NA;EN CONTRA;11512
+NA;NA;NA;NA;VOTOS EN BLANCO;NA
+NA;NA;NA;NA;VOTOS NULOS;690
+5301;Los Andes;5;Valparaíso;A FAVOR;18467
+5301;Los Andes;5;Valparaíso;EN CONTRA;28167
+5301;Los Andes;5;Valparaíso;VOTOS EN BLANCO;NA
+5301;Los Andes;5;Valparaíso;VOTOS NULOS;1691
+5506;Nogales;5;Valparaíso;A FAVOR;5837
+5506;Nogales;5;Valparaíso;EN CONTRA;10849
+5506;Nogales;5;Valparaíso;VOTOS EN BLANCO;272
+5506;Nogales;5;Valparaíso;VOTOS NULOS;803
+5803;Olmué;5;Valparaíso;A FAVOR;7067
+5803;Olmué;5;Valparaíso;EN CONTRA;7663
+5803;Olmué;5;Valparaíso;VOTOS EN BLANCO;229
+5803;Olmué;5;Valparaíso;VOTOS NULOS;675
+5704;Panquehue;5;Valparaíso;A FAVOR;2556
+5704;Panquehue;5;Valparaíso;EN CONTRA;3422
+5704;Panquehue;5;Valparaíso;VOTOS EN BLANCO;NA
+5704;Panquehue;5;Valparaíso;VOTOS NULOS;211
+5403;Papudo;5;Valparaíso;A FAVOR;2650
+5403;Papudo;5;Valparaíso;EN CONTRA;3281
+5403;Papudo;5;Valparaíso;VOTOS EN BLANCO;51
+5403;Papudo;5;Valparaíso;VOTOS NULOS;152
+5404;Petorca;5;Valparaíso;A FAVOR;2404
+5404;Petorca;5;Valparaíso;EN CONTRA;5168
+5404;Petorca;5;Valparaíso;VOTOS EN BLANCO;143
+5404;Petorca;5;Valparaíso;VOTOS NULOS;383
+5105;Puchuncaví;5;Valparaíso;A FAVOR;6622
+5105;Puchuncaví;5;Valparaíso;EN CONTRA;9700
+5105;Puchuncaví;5;Valparaíso;VOTOS EN BLANCO;214
+5105;Puchuncaví;5;Valparaíso;VOTOS NULOS;693
+5705;Putaendo;5;Valparaíso;A FAVOR;4701
+5705;Putaendo;5;Valparaíso;EN CONTRA;7531
+5705;Putaendo;5;Valparaíso;VOTOS EN BLANCO;205
+5705;Putaendo;5;Valparaíso;VOTOS NULOS;578
+5501;Quillota;5;Valparaíso;A FAVOR;28418
+5501;Quillota;5;Valparaíso;EN CONTRA;35504
+5501;Quillota;5;Valparaíso;VOTOS EN BLANCO;900
+5501;Quillota;5;Valparaíso;VOTOS NULOS;2821
+5801;Quilpué;5;Valparaíso;A FAVOR;47112
+5801;Quilpué;5;Valparaíso;EN CONTRA;67358
+5801;Quilpué;5;Valparaíso;VOTOS EN BLANCO;1291
+5801;Quilpué;5;Valparaíso;VOTOS NULOS;4783
+5107;Quintero;5;Valparaíso;A FAVOR;8771
+5107;Quintero;5;Valparaíso;EN CONTRA;13527
+5107;Quintero;5;Valparaíso;VOTOS EN BLANCO;340
+5107;Quintero;5;Valparaíso;VOTOS NULOS;1026
+5303;Rinconada;5;Valparaíso;A FAVOR;3848
+5303;Rinconada;5;Valparaíso;EN CONTRA;5062
+5303;Rinconada;5;Valparaíso;VOTOS EN BLANCO;131
+5303;Rinconada;5;Valparaíso;VOTOS NULOS;210
+5304;San Esteban;5;Valparaíso;A FAVOR;5694
+5304;San Esteban;5;Valparaíso;EN CONTRA;8259
+5304;San Esteban;5;Valparaíso;VOTOS EN BLANCO;183
+5304;San Esteban;5;Valparaíso;VOTOS NULOS;555
+5701;San Felipe;5;Valparaíso;A FAVOR;20823
+5701;San Felipe;5;Valparaíso;EN CONTRA;29999
+5701;San Felipe;5;Valparaíso;VOTOS EN BLANCO;700
+5701;San Felipe;5;Valparaíso;VOTOS NULOS;2042
+5706;Santa María;5;Valparaíso;A FAVOR;4806
+5706;Santa María;5;Valparaíso;EN CONTRA;6175
+5706;Santa María;5;Valparaíso;VOTOS EN BLANCO;171
+5706;Santa María;5;Valparaíso;VOTOS NULOS;474
+5804;Villa Alemana;5;Valparaíso;A FAVOR;37993
+5804;Villa Alemana;5;Valparaíso;EN CONTRA;51590
+5804;Villa Alemana;5;Valparaíso;VOTOS EN BLANCO;NA
+5804;Villa Alemana;5;Valparaíso;VOTOS NULOS;3834
+5405;Zapallar;5;Valparaíso;A FAVOR;4676
+5405;Zapallar;5;Valparaíso;EN CONTRA;3786
+5405;Zapallar;5;Valparaíso;VOTOS EN BLANCO;98
+5405;Zapallar;5;Valparaíso;VOTOS NULOS;257
+5602;Algarrobo;5;Valparaíso;A FAVOR;6766
+5602;Algarrobo;5;Valparaíso;EN CONTRA;7264
+5602;Algarrobo;5;Valparaíso;VOTOS EN BLANCO;NA
+5602;Algarrobo;5;Valparaíso;VOTOS NULOS;505
+5603;Cartagena;5;Valparaíso;A FAVOR;7284
+5603;Cartagena;5;Valparaíso;EN CONTRA;10155
+5603;Cartagena;5;Valparaíso;VOTOS EN BLANCO;NA
+5603;Cartagena;5;Valparaíso;VOTOS NULOS;717
+5102;Casablanca;5;Valparaíso;A FAVOR;9484
+5102;Casablanca;5;Valparaíso;EN CONTRA;10942
+5102;Casablanca;5;Valparaíso;VOTOS EN BLANCO;298
+5102;Casablanca;5;Valparaíso;VOTOS NULOS;877
+5103;Concón;5;Valparaíso;A FAVOR;19872
+5103;Concón;5;Valparaíso;EN CONTRA;18197
+5103;Concón;5;Valparaíso;VOTOS EN BLANCO;NA
+5103;Concón;5;Valparaíso;VOTOS NULOS;1186
+5604;El Quisco;5;Valparaíso;A FAVOR;5826
+5604;El Quisco;5;Valparaíso;EN CONTRA;8350
+5604;El Quisco;5;Valparaíso;VOTOS EN BLANCO;154
+5604;El Quisco;5;Valparaíso;VOTOS NULOS;544
+5605;El Tabo;5;Valparaíso;A FAVOR;5300
+5605;El Tabo;5;Valparaíso;EN CONTRA;7947
+5605;El Tabo;5;Valparaíso;VOTOS EN BLANCO;146
+5605;El Tabo;5;Valparaíso;VOTOS NULOS;527
+5201;Isla de Pascua;5;Valparaíso;A FAVOR;NA
+5201;Isla de Pascua;5;Valparaíso;EN CONTRA;NA
+5201;Isla de Pascua;5;Valparaíso;VOTOS EN BLANCO;NA
+5201;Isla de Pascua;5;Valparaíso;VOTOS NULOS;NA
+5104;Juan Fernández;5;Valparaíso;A FAVOR;155
+5104;Juan Fernández;5;Valparaíso;EN CONTRA;324
+5104;Juan Fernández;5;Valparaíso;VOTOS EN BLANCO;4
+5104;Juan Fernández;5;Valparaíso;VOTOS NULOS;25
+5601;San Antonio;5;Valparaíso;A FAVOR;22134
+5601;San Antonio;5;Valparaíso;EN CONTRA;44696
+5601;San Antonio;5;Valparaíso;VOTOS EN BLANCO;NA
+5601;San Antonio;5;Valparaíso;VOTOS NULOS;2794
+5606;Santo Domingo;5;Valparaíso;A FAVOR;6307
+5606;Santo Domingo;5;Valparaíso;EN CONTRA;5125
+5606;Santo Domingo;5;Valparaíso;VOTOS EN BLANCO;NA
+5606;Santo Domingo;5;Valparaíso;VOTOS NULOS;382
+5101;Valparaíso;5;Valparaíso;A FAVOR;74393
+5101;Valparaíso;5;Valparaíso;EN CONTRA;135505
+5101;Valparaíso;5;Valparaíso;VOTOS EN BLANCO;NA
+5101;Valparaíso;5;Valparaíso;VOTOS NULOS;NA
+5109;Viña del Mar;5;Valparaíso;A FAVOR;102759
+5109;Viña del Mar;5;Valparaíso;EN CONTRA;136251
+5109;Viña del Mar;5;Valparaíso;VOTOS EN BLANCO;NA
+5109;Viña del Mar;5;Valparaíso;VOTOS NULOS;8279
+6102;Codegua;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;4404
+6102;Codegua;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;6012
+6102;Codegua;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;164
+6102;Codegua;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;473
+6103;Coinco;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;3058
+6103;Coinco;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3448
+6103;Coinco;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;121
+6103;Coinco;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;309
+6104;Coltauco;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;6639
+6104;Coltauco;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;8362
+6104;Coltauco;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;262
+6104;Coltauco;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;697
+6105;Doñihue;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;6871
+6105;Doñihue;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;9728
+6105;Doñihue;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;240
+6105;Doñihue;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;750
+6106;Graneros;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;9652
+6106;Graneros;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;14656
+6106;Graneros;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;393
+6106;Graneros;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;926
+6108;Machalí;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;16300
+6108;Machalí;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;20059
+6108;Machalí;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;408
+6108;Machalí;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;1285
+6109;Malloa;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;5521
+6109;Malloa;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;5577
+6109;Malloa;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;197
+6109;Malloa;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;478
+6110;Mostazal;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;7753
+6110;Mostazal;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;11778
+6110;Mostazal;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;271
+6110;Mostazal;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;863
+6111;Olivar;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;5340
+6111;Olivar;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;5942
+6111;Olivar;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;NA
+6111;Olivar;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;492
+6114;Quinta de Tilcoco;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;4847
+6114;Quinta de Tilcoco;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;5966
+6114;Quinta de Tilcoco;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;223
+6114;Quinta de Tilcoco;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;488
+6101;Rancagua;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;69048
+6101;Rancagua;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;99546
+6101;Rancagua;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;NA
+6101;Rancagua;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;6801
+6115;Rengo;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;18460
+6115;Rengo;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;25310
+6115;Rengo;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;667
+6115;Rengo;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;1841
+6116;Requínoa;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;10562
+6116;Requínoa;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;10739
+6116;Requínoa;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;309
+6116;Requínoa;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;785
+6302;Chépica;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;6911
+6302;Chépica;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;5294
+6302;Chépica;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;257
+6302;Chépica;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;555
+6303;Chimbarongo;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;12948
+6303;Chimbarongo;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;14375
+6303;Chimbarongo;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;426
+6303;Chimbarongo;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;1355
+6202;La Estrella;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;1720
+6202;La Estrella;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;1812
+6202;La Estrella;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;64
+6202;La Estrella;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;179
+6107;Las Cabras;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;8762
+6107;Las Cabras;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;10557
+6107;Las Cabras;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;445
+6107;Las Cabras;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;858
+6203;Litueche;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;3060
+6203;Litueche;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3357
+6203;Litueche;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;156
+6203;Litueche;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;389
+6304;Lolol;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;2997
+6304;Lolol;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3033
+6304;Lolol;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;187
+6304;Lolol;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;292
+6204;Marchihue;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;3162
+6204;Marchihue;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3425
+6204;Marchihue;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;175
+6204;Marchihue;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;316
+6305;Nancagua;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;6239
+6305;Nancagua;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;7406
+6305;Nancagua;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;256
+6305;Nancagua;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;529
+6205;Navidad;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;2622
+6205;Navidad;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3859
+6205;Navidad;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;128
+6205;Navidad;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;398
+6306;Palmilla;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;4896
+6306;Palmilla;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;4810
+6306;Palmilla;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;168
+6306;Palmilla;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;395
+6206;Paredones;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;2647
+6206;Paredones;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3237
+6206;Paredones;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;179
+6206;Paredones;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;248
+6307;Peralillo;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;4458
+6307;Peralillo;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;4685
+6307;Peralillo;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;NA
+6307;Peralillo;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;409
+6112;Peumo;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;4275
+6112;Peumo;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;7006
+6112;Peumo;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;224
+6112;Peumo;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;447
+6113;Pichidegua;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;7562
+6113;Pichidegua;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;7948
+6113;Pichidegua;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;297
+6113;Pichidegua;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;606
+6201;Pichilemu;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;6918
+6201;Pichilemu;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;8223
+6201;Pichilemu;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;255
+6201;Pichilemu;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;648
+6308;Placilla;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;3498
+6308;Placilla;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;3957
+6308;Placilla;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;150
+6308;Placilla;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;380
+6309;Pumanque;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;1767
+6309;Pumanque;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;1818
+6309;Pumanque;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;89
+6309;Pumanque;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;167
+6301;San Fernando;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;24535
+6301;San Fernando;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;30155
+6301;San Fernando;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;682
+6301;San Fernando;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;2256
+6310;Santa Cruz;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;13990
+6310;Santa Cruz;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;14422
+6310;Santa Cruz;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;479
+6310;Santa Cruz;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;1194
+6117;San Vicente;6;Libertador Gral. Bernardo O'Higgins;A FAVOR;16022
+6117;San Vicente;6;Libertador Gral. Bernardo O'Higgins;EN CONTRA;20341
+6117;San Vicente;6;Libertador Gral. Bernardo O'Higgins;VOTOS EN BLANCO;601
+6117;San Vicente;6;Libertador Gral. Bernardo O'Higgins;VOTOS NULOS;1555
+7102;Constitución;7;Maule;A FAVOR;16451
+7102;Constitución;7;Maule;EN CONTRA;17428
+7102;Constitución;7;Maule;VOTOS EN BLANCO;531
+7102;Constitución;7;Maule;VOTOS NULOS;1597
+7103;Curepto;7;Maule;A FAVOR;4026
+7103;Curepto;7;Maule;EN CONTRA;4166
+7103;Curepto;7;Maule;VOTOS EN BLANCO;249
+7103;Curepto;7;Maule;VOTOS NULOS;498
+7301;Curicó;7;Maule;A FAVOR;49991
+7301;Curicó;7;Maule;EN CONTRA;56641
+7301;Curicó;7;Maule;VOTOS EN BLANCO;1542
+7301;Curicó;7;Maule;VOTOS NULOS;4384
+7104;Empedrado;7;Maule;A FAVOR;2423
+7104;Empedrado;7;Maule;EN CONTRA;1255
+7104;Empedrado;7;Maule;VOTOS EN BLANCO;61
+7104;Empedrado;7;Maule;VOTOS NULOS;128
+7302;Hualañé;7;Maule;A FAVOR;3757
+7302;Hualañé;7;Maule;EN CONTRA;4504
+7302;Hualañé;7;Maule;VOTOS EN BLANCO;199
+7302;Hualañé;7;Maule;VOTOS NULOS;443
+7303;Licantén;7;Maule;A FAVOR;2719
+7303;Licantén;7;Maule;EN CONTRA;2931
+7303;Licantén;7;Maule;VOTOS EN BLANCO;117
+7303;Licantén;7;Maule;VOTOS NULOS;303
+7105;Maule;7;Maule;A FAVOR;13488
+7105;Maule;7;Maule;EN CONTRA;12607
+7105;Maule;7;Maule;VOTOS EN BLANCO;NA
+7105;Maule;7;Maule;VOTOS NULOS;1092
+7304;Molina;7;Maule;A FAVOR;15828
+7304;Molina;7;Maule;EN CONTRA;19305
+7304;Molina;7;Maule;VOTOS EN BLANCO;464
+7304;Molina;7;Maule;VOTOS NULOS;1641
+7106;Pelarco;7;Maule;A FAVOR;4519
+7106;Pelarco;7;Maule;EN CONTRA;3425
+7106;Pelarco;7;Maule;VOTOS EN BLANCO;106
+7106;Pelarco;7;Maule;VOTOS NULOS;393
+7107;Pencahue;7;Maule;A FAVOR;4837
+7107;Pencahue;7;Maule;EN CONTRA;3821
+7107;Pencahue;7;Maule;VOTOS EN BLANCO;130
+7107;Pencahue;7;Maule;VOTOS NULOS;427
+7305;Rauco;7;Maule;A FAVOR;4753
+7305;Rauco;7;Maule;EN CONTRA;4237
+7305;Rauco;7;Maule;VOTOS EN BLANCO;162
+7305;Rauco;7;Maule;VOTOS NULOS;499
+7108;Río Claro;7;Maule;A FAVOR;6047
+7108;Río Claro;7;Maule;EN CONTRA;5156
+7108;Río Claro;7;Maule;VOTOS EN BLANCO;235
+7108;Río Claro;7;Maule;VOTOS NULOS;534
+7306;Romeral;7;Maule;A FAVOR;6608
+7306;Romeral;7;Maule;EN CONTRA;6157
+7306;Romeral;7;Maule;VOTOS EN BLANCO;211
+7306;Romeral;7;Maule;VOTOS NULOS;577
+7307;Sagrada Familia;7;Maule;A FAVOR;7029
+7307;Sagrada Familia;7;Maule;EN CONTRA;7623
+7307;Sagrada Familia;7;Maule;VOTOS EN BLANCO;282
+7307;Sagrada Familia;7;Maule;VOTOS NULOS;572
+7109;San Clemente;7;Maule;A FAVOR;17007
+7109;San Clemente;7;Maule;EN CONTRA;16449
+7109;San Clemente;7;Maule;VOTOS EN BLANCO;NA
+7109;San Clemente;7;Maule;VOTOS NULOS;1711
+7110;San Rafael;7;Maule;A FAVOR;4145
+7110;San Rafael;7;Maule;EN CONTRA;3988
+7110;San Rafael;7;Maule;VOTOS EN BLANCO;NA
+7110;San Rafael;7;Maule;VOTOS NULOS;414
+7101;Talca;7;Maule;A FAVOR;72424
+7101;Talca;7;Maule;EN CONTRA;87347
+7101;Talca;7;Maule;VOTOS EN BLANCO;NA
+7101;Talca;7;Maule;VOTOS NULOS;5765
+7308;Teno;7;Maule;A FAVOR;12287
+7308;Teno;7;Maule;EN CONTRA;10652
+7308;Teno;7;Maule;VOTOS EN BLANCO;327
+7308;Teno;7;Maule;VOTOS NULOS;1022
+7309;Vichuquén;7;Maule;A FAVOR;2116
+7309;Vichuquén;7;Maule;EN CONTRA;1865
+7309;Vichuquén;7;Maule;VOTOS EN BLANCO;104
+7309;Vichuquén;7;Maule;VOTOS NULOS;204
+7201;Cauquenes;7;Maule;A FAVOR;19459
+7201;Cauquenes;7;Maule;EN CONTRA;12004
+7201;Cauquenes;7;Maule;VOTOS EN BLANCO;419
+7201;Cauquenes;7;Maule;VOTOS NULOS;1335
+7202;Chanco;7;Maule;A FAVOR;4812
+7202;Chanco;7;Maule;EN CONTRA;2700
+7202;Chanco;7;Maule;VOTOS EN BLANCO;NA
+7202;Chanco;7;Maule;VOTOS NULOS;424
+7402;Colbún;7;Maule;A FAVOR;7963
+7402;Colbún;7;Maule;EN CONTRA;8685
+7402;Colbún;7;Maule;VOTOS EN BLANCO;312
+7402;Colbún;7;Maule;VOTOS NULOS;830
+7401;Linares;7;Maule;A FAVOR;36058
+7401;Linares;7;Maule;EN CONTRA;34656
+7401;Linares;7;Maule;VOTOS EN BLANCO;NA
+7401;Linares;7;Maule;VOTOS NULOS;2848
+7403;Longaví;7;Maule;A FAVOR;14911
+7403;Longaví;7;Maule;EN CONTRA;9977
+7403;Longaví;7;Maule;VOTOS EN BLANCO;378
+7403;Longaví;7;Maule;VOTOS NULOS;1024
+7404;Parral;7;Maule;A FAVOR;18129
+7404;Parral;7;Maule;EN CONTRA;14380
+7404;Parral;7;Maule;VOTOS EN BLANCO;459
+7404;Parral;7;Maule;VOTOS NULOS;1536
+7203;Pelluhue;7;Maule;A FAVOR;4062
+7203;Pelluhue;7;Maule;EN CONTRA;2688
+7203;Pelluhue;7;Maule;VOTOS EN BLANCO;92
+7203;Pelluhue;7;Maule;VOTOS NULOS;302
+7405;Retiro;7;Maule;A FAVOR;10058
+7405;Retiro;7;Maule;EN CONTRA;6271
+7405;Retiro;7;Maule;VOTOS EN BLANCO;283
+7405;Retiro;7;Maule;VOTOS NULOS;717
+7406;San Javier;7;Maule;A FAVOR;18591
+7406;San Javier;7;Maule;EN CONTRA;16568
+7406;San Javier;7;Maule;VOTOS EN BLANCO;522
+7406;San Javier;7;Maule;VOTOS NULOS;1656
+7407;Villa Alegre;7;Maule;A FAVOR;6514
+7407;Villa Alegre;7;Maule;EN CONTRA;5796
+7407;Villa Alegre;7;Maule;VOTOS EN BLANCO;188
+7407;Villa Alegre;7;Maule;VOTOS NULOS;637
+7408;Yerbas Buenas;7;Maule;A FAVOR;7987
+7408;Yerbas Buenas;7;Maule;EN CONTRA;6281
+7408;Yerbas Buenas;7;Maule;VOTOS EN BLANCO;NA
+7408;Yerbas Buenas;7;Maule;VOTOS NULOS;712
+8103;Chiguayante;8;Biobío;A FAVOR;24276
+8103;Chiguayante;8;Biobío;EN CONTRA;34360
+8103;Chiguayante;8;Biobío;VOTOS EN BLANCO;736
+8103;Chiguayante;8;Biobío;VOTOS NULOS;2625
+8101;Concepción;8;Biobío;A FAVOR;70285
+8101;Concepción;8;Biobío;EN CONTRA;89776
+8101;Concepción;8;Biobío;VOTOS EN BLANCO;NA
+8101;Concepción;8;Biobío;VOTOS NULOS;5495
+8102;Coronel;8;Biobío;A FAVOR;33864
+8102;Coronel;8;Biobío;EN CONTRA;43329
+8102;Coronel;8;Biobío;VOTOS EN BLANCO;NA
+8102;Coronel;8;Biobío;VOTOS NULOS;3798
+8104;Florida;8;Biobío;A FAVOR;5053
+8104;Florida;8;Biobío;EN CONTRA;4335
+8104;Florida;8;Biobío;VOTOS EN BLANCO;176
+8104;Florida;8;Biobío;VOTOS NULOS;398
+8112;Hualpén;8;Biobío;A FAVOR;27217
+8112;Hualpén;8;Biobío;EN CONTRA;38956
+8112;Hualpén;8;Biobío;VOTOS EN BLANCO;699
+8112;Hualpén;8;Biobío;VOTOS NULOS;2750
+8105;Hualqui;8;Biobío;A FAVOR;8315
+8105;Hualqui;8;Biobío;EN CONTRA;9721
+8105;Hualqui;8;Biobío;VOTOS EN BLANCO;268
+8105;Hualqui;8;Biobío;VOTOS NULOS;929
+8107;Penco;8;Biobío;A FAVOR;14564
+8107;Penco;8;Biobío;EN CONTRA;21883
+8107;Penco;8;Biobío;VOTOS EN BLANCO;466
+8107;Penco;8;Biobío;VOTOS NULOS;1462
+8108;San Pedro de la Paz;8;Biobío;A FAVOR;39284
+8108;San Pedro de la Paz;8;Biobío;EN CONTRA;45865
+8108;San Pedro de la Paz;8;Biobío;VOTOS EN BLANCO;991
+8108;San Pedro de la Paz;8;Biobío;VOTOS NULOS;2880
+8109;Santa Juana;8;Biobío;A FAVOR;6172
+8109;Santa Juana;8;Biobío;EN CONTRA;5020
+8109;Santa Juana;8;Biobío;VOTOS EN BLANCO;248
+8109;Santa Juana;8;Biobío;VOTOS NULOS;477
+8110;Talcahuano;8;Biobío;A FAVOR;46553
+8110;Talcahuano;8;Biobío;EN CONTRA;59925
+8110;Talcahuano;8;Biobío;VOTOS EN BLANCO;NA
+8110;Talcahuano;8;Biobío;VOTOS NULOS;4332
+8111;Tomé;8;Biobío;A FAVOR;18374
+8111;Tomé;8;Biobío;EN CONTRA;23631
+8111;Tomé;8;Biobío;VOTOS EN BLANCO;597
+8111;Tomé;8;Biobío;VOTOS NULOS;1741
+8314;Alto Biobío;8;Biobío;A FAVOR;2013
+8314;Alto Biobío;8;Biobío;EN CONTRA;1990
+8314;Alto Biobío;8;Biobío;VOTOS EN BLANCO;199
+8314;Alto Biobío;8;Biobío;VOTOS NULOS;356
+8302;Antuco;8;Biobío;A FAVOR;1683
+8302;Antuco;8;Biobío;EN CONTRA;1748
+8302;Antuco;8;Biobío;VOTOS EN BLANCO;63
+8302;Antuco;8;Biobío;VOTOS NULOS;175
+8202;Arauco;8;Biobío;A FAVOR;13276
+8202;Arauco;8;Biobío;EN CONTRA;13635
+8202;Arauco;8;Biobío;VOTOS EN BLANCO;449
+8202;Arauco;8;Biobío;VOTOS NULOS;1222
+8303;Cabrero;8;Biobío;A FAVOR;12764
+8303;Cabrero;8;Biobío;EN CONTRA;9873
+8303;Cabrero;8;Biobío;VOTOS EN BLANCO;408
+8303;Cabrero;8;Biobío;VOTOS NULOS;1007
+8203;Cañete;8;Biobío;A FAVOR;14091
+8203;Cañete;8;Biobío;EN CONTRA;10387
+8203;Cañete;8;Biobío;VOTOS EN BLANCO;366
+8203;Cañete;8;Biobío;VOTOS NULOS;1175
+8204;Contulmo;8;Biobío;A FAVOR;2979
+8204;Contulmo;8;Biobío;EN CONTRA;1725
+8204;Contulmo;8;Biobío;VOTOS EN BLANCO;83
+8204;Contulmo;8;Biobío;VOTOS NULOS;172
+8205;Curanilahue;8;Biobío;A FAVOR;11224
+8205;Curanilahue;8;Biobío;EN CONTRA;12781
+8205;Curanilahue;8;Biobío;VOTOS EN BLANCO;404
+8205;Curanilahue;8;Biobío;VOTOS NULOS;1256
+8304;Laja;8;Biobío;A FAVOR;8895
+8304;Laja;8;Biobío;EN CONTRA;8496
+8304;Laja;8;Biobío;VOTOS EN BLANCO;283
+8304;Laja;8;Biobío;VOTOS NULOS;639
+8201;Lebu;8;Biobío;A FAVOR;9189
+8201;Lebu;8;Biobío;EN CONTRA;8667
+8201;Lebu;8;Biobío;VOTOS EN BLANCO;348
+8201;Lebu;8;Biobío;VOTOS NULOS;828
+8206;Los Alamos;8;Biobío;A FAVOR;8395
+8206;Los Alamos;8;Biobío;EN CONTRA;7150
+8206;Los Alamos;8;Biobío;VOTOS EN BLANCO;249
+8206;Los Alamos;8;Biobío;VOTOS NULOS;741
+8301;Los Angeles;8;Biobío;A FAVOR;88495
+8301;Los Angeles;8;Biobío;EN CONTRA;58431
+8301;Los Angeles;8;Biobío;VOTOS EN BLANCO;NA
+8301;Los Angeles;8;Biobío;VOTOS NULOS;5122
+8106;Lota;8;Biobío;A FAVOR;15050
+8106;Lota;8;Biobío;EN CONTRA;20973
+8106;Lota;8;Biobío;VOTOS EN BLANCO;478
+8106;Lota;8;Biobío;VOTOS NULOS;1907
+8305;Mulchén;8;Biobío;A FAVOR;12233
+8305;Mulchén;8;Biobío;EN CONTRA;9341
+8305;Mulchén;8;Biobío;VOTOS EN BLANCO;429
+8305;Mulchén;8;Biobío;VOTOS NULOS;919
+8306;Nacimiento;8;Biobío;A FAVOR;11267
+8306;Nacimiento;8;Biobío;EN CONTRA;8860
+8306;Nacimiento;8;Biobío;VOTOS EN BLANCO;NA
+8306;Nacimiento;8;Biobío;VOTOS NULOS;731
+8307;Negrete;8;Biobío;A FAVOR;4782
+8307;Negrete;8;Biobío;EN CONTRA;3086
+8307;Negrete;8;Biobío;VOTOS EN BLANCO;139
+8307;Negrete;8;Biobío;VOTOS NULOS;307
+8308;Quilaco;8;Biobío;A FAVOR;2070
+8308;Quilaco;8;Biobío;EN CONTRA;1575
+8308;Quilaco;8;Biobío;VOTOS EN BLANCO;52
+8308;Quilaco;8;Biobío;VOTOS NULOS;122
+8309;Quilleco;8;Biobío;A FAVOR;4851
+8309;Quilleco;8;Biobío;EN CONTRA;3026
+8309;Quilleco;8;Biobío;VOTOS EN BLANCO;123
+8309;Quilleco;8;Biobío;VOTOS NULOS;342
+8310;San Rosendo;8;Biobío;A FAVOR;1427
+8310;San Rosendo;8;Biobío;EN CONTRA;1849
+8310;San Rosendo;8;Biobío;VOTOS EN BLANCO;49
+8310;San Rosendo;8;Biobío;VOTOS NULOS;146
+8311;Santa Bárbara;8;Biobío;A FAVOR;6406
+8311;Santa Bárbara;8;Biobío;EN CONTRA;4360
+8311;Santa Bárbara;8;Biobío;VOTOS EN BLANCO;203
+8311;Santa Bárbara;8;Biobío;VOTOS NULOS;464
+8207;Tirúa;8;Biobío;A FAVOR;3994
+8207;Tirúa;8;Biobío;EN CONTRA;2977
+8207;Tirúa;8;Biobío;VOTOS EN BLANCO;188
+8207;Tirúa;8;Biobío;VOTOS NULOS;500
+8312;Tucapel;8;Biobío;A FAVOR;6370
+8312;Tucapel;8;Biobío;EN CONTRA;4993
+8312;Tucapel;8;Biobío;VOTOS EN BLANCO;206
+8312;Tucapel;8;Biobío;VOTOS NULOS;537
+8313;Yumbel;8;Biobío;A FAVOR;8889
+8313;Yumbel;8;Biobío;EN CONTRA;8336
+8313;Yumbel;8;Biobío;VOTOS EN BLANCO;347
+8313;Yumbel;8;Biobío;VOTOS NULOS;795
+9201;Angol;9;La Araucanía;A FAVOR;23900
+9201;Angol;9;La Araucanía;EN CONTRA;14851
+9201;Angol;9;La Araucanía;VOTOS EN BLANCO;465
+9201;Angol;9;La Araucanía;VOTOS NULOS;1404
+9202;Collipulli;9;La Araucanía;A FAVOR;10927
+9202;Collipulli;9;La Araucanía;EN CONTRA;6867
+9202;Collipulli;9;La Araucanía;VOTOS EN BLANCO;343
+9202;Collipulli;9;La Araucanía;VOTOS NULOS;825
+9203;Curacautín;9;La Araucanía;A FAVOR;8011
+9203;Curacautín;9;La Araucanía;EN CONTRA;5659
+9203;Curacautín;9;La Araucanía;VOTOS EN BLANCO;NA
+9203;Curacautín;9;La Araucanía;VOTOS NULOS;609
+9204;Ercilla;9;La Araucanía;A FAVOR;3166
+9204;Ercilla;9;La Araucanía;EN CONTRA;2628
+9204;Ercilla;9;La Araucanía;VOTOS EN BLANCO;139
+9204;Ercilla;9;La Araucanía;VOTOS NULOS;351
+9106;Galvarino;9;La Araucanía;A FAVOR;4722
+9106;Galvarino;9;La Araucanía;EN CONTRA;4619
+9106;Galvarino;9;La Araucanía;VOTOS EN BLANCO;305
+9106;Galvarino;9;La Araucanía;VOTOS NULOS;457
+9108;Lautaro;9;La Araucanía;A FAVOR;15794
+9108;Lautaro;9;La Araucanía;EN CONTRA;12985
+9108;Lautaro;9;La Araucanía;VOTOS EN BLANCO;503
+9108;Lautaro;9;La Araucanía;VOTOS NULOS;1326
+9205;Lonquimay;9;La Araucanía;A FAVOR;4439
+9205;Lonquimay;9;La Araucanía;EN CONTRA;3223
+9205;Lonquimay;9;La Araucanía;VOTOS EN BLANCO;NA
+9205;Lonquimay;9;La Araucanía;VOTOS NULOS;486
+9206;Los Sauces;9;La Araucanía;A FAVOR;3790
+9206;Los Sauces;9;La Araucanía;EN CONTRA;2002
+9206;Los Sauces;9;La Araucanía;VOTOS EN BLANCO;108
+9206;Los Sauces;9;La Araucanía;VOTOS NULOS;231
+9207;Lumaco;9;La Araucanía;A FAVOR;4526
+9207;Lumaco;9;La Araucanía;EN CONTRA;2412
+9207;Lumaco;9;La Araucanía;VOTOS EN BLANCO;160
+9207;Lumaco;9;La Araucanía;VOTOS NULOS;248
+9110;Melipeuco;9;La Araucanía;A FAVOR;2831
+9110;Melipeuco;9;La Araucanía;EN CONTRA;2221
+9110;Melipeuco;9;La Araucanía;VOTOS EN BLANCO;134
+9110;Melipeuco;9;La Araucanía;VOTOS NULOS;243
+9113;Perquenco;9;La Araucanía;A FAVOR;2948
+9113;Perquenco;9;La Araucanía;EN CONTRA;2616
+9113;Perquenco;9;La Araucanía;VOTOS EN BLANCO;121
+9113;Perquenco;9;La Araucanía;VOTOS NULOS;297
+9208;Purén;9;La Araucanía;A FAVOR;5785
+9208;Purén;9;La Araucanía;EN CONTRA;3607
+9208;Purén;9;La Araucanía;VOTOS EN BLANCO;179
+9208;Purén;9;La Araucanía;VOTOS NULOS;379
+9209;Renaico;9;La Araucanía;A FAVOR;4555
+9209;Renaico;9;La Araucanía;EN CONTRA;3455
+9209;Renaico;9;La Araucanía;VOTOS EN BLANCO;169
+9209;Renaico;9;La Araucanía;VOTOS NULOS;337
+9210;Traiguén;9;La Araucanía;A FAVOR;8004
+9210;Traiguén;9;La Araucanía;EN CONTRA;6095
+9210;Traiguén;9;La Araucanía;VOTOS EN BLANCO;271
+9210;Traiguén;9;La Araucanía;VOTOS NULOS;598
+9211;Victoria;9;La Araucanía;A FAVOR;15196
+9211;Victoria;9;La Araucanía;EN CONTRA;9986
+9211;Victoria;9;La Araucanía;VOTOS EN BLANCO;399
+9211;Victoria;9;La Araucanía;VOTOS NULOS;1111
+9119;Vilcún;9;La Araucanía;A FAVOR;10967
+9119;Vilcún;9;La Araucanía;EN CONTRA;9361
+9119;Vilcún;9;La Araucanía;VOTOS EN BLANCO;365
+9119;Vilcún;9;La Araucanía;VOTOS NULOS;967
+9102;Carahue;9;La Araucanía;A FAVOR;9885
+9102;Carahue;9;La Araucanía;EN CONTRA;8275
+9102;Carahue;9;La Araucanía;VOTOS EN BLANCO;405
+9102;Carahue;9;La Araucanía;VOTOS NULOS;950
+9121;Cholchol;9;La Araucanía;A FAVOR;4701
+9121;Cholchol;9;La Araucanía;EN CONTRA;4503
+9121;Cholchol;9;La Araucanía;VOTOS EN BLANCO;174
+9121;Cholchol;9;La Araucanía;VOTOS NULOS;583
+9103;Cunco;9;La Araucanía;A FAVOR;7800
+9103;Cunco;9;La Araucanía;EN CONTRA;6574
+9103;Cunco;9;La Araucanía;VOTOS EN BLANCO;257
+9103;Cunco;9;La Araucanía;VOTOS NULOS;628
+9104;Curarrehue;9;La Araucanía;A FAVOR;3356
+9104;Curarrehue;9;La Araucanía;EN CONTRA;2684
+9104;Curarrehue;9;La Araucanía;VOTOS EN BLANCO;NA
+9104;Curarrehue;9;La Araucanía;VOTOS NULOS;292
+9105;Freire;9;La Araucanía;A FAVOR;9859
+9105;Freire;9;La Araucanía;EN CONTRA;8756
+9105;Freire;9;La Araucanía;VOTOS EN BLANCO;363
+9105;Freire;9;La Araucanía;VOTOS NULOS;1019
+9107;Gorbea;9;La Araucanía;A FAVOR;6911
+9107;Gorbea;9;La Araucanía;EN CONTRA;4740
+9107;Gorbea;9;La Araucanía;VOTOS EN BLANCO;193
+9107;Gorbea;9;La Araucanía;VOTOS NULOS;487
+9109;Loncoche;9;La Araucanía;A FAVOR;8812
+9109;Loncoche;9;La Araucanía;EN CONTRA;9318
+9109;Loncoche;9;La Araucanía;VOTOS EN BLANCO;NA
+9109;Loncoche;9;La Araucanía;VOTOS NULOS;777
+9111;Nueva Imperial;9;La Araucanía;A FAVOR;12300
+9111;Nueva Imperial;9;La Araucanía;EN CONTRA;12518
+9111;Nueva Imperial;9;La Araucanía;VOTOS EN BLANCO;431
+9111;Nueva Imperial;9;La Araucanía;VOTOS NULOS;1204
+9112;Padre Las Casas;9;La Araucanía;A FAVOR;26164
+9112;Padre Las Casas;9;La Araucanía;EN CONTRA;25478
+9112;Padre Las Casas;9;La Araucanía;VOTOS EN BLANCO;NA
+9112;Padre Las Casas;9;La Araucanía;VOTOS NULOS;2458
+9114;Pitrufquén;9;La Araucanía;A FAVOR;10092
+9114;Pitrufquén;9;La Araucanía;EN CONTRA;8945
+9114;Pitrufquén;9;La Araucanía;VOTOS EN BLANCO;315
+9114;Pitrufquén;9;La Araucanía;VOTOS NULOS;804
+9115;Pucón;9;La Araucanía;A FAVOR;11686
+9115;Pucón;9;La Araucanía;EN CONTRA;11809
+9115;Pucón;9;La Araucanía;VOTOS EN BLANCO;399
+9115;Pucón;9;La Araucanía;VOTOS NULOS;1066
+9116;Saavedra;9;La Araucanía;A FAVOR;4289
+9116;Saavedra;9;La Araucanía;EN CONTRA;5008
+9116;Saavedra;9;La Araucanía;VOTOS EN BLANCO;285
+9116;Saavedra;9;La Araucanía;VOTOS NULOS;499
+9101;Temuco;9;La Araucanía;A FAVOR;97818
+9101;Temuco;9;La Araucanía;EN CONTRA;97249
+9101;Temuco;9;La Araucanía;VOTOS EN BLANCO;NA
+9101;Temuco;9;La Araucanía;VOTOS NULOS;7026
+9117;Teodoro Schmidt;9;La Araucanía;A FAVOR;6527
+9117;Teodoro Schmidt;9;La Araucanía;EN CONTRA;4824
+9117;Teodoro Schmidt;9;La Araucanía;VOTOS EN BLANCO;306
+9117;Teodoro Schmidt;9;La Araucanía;VOTOS NULOS;546
+9118;Toltén;9;La Araucanía;A FAVOR;4178
+9118;Toltén;9;La Araucanía;EN CONTRA;3458
+9118;Toltén;9;La Araucanía;VOTOS EN BLANCO;180
+9118;Toltén;9;La Araucanía;VOTOS NULOS;358
+9120;Villarrica;9;La Araucanía;A FAVOR;24234
+9120;Villarrica;9;La Araucanía;EN CONTRA;22524
+9120;Villarrica;9;La Araucanía;VOTOS EN BLANCO;NA
+9120;Villarrica;9;La Araucanía;VOTOS NULOS;2127
+10104;Fresia;10;Los Lagos;A FAVOR;5350
+10104;Fresia;10;Los Lagos;EN CONTRA;4615
+10104;Fresia;10;Los Lagos;VOTOS EN BLANCO;325
+10104;Fresia;10;Los Lagos;VOTOS NULOS;528
+10105;Frutillar;10;Los Lagos;A FAVOR;8080
+10105;Frutillar;10;Los Lagos;EN CONTRA;7595
+10105;Frutillar;10;Los Lagos;VOTOS EN BLANCO;316
+10105;Frutillar;10;Los Lagos;VOTOS NULOS;689
+10107;Llanquihue;10;Los Lagos;A FAVOR;6622
+10107;Llanquihue;10;Los Lagos;EN CONTRA;7222
+10107;Llanquihue;10;Los Lagos;VOTOS EN BLANCO;280
+10107;Llanquihue;10;Los Lagos;VOTOS NULOS;656
+10106;Los Muermos;10;Los Lagos;A FAVOR;8518
+10106;Los Muermos;10;Los Lagos;EN CONTRA;5181
+10106;Los Muermos;10;Los Lagos;VOTOS EN BLANCO;424
+10106;Los Muermos;10;Los Lagos;VOTOS NULOS;646
+10301;Osorno;10;Los Lagos;A FAVOR;53387
+10301;Osorno;10;Los Lagos;EN CONTRA;62977
+10301;Osorno;10;Los Lagos;VOTOS EN BLANCO;1544
+10301;Osorno;10;Los Lagos;VOTOS NULOS;5076
+10302;Puerto Octay;10;Los Lagos;A FAVOR;3251
+10302;Puerto Octay;10;Los Lagos;EN CONTRA;4006
+10302;Puerto Octay;10;Los Lagos;VOTOS EN BLANCO;130
+10302;Puerto Octay;10;Los Lagos;VOTOS NULOS;350
+10109;Puerto Varas;10;Los Lagos;A FAVOR;20641
+10109;Puerto Varas;10;Los Lagos;EN CONTRA;17345
+10109;Puerto Varas;10;Los Lagos;VOTOS EN BLANCO;NA
+10109;Puerto Varas;10;Los Lagos;VOTOS NULOS;1382
+10303;Purranque;10;Los Lagos;A FAVOR;8329
+10303;Purranque;10;Los Lagos;EN CONTRA;7151
+10303;Purranque;10;Los Lagos;VOTOS EN BLANCO;302
+10303;Purranque;10;Los Lagos;VOTOS NULOS;701
+10304;Puyehue;10;Los Lagos;A FAVOR;5008
+10304;Puyehue;10;Los Lagos;EN CONTRA;4884
+10304;Puyehue;10;Los Lagos;VOTOS EN BLANCO;197
+10304;Puyehue;10;Los Lagos;VOTOS NULOS;422
+10305;Río Negro;10;Los Lagos;A FAVOR;5446
+10305;Río Negro;10;Los Lagos;EN CONTRA;5225
+10305;Río Negro;10;Los Lagos;VOTOS EN BLANCO;173
+10305;Río Negro;10;Los Lagos;VOTOS NULOS;467
+10306;San Juan de la Costa;10;Los Lagos;A FAVOR;2745
+10306;San Juan de la Costa;10;Los Lagos;EN CONTRA;3844
+10306;San Juan de la Costa;10;Los Lagos;VOTOS EN BLANCO;116
+10306;San Juan de la Costa;10;Los Lagos;VOTOS NULOS;347
+10307;San Pablo;10;Los Lagos;A FAVOR;4061
+10307;San Pablo;10;Los Lagos;EN CONTRA;4263
+10307;San Pablo;10;Los Lagos;VOTOS EN BLANCO;133
+10307;San Pablo;10;Los Lagos;VOTOS NULOS;418
+10202;Ancud;10;Los Lagos;A FAVOR;13729
+10202;Ancud;10;Los Lagos;EN CONTRA;16253
+10202;Ancud;10;Los Lagos;VOTOS EN BLANCO;785
+10202;Ancud;10;Los Lagos;VOTOS NULOS;1537
+10102;Calbuco;10;Los Lagos;A FAVOR;12569
+10102;Calbuco;10;Los Lagos;EN CONTRA;12345
+10102;Calbuco;10;Los Lagos;VOTOS EN BLANCO;855
+10102;Calbuco;10;Los Lagos;VOTOS NULOS;1322
+10201;Castro;10;Los Lagos;A FAVOR;13670
+10201;Castro;10;Los Lagos;EN CONTRA;18231
+10201;Castro;10;Los Lagos;VOTOS EN BLANCO;792
+10201;Castro;10;Los Lagos;VOTOS NULOS;1735
+10401;Chaitén;10;Los Lagos;A FAVOR;1523
+10401;Chaitén;10;Los Lagos;EN CONTRA;1343
+10401;Chaitén;10;Los Lagos;VOTOS EN BLANCO;134
+10401;Chaitén;10;Los Lagos;VOTOS NULOS;176
+10203;Chonchi;10;Los Lagos;A FAVOR;4232
+10203;Chonchi;10;Los Lagos;EN CONTRA;6325
+10203;Chonchi;10;Los Lagos;VOTOS EN BLANCO;407
+10203;Chonchi;10;Los Lagos;VOTOS NULOS;628
+10103;Cochamó;10;Los Lagos;A FAVOR;1806
+10103;Cochamó;10;Los Lagos;EN CONTRA;1455
+10103;Cochamó;10;Los Lagos;VOTOS EN BLANCO;103
+10103;Cochamó;10;Los Lagos;VOTOS NULOS;145
+10204;Curaco de Vélez;10;Los Lagos;A FAVOR;1238
+10204;Curaco de Vélez;10;Los Lagos;EN CONTRA;1429
+10204;Curaco de Vélez;10;Los Lagos;VOTOS EN BLANCO;163
+10204;Curaco de Vélez;10;Los Lagos;VOTOS NULOS;195
+10205;Dalcahue;10;Los Lagos;A FAVOR;4900
+10205;Dalcahue;10;Los Lagos;EN CONTRA;5554
+10205;Dalcahue;10;Los Lagos;VOTOS EN BLANCO;416
+10205;Dalcahue;10;Los Lagos;VOTOS NULOS;590
+10402;Futaleufú;10;Los Lagos;A FAVOR;1016
+10402;Futaleufú;10;Los Lagos;EN CONTRA;901
+10402;Futaleufú;10;Los Lagos;VOTOS EN BLANCO;66
+10402;Futaleufú;10;Los Lagos;VOTOS NULOS;111
+10403;Hualaihué;10;Los Lagos;A FAVOR;3390
+10403;Hualaihué;10;Los Lagos;EN CONTRA;3707
+10403;Hualaihué;10;Los Lagos;VOTOS EN BLANCO;230
+10403;Hualaihué;10;Los Lagos;VOTOS NULOS;345
+10108;Maullín;10;Los Lagos;A FAVOR;6213
+10108;Maullín;10;Los Lagos;EN CONTRA;5205
+10108;Maullín;10;Los Lagos;VOTOS EN BLANCO;420
+10108;Maullín;10;Los Lagos;VOTOS NULOS;608
+10404;Palena;10;Los Lagos;A FAVOR;669
+10404;Palena;10;Los Lagos;EN CONTRA;564
+10404;Palena;10;Los Lagos;VOTOS EN BLANCO;52
+10404;Palena;10;Los Lagos;VOTOS NULOS;75
+10101;Puerto Montt;10;Los Lagos;A FAVOR;79495
+10101;Puerto Montt;10;Los Lagos;EN CONTRA;86193
+10101;Puerto Montt;10;Los Lagos;VOTOS EN BLANCO;NA
+10101;Puerto Montt;10;Los Lagos;VOTOS NULOS;7183
+10206;Puqueldón;10;Los Lagos;A FAVOR;1286
+10206;Puqueldón;10;Los Lagos;EN CONTRA;1726
+10206;Puqueldón;10;Los Lagos;VOTOS EN BLANCO;119
+10206;Puqueldón;10;Los Lagos;VOTOS NULOS;162
+10207;Queilén;10;Los Lagos;A FAVOR;1818
+10207;Queilén;10;Los Lagos;EN CONTRA;2228
+10207;Queilén;10;Los Lagos;VOTOS EN BLANCO;193
+10207;Queilén;10;Los Lagos;VOTOS NULOS;211
+10208;Quellón;10;Los Lagos;A FAVOR;8625
+10208;Quellón;10;Los Lagos;EN CONTRA;9686
+10208;Quellón;10;Los Lagos;VOTOS EN BLANCO;677
+10208;Quellón;10;Los Lagos;VOTOS NULOS;869
+10209;Quemchi;10;Los Lagos;A FAVOR;3126
+10209;Quemchi;10;Los Lagos;EN CONTRA;3149
+10209;Quemchi;10;Los Lagos;VOTOS EN BLANCO;287
+10209;Quemchi;10;Los Lagos;VOTOS NULOS;304
+10210;Quinchao;10;Los Lagos;A FAVOR;2155
+10210;Quinchao;10;Los Lagos;EN CONTRA;3360
+10210;Quinchao;10;Los Lagos;VOTOS EN BLANCO;225
+10210;Quinchao;10;Los Lagos;VOTOS NULOS;352
+11201;Aisén;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;6376
+11201;Aisén;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;9291
+11201;Aisén;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;383
+11201;Aisén;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;758
+11401;Chile Chico;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;1305
+11401;Chile Chico;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;1886
+11401;Chile Chico;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;108
+11401;Chile Chico;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;170
+11202;Cisnes;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;1733
+11202;Cisnes;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;1622
+11202;Cisnes;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;108
+11202;Cisnes;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;171
+11301;Cochrane;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;1020
+11301;Cochrane;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;1034
+11301;Cochrane;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;83
+11301;Cochrane;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;155
+11101;Coihaique;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;17234
+11101;Coihaique;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;20054
+11101;Coihaique;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;NA
+11101;Coihaique;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;1553
+11203;Guaitecas;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;476
+11203;Guaitecas;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;539
+11203;Guaitecas;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;36
+11203;Guaitecas;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;37
+11102;Lago Verde;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;327
+11102;Lago Verde;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;265
+11102;Lago Verde;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;33
+11102;Lago Verde;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;65
+11302;O'Higgins;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;203
+11302;O'Higgins;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;184
+11302;O'Higgins;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;6
+11302;O'Higgins;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;17
+11402;Río Ibáñez;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;1058
+11402;Río Ibáñez;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;946
+11402;Río Ibáñez;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;57
+11402;Río Ibáñez;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;135
+11303;Tortel;11;Aysén del General Carlos Ibáñez del Campo;A FAVOR;125
+11303;Tortel;11;Aysén del General Carlos Ibáñez del Campo;EN CONTRA;242
+11303;Tortel;11;Aysén del General Carlos Ibáñez del Campo;VOTOS EN BLANCO;5
+11303;Tortel;11;Aysén del General Carlos Ibáñez del Campo;VOTOS NULOS;25
+12201;Cabo de Hornos;12;Magallanes y de la Antártica Chilena;A FAVOR;559
+12201;Cabo de Hornos;12;Magallanes y de la Antártica Chilena;EN CONTRA;426
+12201;Cabo de Hornos;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;11
+12201;Cabo de Hornos;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;28
+12102;Laguna Blanca;12;Magallanes y de la Antártica Chilena;A FAVOR;194
+12102;Laguna Blanca;12;Magallanes y de la Antártica Chilena;EN CONTRA;224
+12102;Laguna Blanca;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;9
+12102;Laguna Blanca;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;14
+12401;Natales;12;Magallanes y de la Antártica Chilena;A FAVOR;5653
+12401;Natales;12;Magallanes y de la Antártica Chilena;EN CONTRA;9363
+12401;Natales;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;363
+12401;Natales;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;978
+12301;Porvenir;12;Magallanes y de la Antártica Chilena;A FAVOR;1445
+12301;Porvenir;12;Magallanes y de la Antártica Chilena;EN CONTRA;2245
+12301;Porvenir;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;62
+12301;Porvenir;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;206
+12302;Primavera;12;Magallanes y de la Antártica Chilena;A FAVOR;171
+12302;Primavera;12;Magallanes y de la Antártica Chilena;EN CONTRA;234
+12302;Primavera;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;11
+12302;Primavera;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;19
+12101;Punta Arenas;12;Magallanes y de la Antártica Chilena;A FAVOR;35461
+12101;Punta Arenas;12;Magallanes y de la Antártica Chilena;EN CONTRA;52805
+12101;Punta Arenas;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;1664
+12101;Punta Arenas;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;4396
+12103;Río Verde;12;Magallanes y de la Antártica Chilena;A FAVOR;195
+12103;Río Verde;12;Magallanes y de la Antártica Chilena;EN CONTRA;171
+12103;Río Verde;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;4
+12103;Río Verde;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;12
+12104;San Gregorio;12;Magallanes y de la Antártica Chilena;A FAVOR;146
+12104;San Gregorio;12;Magallanes y de la Antártica Chilena;EN CONTRA;150
+12104;San Gregorio;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;5
+12104;San Gregorio;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;7
+12303;Timaukel;12;Magallanes y de la Antártica Chilena;A FAVOR;82
+12303;Timaukel;12;Magallanes y de la Antártica Chilena;EN CONTRA;56
+12303;Timaukel;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;1
+12303;Timaukel;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;5
+12402;Torres del Paine;12;Magallanes y de la Antártica Chilena;A FAVOR;396
+12402;Torres del Paine;12;Magallanes y de la Antártica Chilena;EN CONTRA;483
+12402;Torres del Paine;12;Magallanes y de la Antártica Chilena;VOTOS EN BLANCO;28
+12402;Torres del Paine;12;Magallanes y de la Antártica Chilena;VOTOS NULOS;32
+13111;La Granja;13;Metropolitana de Santiago;A FAVOR;27321
+13111;La Granja;13;Metropolitana de Santiago;EN CONTRA;53228
+13111;La Granja;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13111;La Granja;13;Metropolitana de Santiago;VOTOS NULOS;3348
+13118;Macul;13;Metropolitana de Santiago;A FAVOR;31248
+13118;Macul;13;Metropolitana de Santiago;EN CONTRA;51636
+13118;Macul;13;Metropolitana de Santiago;VOTOS EN BLANCO;897
+13118;Macul;13;Metropolitana de Santiago;VOTOS NULOS;2489
+13120;Ñuñoa;13;Metropolitana de Santiago;A FAVOR;66010
+13120;Ñuñoa;13;Metropolitana de Santiago;EN CONTRA;99317
+13120;Ñuñoa;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13120;Ñuñoa;13;Metropolitana de Santiago;VOTOS NULOS;3839
+13123;Providencia;13;Metropolitana de Santiago;A FAVOR;56186
+13123;Providencia;13;Metropolitana de Santiago;EN CONTRA;60244
+13123;Providencia;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13123;Providencia;13;Metropolitana de Santiago;VOTOS NULOS;2370
+13129;San Joaquín;13;Metropolitana de Santiago;A FAVOR;21914
+13129;San Joaquín;13;Metropolitana de Santiago;EN CONTRA;43186
+13129;San Joaquín;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13129;San Joaquín;13;Metropolitana de Santiago;VOTOS NULOS;2465
+13101;Santiago;13;Metropolitana de Santiago;A FAVOR;94523
+13101;Santiago;13;Metropolitana de Santiago;EN CONTRA;132978
+13101;Santiago;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13101;Santiago;13;Metropolitana de Santiago;VOTOS NULOS;6412
+13113;La Reina;13;Metropolitana de Santiago;A FAVOR;35874
+13113;La Reina;13;Metropolitana de Santiago;EN CONTRA;36840
+13113;La Reina;13;Metropolitana de Santiago;VOTOS EN BLANCO;805
+13113;La Reina;13;Metropolitana de Santiago;VOTOS NULOS;1630
+13114;Las Condes;13;Metropolitana de Santiago;A FAVOR;143008
+13114;Las Condes;13;Metropolitana de Santiago;EN CONTRA;66535
+13114;Las Condes;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13114;Las Condes;13;Metropolitana de Santiago;VOTOS NULOS;4377
+13115;Lo Barnechea;13;Metropolitana de Santiago;A FAVOR;54206
+13115;Lo Barnechea;13;Metropolitana de Santiago;EN CONTRA;18846
+13115;Lo Barnechea;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13115;Lo Barnechea;13;Metropolitana de Santiago;VOTOS NULOS;1351
+13122;Peñalolén;13;Metropolitana de Santiago;A FAVOR;59163
+13122;Peñalolén;13;Metropolitana de Santiago;EN CONTRA;99139
+13122;Peñalolén;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13122;Peñalolén;13;Metropolitana de Santiago;VOTOS NULOS;5783
+13132;Vitacura;13;Metropolitana de Santiago;A FAVOR;53365
+13132;Vitacura;13;Metropolitana de Santiago;EN CONTRA;14169
+13132;Vitacura;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13132;Vitacura;13;Metropolitana de Santiago;VOTOS NULOS;NA
+13110;La Florida;13;Metropolitana de Santiago;A FAVOR;97609
+13110;La Florida;13;Metropolitana de Santiago;EN CONTRA;161879
+13110;La Florida;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13110;La Florida;13;Metropolitana de Santiago;VOTOS NULOS;8852
+13112;La Pintana;13;Metropolitana de Santiago;A FAVOR;37983
+13112;La Pintana;13;Metropolitana de Santiago;EN CONTRA;73620
+13112;La Pintana;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13112;La Pintana;13;Metropolitana de Santiago;VOTOS NULOS;4428
+13202;Pirque;13;Metropolitana de Santiago;A FAVOR;9405
+13202;Pirque;13;Metropolitana de Santiago;EN CONTRA;12172
+13202;Pirque;13;Metropolitana de Santiago;VOTOS EN BLANCO;250
+13202;Pirque;13;Metropolitana de Santiago;VOTOS NULOS;735
+13201;Puente Alto;13;Metropolitana de Santiago;A FAVOR;121877
+13201;Puente Alto;13;Metropolitana de Santiago;EN CONTRA;230478
+13201;Puente Alto;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13201;Puente Alto;13;Metropolitana de Santiago;VOTOS NULOS;13229
+13203;San José de Maipo;13;Metropolitana de Santiago;A FAVOR;4618
+13203;San José de Maipo;13;Metropolitana de Santiago;EN CONTRA;8726
+13203;San José de Maipo;13;Metropolitana de Santiago;VOTOS EN BLANCO;172
+13203;San José de Maipo;13;Metropolitana de Santiago;VOTOS NULOS;527
+13105;El Bosque;13;Metropolitana de Santiago;A FAVOR;41062
+13105;El Bosque;13;Metropolitana de Santiago;EN CONTRA;69921
+13105;El Bosque;13;Metropolitana de Santiago;VOTOS EN BLANCO;1286
+13105;El Bosque;13;Metropolitana de Santiago;VOTOS NULOS;3838
+13109;La Cisterna;13;Metropolitana de Santiago;A FAVOR;25701
+13109;La Cisterna;13;Metropolitana de Santiago;EN CONTRA;38212
+13109;La Cisterna;13;Metropolitana de Santiago;VOTOS EN BLANCO;645
+13109;La Cisterna;13;Metropolitana de Santiago;VOTOS NULOS;2046
+13116;Lo Espejo;13;Metropolitana de Santiago;A FAVOR;22446
+13116;Lo Espejo;13;Metropolitana de Santiago;EN CONTRA;45527
+13116;Lo Espejo;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13116;Lo Espejo;13;Metropolitana de Santiago;VOTOS NULOS;2768
+13121;Pedro Aguirre Cerda;13;Metropolitana de Santiago;A FAVOR;23512
+13121;Pedro Aguirre Cerda;13;Metropolitana de Santiago;EN CONTRA;48897
+13121;Pedro Aguirre Cerda;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13121;Pedro Aguirre Cerda;13;Metropolitana de Santiago;VOTOS NULOS;2663
+13130;San Miguel;13;Metropolitana de Santiago;A FAVOR;32974
+13130;San Miguel;13;Metropolitana de Santiago;EN CONTRA;49732
+13130;San Miguel;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13130;San Miguel;13;Metropolitana de Santiago;VOTOS NULOS;2258
+13131;San Ramón;13;Metropolitana de Santiago;A FAVOR;21696
+13131;San Ramón;13;Metropolitana de Santiago;EN CONTRA;40298
+13131;San Ramón;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13131;San Ramón;13;Metropolitana de Santiago;VOTOS NULOS;2604
+13502;Alhué;13;Metropolitana de Santiago;A FAVOR;1962
+13502;Alhué;13;Metropolitana de Santiago;EN CONTRA;3097
+13502;Alhué;13;Metropolitana de Santiago;VOTOS EN BLANCO;85
+13502;Alhué;13;Metropolitana de Santiago;VOTOS NULOS;226
+13402;Buin;13;Metropolitana de Santiago;A FAVOR;33145
+13402;Buin;13;Metropolitana de Santiago;EN CONTRA;40972
+13402;Buin;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13402;Buin;13;Metropolitana de Santiago;VOTOS NULOS;2364
+13403;Calera de Tango;13;Metropolitana de Santiago;A FAVOR;9682
+13403;Calera de Tango;13;Metropolitana de Santiago;EN CONTRA;9963
+13403;Calera de Tango;13;Metropolitana de Santiago;VOTOS EN BLANCO;262
+13403;Calera de Tango;13;Metropolitana de Santiago;VOTOS NULOS;604
+13503;Curacaví;13;Metropolitana de Santiago;A FAVOR;11074
+13503;Curacaví;13;Metropolitana de Santiago;EN CONTRA;14224
+13503;Curacaví;13;Metropolitana de Santiago;VOTOS EN BLANCO;354
+13503;Curacaví;13;Metropolitana de Santiago;VOTOS NULOS;863
+13602;El Monte;13;Metropolitana de Santiago;A FAVOR;10773
+13602;El Monte;13;Metropolitana de Santiago;EN CONTRA;14910
+13602;El Monte;13;Metropolitana de Santiago;VOTOS EN BLANCO;379
+13602;El Monte;13;Metropolitana de Santiago;VOTOS NULOS;977
+13603;Isla de Maipo;13;Metropolitana de Santiago;A FAVOR;11913
+13603;Isla de Maipo;13;Metropolitana de Santiago;EN CONTRA;14719
+13603;Isla de Maipo;13;Metropolitana de Santiago;VOTOS EN BLANCO;292
+13603;Isla de Maipo;13;Metropolitana de Santiago;VOTOS NULOS;902
+13504;María Pinto;13;Metropolitana de Santiago;A FAVOR;5451
+13504;María Pinto;13;Metropolitana de Santiago;EN CONTRA;5801
+13504;María Pinto;13;Metropolitana de Santiago;VOTOS EN BLANCO;227
+13504;María Pinto;13;Metropolitana de Santiago;VOTOS NULOS;481
+13501;Melipilla;13;Metropolitana de Santiago;A FAVOR;42388
+13501;Melipilla;13;Metropolitana de Santiago;EN CONTRA;46286
+13501;Melipilla;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13501;Melipilla;13;Metropolitana de Santiago;VOTOS NULOS;3462
+13604;Padre Hurtado;13;Metropolitana de Santiago;A FAVOR;18638
+13604;Padre Hurtado;13;Metropolitana de Santiago;EN CONTRA;28743
+13604;Padre Hurtado;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13604;Padre Hurtado;13;Metropolitana de Santiago;VOTOS NULOS;1592
+13404;Paine;13;Metropolitana de Santiago;A FAVOR;24285
+13404;Paine;13;Metropolitana de Santiago;EN CONTRA;27572
+13404;Paine;13;Metropolitana de Santiago;VOTOS EN BLANCO;683
+13404;Paine;13;Metropolitana de Santiago;VOTOS NULOS;1858
+13605;Peñaflor;13;Metropolitana de Santiago;A FAVOR;23870
+13605;Peñaflor;13;Metropolitana de Santiago;EN CONTRA;40405
+13605;Peñaflor;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13605;Peñaflor;13;Metropolitana de Santiago;VOTOS NULOS;2240
+13401;San Bernardo;13;Metropolitana de Santiago;A FAVOR;72548
+13401;San Bernardo;13;Metropolitana de Santiago;EN CONTRA;117266
+13401;San Bernardo;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13401;San Bernardo;13;Metropolitana de Santiago;VOTOS NULOS;7275
+13505;San Pedro;13;Metropolitana de Santiago;A FAVOR;4025
+13505;San Pedro;13;Metropolitana de Santiago;EN CONTRA;3604
+13505;San Pedro;13;Metropolitana de Santiago;VOTOS EN BLANCO;151
+13505;San Pedro;13;Metropolitana de Santiago;VOTOS NULOS;403
+13601;Talagante;13;Metropolitana de Santiago;A FAVOR;21714
+13601;Talagante;13;Metropolitana de Santiago;EN CONTRA;30988
+13601;Talagante;13;Metropolitana de Santiago;VOTOS EN BLANCO;698
+13601;Talagante;13;Metropolitana de Santiago;VOTOS NULOS;1771
+13102;Cerrillos;13;Metropolitana de Santiago;A FAVOR;20714
+13102;Cerrillos;13;Metropolitana de Santiago;EN CONTRA;32624
+13102;Cerrillos;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13102;Cerrillos;13;Metropolitana de Santiago;VOTOS NULOS;1758
+13301;Colina;13;Metropolitana de Santiago;A FAVOR;50390
+13301;Colina;13;Metropolitana de Santiago;EN CONTRA;37229
+13301;Colina;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13301;Colina;13;Metropolitana de Santiago;VOTOS NULOS;2713
+13106;Estación Central;13;Metropolitana de Santiago;A FAVOR;35625
+13106;Estación Central;13;Metropolitana de Santiago;EN CONTRA;56070
+13106;Estación Central;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13106;Estación Central;13;Metropolitana de Santiago;VOTOS NULOS;3175
+13302;Lampa;13;Metropolitana de Santiago;A FAVOR;28083
+13302;Lampa;13;Metropolitana de Santiago;EN CONTRA;34068
+13302;Lampa;13;Metropolitana de Santiago;VOTOS EN BLANCO;805
+13302;Lampa;13;Metropolitana de Santiago;VOTOS NULOS;2093
+13119;Maipú;13;Metropolitana de Santiago;A FAVOR;123529
+13119;Maipú;13;Metropolitana de Santiago;EN CONTRA;219874
+13119;Maipú;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13119;Maipú;13;Metropolitana de Santiago;VOTOS NULOS;11054
+13124;Pudahuel;13;Metropolitana de Santiago;A FAVOR;52898
+13124;Pudahuel;13;Metropolitana de Santiago;EN CONTRA;94763
+13124;Pudahuel;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13124;Pudahuel;13;Metropolitana de Santiago;VOTOS NULOS;5160
+13125;Quilicura;13;Metropolitana de Santiago;A FAVOR;44389
+13125;Quilicura;13;Metropolitana de Santiago;EN CONTRA;81450
+13125;Quilicura;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13125;Quilicura;13;Metropolitana de Santiago;VOTOS NULOS;4587
+13303;Tiltil;13;Metropolitana de Santiago;A FAVOR;5950
+13303;Tiltil;13;Metropolitana de Santiago;EN CONTRA;7570
+13303;Tiltil;13;Metropolitana de Santiago;VOTOS EN BLANCO;142
+13303;Tiltil;13;Metropolitana de Santiago;VOTOS NULOS;469
+13103;Cerro Navia;13;Metropolitana de Santiago;A FAVOR;31696
+13103;Cerro Navia;13;Metropolitana de Santiago;EN CONTRA;58753
+13103;Cerro Navia;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13103;Cerro Navia;13;Metropolitana de Santiago;VOTOS NULOS;3420
+13104;Conchalí;13;Metropolitana de Santiago;A FAVOR;32413
+13104;Conchalí;13;Metropolitana de Santiago;EN CONTRA;57446
+13104;Conchalí;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13104;Conchalí;13;Metropolitana de Santiago;VOTOS NULOS;3308
+13107;Huechuraba;13;Metropolitana de Santiago;A FAVOR;27017
+13107;Huechuraba;13;Metropolitana de Santiago;EN CONTRA;38474
+13107;Huechuraba;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13107;Huechuraba;13;Metropolitana de Santiago;VOTOS NULOS;2093
+13108;Independencia;13;Metropolitana de Santiago;A FAVOR;25714
+13108;Independencia;13;Metropolitana de Santiago;EN CONTRA;36036
+13108;Independencia;13;Metropolitana de Santiago;VOTOS EN BLANCO;776
+13108;Independencia;13;Metropolitana de Santiago;VOTOS NULOS;2161
+13117;Lo Prado;13;Metropolitana de Santiago;A FAVOR;24161
+13117;Lo Prado;13;Metropolitana de Santiago;EN CONTRA;44409
+13117;Lo Prado;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13117;Lo Prado;13;Metropolitana de Santiago;VOTOS NULOS;2469
+13126;Quinta Normal;13;Metropolitana de Santiago;A FAVOR;29860
+13126;Quinta Normal;13;Metropolitana de Santiago;EN CONTRA;48812
+13126;Quinta Normal;13;Metropolitana de Santiago;VOTOS EN BLANCO;758
+13126;Quinta Normal;13;Metropolitana de Santiago;VOTOS NULOS;2626
+13127;Recoleta;13;Metropolitana de Santiago;A FAVOR;39377
+13127;Recoleta;13;Metropolitana de Santiago;EN CONTRA;66532
+13127;Recoleta;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13127;Recoleta;13;Metropolitana de Santiago;VOTOS NULOS;3659
+13128;Renca;13;Metropolitana de Santiago;A FAVOR;32467
+13128;Renca;13;Metropolitana de Santiago;EN CONTRA;62165
+13128;Renca;13;Metropolitana de Santiago;VOTOS EN BLANCO;NA
+13128;Renca;13;Metropolitana de Santiago;VOTOS NULOS;3655
+14102;Corral;14;Los Ríos;A FAVOR;1565
+14102;Corral;14;Los Ríos;EN CONTRA;2562
+14102;Corral;14;Los Ríos;VOTOS EN BLANCO;88
+14102;Corral;14;Los Ríos;VOTOS NULOS;216
+14202;Futrono;14;Los Ríos;A FAVOR;6450
+14202;Futrono;14;Los Ríos;EN CONTRA;5578
+14202;Futrono;14;Los Ríos;VOTOS EN BLANCO;252
+14202;Futrono;14;Los Ríos;VOTOS NULOS;450
+14203;Lago Ranco;14;Los Ríos;A FAVOR;4509
+14203;Lago Ranco;14;Los Ríos;EN CONTRA;3608
+14203;Lago Ranco;14;Los Ríos;VOTOS EN BLANCO;212
+14203;Lago Ranco;14;Los Ríos;VOTOS NULOS;417
+14103;Lanco;14;Los Ríos;A FAVOR;6182
+14103;Lanco;14;Los Ríos;EN CONTRA;6852
+14103;Lanco;14;Los Ríos;VOTOS EN BLANCO;267
+14103;Lanco;14;Los Ríos;VOTOS NULOS;657
+14201;La Unión;14;Los Ríos;A FAVOR;14511
+14201;La Unión;14;Los Ríos;EN CONTRA;14434
+14201;La Unión;14;Los Ríos;VOTOS EN BLANCO;484
+14201;La Unión;14;Los Ríos;VOTOS NULOS;1156
+14104;Los Lagos;14;Los Ríos;A FAVOR;8079
+14104;Los Lagos;14;Los Ríos;EN CONTRA;7130
+14104;Los Lagos;14;Los Ríos;VOTOS EN BLANCO;303
+14104;Los Lagos;14;Los Ríos;VOTOS NULOS;668
+14105;Máfil;14;Los Ríos;A FAVOR;3237
+14105;Máfil;14;Los Ríos;EN CONTRA;2629
+14105;Máfil;14;Los Ríos;VOTOS EN BLANCO;105
+14105;Máfil;14;Los Ríos;VOTOS NULOS;274
+14106;Mariquina;14;Los Ríos;A FAVOR;7393
+14106;Mariquina;14;Los Ríos;EN CONTRA;8599
+14106;Mariquina;14;Los Ríos;VOTOS EN BLANCO;380
+14106;Mariquina;14;Los Ríos;VOTOS NULOS;699
+14107;Paillaco;14;Los Ríos;A FAVOR;8203
+14107;Paillaco;14;Los Ríos;EN CONTRA;7456
+14107;Paillaco;14;Los Ríos;VOTOS EN BLANCO;256
+14107;Paillaco;14;Los Ríos;VOTOS NULOS;656
+14108;Panguipulli;14;Los Ríos;A FAVOR;13547
+14108;Panguipulli;14;Los Ríos;EN CONTRA;13159
+14108;Panguipulli;14;Los Ríos;VOTOS EN BLANCO;580
+14108;Panguipulli;14;Los Ríos;VOTOS NULOS;1408
+14204;Río Bueno;14;Los Ríos;A FAVOR;12699
+14204;Río Bueno;14;Los Ríos;EN CONTRA;11550
+14204;Río Bueno;14;Los Ríos;VOTOS EN BLANCO;427
+14204;Río Bueno;14;Los Ríos;VOTOS NULOS;1105
+14101;Valdivia;14;Los Ríos;A FAVOR;46236
+14101;Valdivia;14;Los Ríos;EN CONTRA;69479
+14101;Valdivia;14;Los Ríos;VOTOS EN BLANCO;1725
+14101;Valdivia;14;Los Ríos;VOTOS NULOS;4128
+15101;Arica;15;Arica y Parinacota;A FAVOR;63561
+15101;Arica;15;Arica y Parinacota;EN CONTRA;75776
+15101;Arica;15;Arica y Parinacota;VOTOS EN BLANCO;NA
+15101;Arica;15;Arica y Parinacota;VOTOS NULOS;6484
+15102;Camarones;15;Arica y Parinacota;A FAVOR;682
+15102;Camarones;15;Arica y Parinacota;EN CONTRA;850
+15102;Camarones;15;Arica y Parinacota;VOTOS EN BLANCO;13
+15102;Camarones;15;Arica y Parinacota;VOTOS NULOS;55
+15202;General Lagos;15;Arica y Parinacota;A FAVOR;311
+15202;General Lagos;15;Arica y Parinacota;EN CONTRA;185
+15202;General Lagos;15;Arica y Parinacota;VOTOS EN BLANCO;8
+15202;General Lagos;15;Arica y Parinacota;VOTOS NULOS;36
+15201;Putre;15;Arica y Parinacota;A FAVOR;939
+15201;Putre;15;Arica y Parinacota;EN CONTRA;944
+15201;Putre;15;Arica y Parinacota;VOTOS EN BLANCO;12
+15201;Putre;15;Arica y Parinacota;VOTOS NULOS;80
+16102;Bulnes;16;Ñuble;A FAVOR;10143
+16102;Bulnes;16;Ñuble;EN CONTRA;7340
+16102;Bulnes;16;Ñuble;VOTOS EN BLANCO;348
+16102;Bulnes;16;Ñuble;VOTOS NULOS;829
+16101;Chillán;16;Ñuble;A FAVOR;67861
+16101;Chillán;16;Ñuble;EN CONTRA;65176
+16101;Chillán;16;Ñuble;VOTOS EN BLANCO;NA
+16101;Chillán;16;Ñuble;VOTOS NULOS;4919
+16103;Chillán Viejo;16;Ñuble;A FAVOR;11033
+16103;Chillán Viejo;16;Ñuble;EN CONTRA;10149
+16103;Chillán Viejo;16;Ñuble;VOTOS EN BLANCO;297
+16103;Chillán Viejo;16;Ñuble;VOTOS NULOS;853
+16202;Cobquecura;16;Ñuble;A FAVOR;2718
+16202;Cobquecura;16;Ñuble;EN CONTRA;2027
+16202;Cobquecura;16;Ñuble;VOTOS EN BLANCO;56
+16202;Cobquecura;16;Ñuble;VOTOS NULOS;203
+16203;Coelemu;16;Ñuble;A FAVOR;7112
+16203;Coelemu;16;Ñuble;EN CONTRA;5705
+16203;Coelemu;16;Ñuble;VOTOS EN BLANCO;175
+16203;Coelemu;16;Ñuble;VOTOS NULOS;501
+16302;Coihueco;16;Ñuble;A FAVOR;14299
+16302;Coihueco;16;Ñuble;EN CONTRA;6370
+16302;Coihueco;16;Ñuble;VOTOS EN BLANCO;268
+16302;Coihueco;16;Ñuble;VOTOS NULOS;712
+16104;El Carmen;16;Ñuble;A FAVOR;6887
+16104;El Carmen;16;Ñuble;EN CONTRA;3573
+16104;El Carmen;16;Ñuble;VOTOS EN BLANCO;182
+16104;El Carmen;16;Ñuble;VOTOS NULOS;338
+16204;Ninhue;16;Ñuble;A FAVOR;2750
+16204;Ninhue;16;Ñuble;EN CONTRA;1863
+16204;Ninhue;16;Ñuble;VOTOS EN BLANCO;110
+16204;Ninhue;16;Ñuble;VOTOS NULOS;268
+16303;Ñiquén;16;Ñuble;A FAVOR;5821
+16303;Ñiquén;16;Ñuble;EN CONTRA;3576
+16303;Ñiquén;16;Ñuble;VOTOS EN BLANCO;151
+16303;Ñiquén;16;Ñuble;VOTOS NULOS;450
+16105;Pemuco;16;Ñuble;A FAVOR;4202
+16105;Pemuco;16;Ñuble;EN CONTRA;2730
+16105;Pemuco;16;Ñuble;VOTOS EN BLANCO;111
+16105;Pemuco;16;Ñuble;VOTOS NULOS;293
+16106;Pinto;16;Ñuble;A FAVOR;7096
+16106;Pinto;16;Ñuble;EN CONTRA;3217
+16106;Pinto;16;Ñuble;VOTOS EN BLANCO;116
+16106;Pinto;16;Ñuble;VOTOS NULOS;452
+16205;Portezuelo;16;Ñuble;A FAVOR;2662
+16205;Portezuelo;16;Ñuble;EN CONTRA;1915
+16205;Portezuelo;16;Ñuble;VOTOS EN BLANCO;94
+16205;Portezuelo;16;Ñuble;VOTOS NULOS;191
+16107;Quillón;16;Ñuble;A FAVOR;8071
+16107;Quillón;16;Ñuble;EN CONTRA;6179
+16107;Quillón;16;Ñuble;VOTOS EN BLANCO;270
+16107;Quillón;16;Ñuble;VOTOS NULOS;634
+16201;Quirihue;16;Ñuble;A FAVOR;4734
+16201;Quirihue;16;Ñuble;EN CONTRA;4168
+16201;Quirihue;16;Ñuble;VOTOS EN BLANCO;NA
+16201;Quirihue;16;Ñuble;VOTOS NULOS;410
+16206;Ranquil;16;Ñuble;A FAVOR;2840
+16206;Ranquil;16;Ñuble;EN CONTRA;2176
+16206;Ranquil;16;Ñuble;VOTOS EN BLANCO;90
+16206;Ranquil;16;Ñuble;VOTOS NULOS;184
+16301;San Carlos;16;Ñuble;A FAVOR;23925
+16301;San Carlos;16;Ñuble;EN CONTRA;16397
+16301;San Carlos;16;Ñuble;VOTOS EN BLANCO;608
+16301;San Carlos;16;Ñuble;VOTOS NULOS;1768
+16304;San Fabián;16;Ñuble;A FAVOR;2314
+16304;San Fabián;16;Ñuble;EN CONTRA;1939
+16304;San Fabián;16;Ñuble;VOTOS EN BLANCO;93
+16304;San Fabián;16;Ñuble;VOTOS NULOS;198
+16108;San Ignacio;16;Ñuble;A FAVOR;8200
+16108;San Ignacio;16;Ñuble;EN CONTRA;4872
+16108;San Ignacio;16;Ñuble;VOTOS EN BLANCO;202
+16108;San Ignacio;16;Ñuble;VOTOS NULOS;533
+16305;San Nicolás;16;Ñuble;A FAVOR;6117
+16305;San Nicolás;16;Ñuble;EN CONTRA;4628
+16305;San Nicolás;16;Ñuble;VOTOS EN BLANCO;183
+16305;San Nicolás;16;Ñuble;VOTOS NULOS;563
+16207;Treguaco;16;Ñuble;A FAVOR;2886
+16207;Treguaco;16;Ñuble;EN CONTRA;2058
+16207;Treguaco;16;Ñuble;VOTOS EN BLANCO;96
+16207;Treguaco;16;Ñuble;VOTOS NULOS;206
+16109;Yungay;16;Ñuble;A FAVOR;7001
+16109;Yungay;16;Ñuble;EN CONTRA;7168
+16109;Yungay;16;Ñuble;VOTOS EN BLANCO;275
+16109;Yungay;16;Ñuble;VOTOS NULOS;714

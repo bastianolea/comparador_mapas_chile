@@ -1,8 +1,8 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
-library(sf)
-library(chilemapas) |> suppressPackageStartupMessages()
+# library(sf)
+# library(chilemapas) |> suppressPackageStartupMessages()
 library(thematic)
 library(bslib)
 
@@ -18,10 +18,12 @@ theme_set(theme_void())
 tema <- bs_theme(bg = "#181818", fg = "white", primary = "#2AA198")
 
 
-ui <- fluidPage(theme = tema,
+ui <- fluidPage(
+  theme = tema,
   
+  # header ----
   div(
-  titlePanel(h1("Título")),
+    titlePanel(h1("Título")),
   ),
   
   fluidRow(
@@ -36,6 +38,7 @@ ui <- fluidPage(theme = tema,
     )
   ),
   
+  # módulos ui ----
   fluidRow(
     column(6,
            mapaUI(id = "mapa_1")
@@ -45,7 +48,7 @@ ui <- fluidPage(theme = tema,
     )
   ),
   
-  ## firma ----
+  # firma ----
   fluidRow(
     column(12, style = "opacity: 0.5; font-size: 80%;",
            p("Diseñado y programado por",
@@ -64,12 +67,27 @@ ui <- fluidPage(theme = tema,
   )
 )
 
-
+#—----
 server <- function(input, output, session) {
   
   
+  # variables ----
+  variable_elegida_1 <- reactiveVal()
+  variable_elegida_2 <- reactiveVal()
   
-  # cargar mapas ----
+  observeEvent(variable_elegida_1(), {
+    message("variable elegida para mapa 1: ", variable_elegida_1())
+  })
+  
+  observeEvent(variable_elegida_2(), {
+    message("variable elegida para mapa 2: ", variable_elegida_2())
+  })
+  
+  
+  
+  
+  # mapas ----
+  ## cargar mapas ----
   mapa_urbano_rm <- reactive({
     message("cargando mapa_urbano_rm")
     readRDS("mapas/mapa_urbano_rm.rds")
@@ -82,6 +100,8 @@ server <- function(input, output, session) {
   
   region <- reactive(input$region)
   
+  
+  ## selector de mapas ----
   mapa <- reactive({
     message("mapa region ", region())
     
@@ -90,141 +110,100 @@ server <- function(input, output, session) {
     } else {
       return(mapas_regiones()[[as.numeric(region())]])
     }
-  }) |> bindEvent(region())
+  }) |> 
+    bindEvent(region())
+  
+  
+  
+  
+  # datos ----
+  
+  ## datos individuales ----
+  d_plebiscito_22 <- reactive({
+    readr::read_csv2("datos/resultados_plebiscito_2022_comuna.csv", show_col_types = F) |> 
+      group_by(cut_comuna) |> 
+      mutate(total = sum(votos, na.rm = T),
+             porcentaje = votos/total)
+  })
+  
+  d_plebiscito_22_apruebo <- reactive({
+    d_plebiscito_22() |> 
+      filter(tolower(opciones) == "apruebo") |> 
+      mutate(variable = porcentaje)
+  })
+  
+  d_plebiscito_22_rechazo <- reactive({
+    d_plebiscito_22() |> 
+      filter(tolower(opciones) == "rechazo") |> 
+      mutate(variable = porcentaje)
+  })
+  
+  d_plebiscito_23 <- reactive({
+    readr::read_csv2("datos/resultados_plebiscito_2023_comuna.csv", show_col_types = F) |> 
+      group_by(cut_comuna) |> 
+      mutate(total = sum(votos, na.rm = T),
+             porcentaje = votos/total)
+  })
+  
+  d_plebiscito_23_encontra <- reactive({
+    d_plebiscito_23() |> 
+      filter(tolower(opciones) == "en contra") |> 
+      mutate(variable = porcentaje)
+  })
+  
+  d_plebiscito_23_afavor <- reactive({
+    d_plebiscito_23() |> 
+      filter(tolower(opciones) == "a favor") |> 
+      mutate(variable = porcentaje)
+  })
+  
+  
+  
+  ## cargador de datos ----
+  datos_1 <- eventReactive(variable_elegida_1(), {
+    message("eligiendo datos para mapa 1")
+    variable <- variable_elegida_1()
+    
+    if (variable == "Plebiscito 2022: apruebo") return(d_plebiscito_22_apruebo())
+    if (variable == "Plebiscito 2022: rechazo") return(d_plebiscito_22_rechazo())
+    if (variable == "Plebiscito 2023: en contra") return(d_plebiscito_23_encontra())
+    if (variable == "Plebiscito 2023: a favor") return(d_plebiscito_23_afavor())
+  })
+  
+  datos_2 <- eventReactive(variable_elegida_2(), {
+    message("eligiendo datos para mapa 2")
+    variable <- variable_elegida_2()
+    
+    if (variable == "Plebiscito 2022: apruebo") return(d_plebiscito_22_apruebo())
+    if (variable == "Plebiscito 2022: rechazo") return(d_plebiscito_22_rechazo())
+    if (variable == "Plebiscito 2023: en contra") return(d_plebiscito_23_encontra())
+    if (variable == "Plebiscito 2023: a favor") return(d_plebiscito_23_afavor())
+  })
+  
+  
+  
   
   
   # modulos ----
+  
   mapaServer("mapa_1",
              session, #para el updateInput
              region = region, #reactive del selector que aplica a los dos modulos
              # datos
-             mapa = mapa
+             mapa = mapa,
+             variable_elegida = variable_elegida_1,
+             datos = datos_1
   )
   
   mapaServer("mapa_2",
              session,
              region = region,
              # datos
-             mapa = mapa
+             mapa = mapa,
+             variable_elegida = variable_elegida_2,
+             datos = datos_2
   )
 }
 
 
 shinyApp(ui = ui, server = server)
-
-
-
-# library(shiny)
-# library(dplyr)
-# library(ggplot2)
-# library(sf)
-# library(chilemapas)
-# 
-# source("funciones.R")
-# 
-# cut_comunas <- read.csv2("datos/comunas_chile_cut.csv")
-# 
-# regiones <- cut_comunas |> select(region, cut_region) |> distinct() |> tibble::deframe()
-# 
-# # ui ----
-# ui <- fluidPage(
-#   
-#   fluidRow(
-#     column(12,
-#            h1("Título")
-#     )
-#   ),
-#   
-#   fluidRow(
-#     column(12,
-#            selectInput("region", label = NULL,
-#                        choices = c("Santiago" = 99, regiones),
-#                        selected = c("Santiago" = 99),
-#                        width = "100%")
-#     )
-#   ),
-#   
-#   fluidRow(
-#     column(6, 
-#            h2("Mapa 1"),
-#            
-#            selector_variables(1),
-#            
-#            plotOutput("mapa1")
-#     ),
-#     
-#     column(6, 
-#            h2("Mapa 2"),
-#            
-#            selector_variables(2),
-#            
-#            plotOutput("mapa2")
-#     )
-#   )
-# )
-# 
-# # server ----
-# server <- function(input, output, session) {
-#   
-#   
-#   output$texto_1 <- renderText(input$categoria_1)
-#   output$texto_2 <- renderText(input$categoria_2)
-#   
-#   # observe({
-#   #   updateSelectInput(session, "variable_1", 
-#   #                     choices = paste("preguntas", input$categoria_1))
-#   # }) |> 
-#   #   bindEvent(input$categoria_1)
-#   
-#   # actualizan los selectores de preguntas en base a las categorías seleccionadas
-#   actualizador_variables(1, input, session)
-#   
-#   actualizador_variables(2, input, session)
-#   
-#   
-#   comunas <- reactive({
-#     cut_comunas |> filter(codigo_region == input$region) |> pull(comunas)
-#   })
-#   
-#   # cargar mapas ----
-#   mapa_urbano_rm <- reactive({
-#     message("cargando mapa_urbano_rm")
-#     readRDS("mapas/mapa_urbano_rm.rds")
-#   })
-#   
-#   mapas_regiones <- reactive({
-#     message("cargando mapas_regiones")
-#     readRDS("mapas/mapas_regiones.rds")
-#   })
-#   
-#   # mapas ----
-#   mapa <- reactive({
-#     message("mapa region ", input$region)
-#     
-#     if (input$region == 99) {
-#       return(mapa_urbano_rm())
-#     } else {
-#       return(mapas_regiones()[[as.numeric(input$region)]])
-#     }
-#   }) |> 
-#     bindEvent(input$region)
-#   
-#   # gráficos ----
-#   output$mapa1 <- renderPlot({
-#     mapa() |> 
-#       ggplot(aes(geometry = geometry)) +
-#       geom_sf(fill = "grey60", color = "white") +
-#       theme_void() +
-#       labs(title = input$categoria1)
-#   })
-#   
-#   output$mapa2 <- renderPlot({
-#     mapa() |>
-#       ggplot(aes(geometry = geometry)) +
-#       geom_sf(fill = "grey60", color = "white") +
-#       theme_void() +
-#       labs(title = input$categoria2)
-#   })
-# }
-# 
-# shinyApp(ui = ui, server = server)
