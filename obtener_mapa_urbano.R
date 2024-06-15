@@ -21,3 +21,7 @@ mapa_urbano <- mapa_zonas_urbanas |>
   ungroup()
 # simplificar bordes del mapa (opcional)
 # mutate(geometry = rmapshaper::ms_simplify(geometry,  keep = 0.4))
+
+# guardar ----
+saveRDS(mapa_urbano, "mapas/mapa_urbano_rm.rds", compress = FALSE)
+
