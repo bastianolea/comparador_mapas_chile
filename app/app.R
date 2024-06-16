@@ -1,36 +1,57 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
+library(sf)
 library(thematic)
 library(bslib)
 library(stringr)
+library(shinyjs)
+library(gt)
+library(shinycssloaders)
 
 # setup ----
 cut_comunas <- read.csv2("datos/comunas_chile_cut.csv")
 fuentes <- read.csv2("fuentes.csv") #manda el contenido de los selectores y la carga de sus datos
 regiones <- cut_comunas |> select(region, cut_region) |> distinct() |> tibble::deframe()
 
+source("funciones.R")
 source("modulos.R")
-
 
 
 # tema ----
 thematic_shiny()
 theme_set(theme_void())
-tema <- bs_theme(bg = "#181818", fg = "white", primary = "#2AA198")
+color_fondo = "#181818"
+color_detalle = "#505050"
+color_texto = "white"
+color_principal = "#2AA198"
+tema <- bs_theme(bg = color_fondo, fg = color_texto, primary = color_principal)
+options(spinner.type = 8, spinner.color = color_principal)
+
+# css ----
+# tags$head(
+#   tags$style(HTML(".selectize-input {
+# max-height: 20px !important;
+# overflow-y: hidden !important;
+# }")))
 
 
 ui <- fluidPage(
   theme = tema,
+  shinyjs::useShinyjs(),
   
   # header ----
   div(
-    titlePanel(h1("Título")),
+    titlePanel(h1("Datos comunales comparados")),
+    
+    p("Esta aplicación permite elegir dos variables de nivel comunal distintas para poder comparar visualmente las diferencias entre las comunas."),
+    
+    p("Seleccione una región del país, y luego seleccione entre más de 90 variables de datos sociales, separadas en 10 categorías, abarcando temas como datos de salud, educación, ingreso, seguridad, delincuencia, urbanismo, y otros.")
   ),
   
   fluidRow(
     column(12,
-           p("aaaa"),
+           
            # este selector afecta a todos los módulos
            selectInput("region", label = NULL,
                        choices = c("Santiago" = 99, regiones),
@@ -42,17 +63,28 @@ ui <- fluidPage(
   
   # módulos ui ----
   fluidRow(
-    column(6,
+    column(6, #align = "right",
+           style = "border: 0px solid green;", #display: flex;", # padding-right: 0; margin-right: 0;",
            mapaUI(id = "mapa_1", fuentes)
     ),
-    column(6,
+    column(6, 
+           style = "border: 0px solid green;", # padding-left: 0; margin-left: 0;",
            mapaUI(id = "mapa_2", fuentes)
+    )
+  ),
+  
+  # tabla ----
+  fluidRow(
+    column(12,
+           h4("Comparación de datos"),
+           gt_output("tabla_comparativa") |> withSpinner()
     )
   ),
   
   # firma ----
   fluidRow(
-    column(12, style = "opacity: 0.5; font-size: 80%;",
+    column(12, style = "opacity: 1; font-size: 80%;",
+           hr(),
            p("Diseñado y programado por",
              tags$a("Bastián Olea Herrera.", target = "_blank", href = "https://bastian.olea.biz")),
            p("Puedes explorar mis otras",
@@ -201,6 +233,7 @@ server <- function(input, output, session) {
   d_sinim_19 <- reactive(d_sinim()[[19]])
   d_sinim_20 <- reactive(d_sinim()[[20]])
   d_sinim_21 <- reactive(d_sinim()[[21]])
+  d_sinim_22 <- reactive(d_sinim()[[22]])
   
   
   ### paes ----
@@ -269,7 +302,7 @@ server <- function(input, output, session) {
   ### casen ----
   # son tantas variables que vamos a usar un método distinto, se carga solo el df y en el cargador de datos se le dice qué variable quiere
   d_casen <- reactive(read.csv2("datos/casen_comunas.csv"))
-
+  
   
   
   ## cargador de datos ----
@@ -345,6 +378,52 @@ server <- function(input, output, session) {
              # variable_fuente = variable_fuente_2,
              datos = datos_2
   )
+  
+  
+  # tabla comparativa ----
+  
+  output$tabla_comparativa <- render_gt({
+    req(variable_elegida_1() != "",
+        variable_elegida_2() != "")
+    
+    dato_1 <- datos_1() |> select(cut_comuna, variable_1 = variable) |> mutate(cut_comuna = as.numeric(cut_comuna))
+    dato_2 <- datos_2() |> select(cut_comuna, variable_2 = variable) |> mutate(cut_comuna = as.numeric(cut_comuna))
+    
+    datos <- left_join(dato_1,
+              dato_2, by = "cut_comuna")
+    
+    datos_2 <- datos |> 
+      left_join(cut_comunas, by = "cut_comuna") |> 
+      filter(cut_region == ifelse(input$region == 99, 13, input$region)) |>
+      ungroup() |> 
+      select(comuna, starts_with("variable"))
+    
+    datos_2 |> 
+      arrange(desc(variable_1)) |> 
+      gt() |> 
+      data_color(
+        method = "numeric", 
+        palette = c(color_fondo, color_detalle, color_principal),
+      ) |> 
+      fmt_number(columns = starts_with("variable"),
+                 sep_mark = ",",
+                 drop_trailing_zeros = T, 
+                 decimals = 2) |> 
+      tab_options(table.font.size = 10) |> 
+      tab_options(table.font.color = color_texto, table.font.color.light = color_texto,
+                  table_body.hlines.color = color_detalle,
+                  table_body.vlines.color = color_detalle, 
+                  column_labels.border.top.color = color_fondo, column_labels.border.bottom.color = color_detalle, 
+                  table_body.border.bottom.color = color_detalle,
+                  table.background.color = color_fondo) |> 
+      cols_label(comuna = "Comuna",
+                 variable_1 = variable_elegida_1(),
+                 variable_2 = variable_elegida_2()) |> 
+      tab_options(table_body.hlines.width = 3,
+                  table_body.hlines.color = color_fondo,
+                  table_body.vlines.width = 3,
+                  table_body.vlines.color = color_fondo)
+  })
 }
 
 

@@ -1,0 +1,12 @@
+name: comparador_mapas_chile
+title: comparador_mapas_chile
+username: bastianoleah
+account: bastianoleah
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12190356
+bundleId: 8749961
+url: https://bastianoleah.shinyapps.io/comparador_mapas_chile/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
