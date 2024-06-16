@@ -1,15 +1,17 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
-# library(sf)
-# library(chilemapas) |> suppressPackageStartupMessages()
 library(thematic)
 library(bslib)
+library(stringr)
 
 # setup ----
 cut_comunas <- read.csv2("datos/comunas_chile_cut.csv")
+fuentes <- read.csv2("fuentes.csv") #manda el contenido de los selectores y la carga de sus datos
 regiones <- cut_comunas |> select(region, cut_region) |> distinct() |> tibble::deframe()
+
 source("modulos.R")
+
 
 
 # tema ----
@@ -41,10 +43,10 @@ ui <- fluidPage(
   # módulos ui ----
   fluidRow(
     column(6,
-           mapaUI(id = "mapa_1")
+           mapaUI(id = "mapa_1", fuentes)
     ),
     column(6,
-           mapaUI(id = "mapa_2")
+           mapaUI(id = "mapa_2", fuentes)
     )
   ),
   
@@ -119,6 +121,10 @@ server <- function(input, output, session) {
   # datos ----
   
   ## datos individuales ----
+  # cada uno de estos reactives carga una fuente de datos distinta,
+  # que corresponde a una variable del selector de variables
+  # para agregar una al selector de variables, de categorias y al mecanismo que los carga, hay que editar fuentes.R
+  
   d_plebiscito_22 <- reactive({
     readr::read_csv2("datos/resultados_plebiscito_2022_comuna.csv", show_col_types = F) |> 
       group_by(cut_comuna) |> 
@@ -158,26 +164,127 @@ server <- function(input, output, session) {
   })
   
   
+  ### sinim ----
+  d_sinim <- reactive({
+    readRDS("datos/datos_sinim.rds")
+  })
+  
+  d_sinim_1 <- reactive(d_sinim()[[1]])
+  d_sinim_2 <- reactive(d_sinim()[[2]])
+  d_sinim_3 <- reactive(d_sinim()[[3]])
+  d_sinim_4 <- reactive(d_sinim()[[4]])
+  d_sinim_5 <- reactive(d_sinim()[[5]])
+  d_sinim_6 <- reactive(d_sinim()[[6]])
+  d_sinim_7 <- reactive(d_sinim()[[7]])
+  d_sinim_8 <- reactive(d_sinim()[[8]])
+  d_sinim_9 <- reactive(d_sinim()[[9]])
+  d_sinim_10 <- reactive(d_sinim()[[10]])
+  d_sinim_11 <- reactive(d_sinim()[[11]])
+  d_sinim_12 <- reactive(d_sinim()[[12]])
+  d_sinim_13 <- reactive(d_sinim()[[13]])
+  d_sinim_14 <- reactive(d_sinim()[[14]])
+  d_sinim_15 <- reactive(d_sinim()[[15]])
+  d_sinim_16 <- reactive(d_sinim()[[16]])
+  d_sinim_17 <- reactive(d_sinim()[[17]])
+  d_sinim_18 <- reactive(d_sinim()[[18]])
+  d_sinim_19 <- reactive(d_sinim()[[19]])
+  d_sinim_20 <- reactive(d_sinim()[[20]])
+  d_sinim_21 <- reactive(d_sinim()[[21]])
+  
+  
+  ### paes ----
+  
+  d_paes <- reactive({
+    read.csv2("datos/puntajes_paes_comuna_2024.csv")
+  })
+  
+  d_paes_lectura <- reactive({
+    d_paes() |> 
+      rename(variable = paes_complectora)
+  })
+  
+  d_promedio_notas <- reactive({
+    d_paes() |> 
+      rename(variable = promedio_notas)
+  })
+  
+  d_paes_mate1 <- reactive({
+    d_paes() |> 
+      rename(variable = paes_matematica1)
+  })
+  
+  d_paes_mate2 <- reactive({
+    d_paes() |> 
+      rename(variable = paes_matematica2)
+  })
+  
+  d_paes_historia <- reactive({
+    d_paes() |> 
+      rename(variable = paes_histciesoc)
+  })
+  
+  d_paes_ciencias <- reactive({
+    d_paes() |> 
+      rename(variable = paes_ciencias)
+  })
+  
+  
+  ### cead ----
+  
+  d_delinc_total_cantidad <- reactive(read.csv2("datos/delincuencia_total_cantidad.csv") |> rename(variable = delitos))
+  
+  d_delinc_mcs_cantidad <- reactive(read.csv2("datos/delincuencia_total_cantidad.csv") |> rename(variable = delitos))
+  
+  d_delinc_total_aumento <- reactive(read.csv2("datos/delincuencia_total_aumento.csv"))
+  
+  d_delinc_mcs_aumento <- reactive(read.csv2("datos/delincuencia_mcs_aumento.csv"))
+  
+  d_delinc_total_aumento_2a <- reactive(d_delinc_total_aumento() |> rename(variable = delitos_aumento_2a))
+  d_delinc_total_aumento_3a <- reactive(d_delinc_total_aumento() |> rename(variable = delitos_aumento_3a))
+  d_delinc_total_aumento_5a <- reactive(d_delinc_total_aumento() |> rename(variable = delitos_aumento_5a))
+  
+  d_delinc_mcs_aumento_2a <- reactive(d_delinc_mcs_aumento() |> rename(variable = delitos_mcs_aumento_2a))
+  d_delinc_mcs_aumento_3a <- reactive(d_delinc_mcs_aumento() |> rename(variable = delitos_mcs_aumento_3a))
+  d_delinc_mcs_aumento_5a <- reactive(d_delinc_mcs_aumento() |> rename(variable = delitos_mcs_aumento_5a))
+  
+  d_delinc_mcs_porcentaje <- reactive(read.csv2("datos/delincuencia_mcs_porcentaje.csv") |> rename(variable = delitoc_mcs_p))
+  
+  d_delinc_total_tasa <- reactive(read.csv2("datos/delincuencia_total_tasa.csv") |> rename(variable = tasa))
+  
+  d_delinc_mcs_tasa <- reactive(read.csv2("datos/delincuencia_mcs_tasa.csv") |> rename(variable = tasa))
+  
+  
+  
   
   ## cargador de datos ----
   datos_1 <- eventReactive(variable_elegida_1(), {
     message("eligiendo datos para mapa 1")
-    variable <- variable_elegida_1()
+    variable_elegida <- variable_elegida_1()
+    req(variable_elegida != "")
     
-    if (variable == "Plebiscito 2022: apruebo") return(d_plebiscito_22_apruebo())
-    if (variable == "Plebiscito 2022: rechazo") return(d_plebiscito_22_rechazo())
-    if (variable == "Plebiscito 2023: en contra") return(d_plebiscito_23_encontra())
-    if (variable == "Plebiscito 2023: a favor") return(d_plebiscito_23_afavor())
+    # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
+    objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
+    
+    # transformar el nombre del objeto en el objeto mismo (magia)
+    if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
+    
+    # retornarlo si existe
+    if (length(objeto) == 1) return(objeto_reactive) 
   })
   
   datos_2 <- eventReactive(variable_elegida_2(), {
     message("eligiendo datos para mapa 2")
-    variable <- variable_elegida_2()
+    variable_elegida <- variable_elegida_2()
+    req(variable_elegida != "")
     
-    if (variable == "Plebiscito 2022: apruebo") return(d_plebiscito_22_apruebo())
-    if (variable == "Plebiscito 2022: rechazo") return(d_plebiscito_22_rechazo())
-    if (variable == "Plebiscito 2023: en contra") return(d_plebiscito_23_encontra())
-    if (variable == "Plebiscito 2023: a favor") return(d_plebiscito_23_afavor())
+    # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
+    objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
+    
+    # transformar el nombre del objeto en el objeto mismo (magia)
+    if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
+    
+    # retornarlo si existe
+    if (length(objeto) == 1) return(objeto_reactive) 
   })
   
   
@@ -188,18 +295,18 @@ server <- function(input, output, session) {
   
   mapaServer("mapa_1",
              session, #para el updateInput
-             region = region, #reactive del selector que aplica a los dos modulos
-             # datos
-             mapa = mapa,
+             region, #reactive del selector que aplica a los dos modulos
+             mapa,
+             fuentes,
              variable_elegida = variable_elegida_1,
              datos = datos_1
   )
   
   mapaServer("mapa_2",
              session,
-             region = region,
-             # datos
-             mapa = mapa,
+             region,
+             mapa,
+             fuentes,
              variable_elegida = variable_elegida_2,
              datos = datos_2
   )

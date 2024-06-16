@@ -1,8 +1,8 @@
 library(lubridate)
 library(tidyr)
 
-datos_delinc <- arrow::read_parquet("datos/cead_delincuencia.parquet") #delincuencia_chile
-datos_poblac <- arrow::read_parquet("datos/censo_proyecciones_año.parquet") #censo_proyecciones
+# datos_delinc <- arrow::read_parquet("datos/cead_delincuencia.parquet") #delincuencia_chile
+# datos_poblac <- arrow::read_parquet("datos/censo_proyecciones_año.parquet") #censo_proyecciones
 
 
 # delincuencia ----
@@ -26,7 +26,10 @@ delitos_mayor_connotacion <- c("Homicidios",
 datos_delinc_anual <- datos_delinc |> 
   filter(year(fecha) == 2023) |> 
   group_by(cut_comuna, comuna, cut_region, region) |> 
-  summarize(delitos = sum(delito_n))
+  summarize(delitos = sum(delito_n)) |> 
+  ungroup()
+
+write.csv2(datos_delinc_anual, "datos/delincuencia_total_cantidad.csv")
 
 # delitos por año
 datos_delinc_años <- datos_delinc |> 
@@ -43,6 +46,8 @@ mutate(delitos_aumento_2a = delitos_2023/delitos_2021,
        delitos_aumento_10a = delitos_2023/delitos_2013) |> 
   select(1:4, matches("aumento"))
 
+write.csv2(datos_delinc_aumento, "datos/delincuencia_total_aumento.csv")
+
 
 # delitos 2023 de mayor connotación social
 datos_delinc_mcs_anual <- datos_delinc |> 
@@ -51,11 +56,14 @@ datos_delinc_mcs_anual <- datos_delinc |>
   group_by(cut_comuna, comuna, cut_region, region) |> 
   summarize(delitos_mcs = sum(delito_n))
 
+write.csv2(datos_delinc_mcs_anual, "datos/delincuencia_mcs_cantidad.csv")
+
 # porcentaje de delitos que son de mayor connotación social
-datos_delinc_anual |> 
+datos_delinc_mcs_porcentaje <- datos_delinc_anual |> 
   left_join(datos_delinc_mcs_anual) |> 
   mutate(delitoc_mcs_p = delitos/delitos_mcs)
   
+write.csv2(datos_delinc_mcs_porcentaje, "datos/delincuencia_mcs_porcentaje.csv")
 
 
 # delitos de mayor connotación social por año
@@ -66,6 +74,7 @@ datos_delinc_mcs_años <- datos_delinc |>
   summarize(delitos_mcs = sum(delito_n)) |> 
   pivot_wider(names_from = año, values_from = delitos_mcs, names_prefix = "delitos_mcs_")
 
+
 # aumento de delitos de mayor connotación social entre años
 datos_delinc_mcs_aumento <- datos_delinc_mcs_años |> 
   mutate(delitos_mcs_aumento_2a = delitos_mcs_2023/delitos_mcs_2021,
@@ -73,6 +82,34 @@ datos_delinc_mcs_aumento <- datos_delinc_mcs_años |>
          delitos_mcs_aumento_5a = delitos_mcs_2023/delitos_mcs_2019,
          delitos_mcs_aumento_10a = delitos_mcs_2023/delitos_mcs_2013) |> 
   select(1:4, matches("aumento"))
+
+write.csv2(datos_delinc_mcs_aumento, "datos/delincuencia_mcs_aumento.csv")
+# ok ----
+
+
+# delitos per capita ----
+datos_delinc_total_tasa <- datos_delinc_anual |> 
+  mutate(año = 2023) |> 
+  left_join(datos_poblac |> select(-comuna), by = join_by(cut_comuna, año)) |> 
+  group_by(cut_comuna, comuna, año) |> 
+  summarize(delitos = sum(delitos), 
+            poblacion = first(población)) |> 
+  ungroup() |> 
+  mutate(tasa = (delitos / poblacion) * 1000)
+
+write.csv2(datos_delinc_total_tasa, "datos/delincuencia_total_tasa.csv")
+
+datos_delinc_mcs_tasa <- datos_delinc_mcs_anual |> 
+  mutate(año = 2023) |> 
+  left_join(datos_poblac |> select(-comuna), by = join_by(cut_comuna, año)) |> 
+  group_by(cut_comuna, comuna, año) |> 
+  summarize(delitos_mcs = sum(delitos_mcs), 
+            poblacion = first(población)) |> 
+  ungroup() |> 
+  mutate(tasa = (delitos_mcs / poblacion) * 1000)
+
+write.csv2(datos_delinc_mcs_tasa, "datos/delincuencia_mcs_tasa.csv")
+
 
 
 

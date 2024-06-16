@@ -1,0 +1,44 @@
+categoria;variable;objeto;fuente
+Elecciones;Plebiscito 2022: apruebo;d_plebiscito_22_apruebo;Servel, Resultados electorales históricos (2022)
+Elecciones;Plebiscito 2022: rechazo;d_plebiscito_22_rechazo;Servel, Resultados electorales históricos (2022)
+Elecciones;Plebiscito 2023: en contra;d_plebiscito_23_encontra;Servel, Resultados electorales históricos (2023)
+Elecciones;Plebiscito 2023: a favor;d_plebiscito_23_afavor;Servel, Resultados electorales históricos (2023)
+Educación;Promedio de notas de educación media;d_promedio_notas;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;Puntaje PAES 2024 en la prueba de Competencia Lectora;d_paes_lectura;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;Puntaje PAES 2024 en la prueba de Competencia Matemática 1;d_paes_mate1;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;Puntaje PAES 2024 en la prueba de Competencia Matemática 2;d_paes_mate2;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;Puntaje PAES 2024 en la prueba de Historia y Ciencias Sociales;d_paes_historia;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;Puntaje PAES 2024 en la prueba de Ciencias;d_paes_ciencias;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Urbanismo;Parques urbanos (metros²);d_sinim_1;Sinim
+Urbanismo;Plazas existentes (metros²);d_sinim_2;Sinim
+Urbanismo;Cantidad de plazas;d_sinim_3;Sinim
+Urbanismo;Cantidad de parques urbanos;d_sinim_4;Sinim
+Seguridad;Cantidad de cámaras de vigilancia;d_sinim_5;Sinim
+Seguridad;Cantidad de guardias, inspectores o vigilantes municipales;d_sinim_6;Sinim
+Seguridad;Cantidad de automóviles de seguridad municipal o patrullaje;d_sinim_7;Sinim
+Seguridad;Cantidad de motos de seguridad municipal o patrullaje;d_sinim_8;Sinim
+Urbanismo;Superficie de áreas verdes con mantenimiento (metros²);d_sinim_9;Sinim
+Ingresos;Porcentaje de hogares con menos del 40% de ingresos respecto del total regional (RSH);d_sinim_10;Sinim, Registro Social de Hogares
+Educación;Docentes de aula contratados;d_sinim_11;Sinim, Ministerio de Educación
+Educación;Alumnos por docente de aula;d_sinim_12;Sinim, Ministerio de Educación
+Educación;Cantidad de personal docente;d_sinim_13;Sinim, Ministerio de Educación
+Educación;Establecimientos de Educación Municipal;d_sinim_14;Sinim, Ministerio de Educación
+Economía;Monto percibido por Fondo Común Municipal;d_sinim_15;Sinim
+Economía;Participación de Ingresos Propios Permanentes en el Ingreso Total del municipio;d_sinim_16;Sinim
+Economía;Dependencia del Fondo Común Municipal sobre los Ingresos Propios del municipio;d_sinim_17;Sinim
+Salud;Cantidad de Ambulancias;d_sinim_18;Sinim
+Salud;Cantidad de CESFAM en la comuna;d_sinim_19;Sinim
+Salud;Cantidad de COSAM en la comuna;d_sinim_20;Sinim
+Salud;Cantidad de Consultorios (urbanos y rurales);d_sinim_21;Sinim
+Salud;Cantidad de SAPU en la comuna;d_sinim_22;Sinim
+Seguridad;Cantidad de delitos denunciados (total anual);d_delinc_total_cantidad;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Delitos de mayor connotación social denunciados (total anual);d_delinc_mcs_cantidad;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Aumento de delitos anuales reportados respecto a 2 años atrás;d_delinc_total_aumento_2a;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Aumento de delitos anuales reportados respecto a 3 años atrás;d_delinc_total_aumento_3a;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Aumento de delitos anuales reportados respecto a 5 años atrás;d_delinc_total_aumento_5a;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Aumento de delitos de mayor connotación social anuales reportados respecto a 2 años atrás;d_delinc_mcs_aumento_2a;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Aumento de delitos de mayor connotación social anuales reportados respecto a 3 años atrás;d_delinc_mcs_aumento_3a;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Aumento de delitos de mayor connotación social anuales reportados respecto a 5 años atrás;d_delinc_mcs_aumento_5a;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Porcentaje del total de delitos anuales denunciados que son de mayor connotación social;d_delinc_mcs_porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Tasa de delitos denunciados anualmente por cada 1.000 habitantes;d_delinc_total_tasa;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;Tasa de delitos de mayor connotación social denunciados anualmente por cada 1.000 habitantes;d_delinc_mcs_tasa;Centro de Estudios y Análisis del Delito (CEAD) (2023)

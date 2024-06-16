@@ -1,0 +1,346 @@
+"";"cut_comuna";"comuna";"cut_region";"region";"delitos"
+"1";1101;"Iquique";1;"Tarapacá";12365
+"2";1107;"Alto Hospicio";1;"Tarapacá";7001
+"3";1401;"Pozo Almonte";1;"Tarapacá";1830
+"4";1402;"Camiña";1;"Tarapacá";88
+"5";1403;"Colchane";1;"Tarapacá";107
+"6";1404;"Huara";1;"Tarapacá";230
+"7";1405;"Pica";1;"Tarapacá";568
+"8";2101;"Antofagasta";2;"Antofagasta";22816
+"9";2102;"Mejillones";2;"Antofagasta";1333
+"10";2103;"Sierra Gorda";2;"Antofagasta";573
+"11";2104;"Taltal";2;"Antofagasta";696
+"12";2201;"Calama";2;"Antofagasta";10042
+"13";2202;"Ollagüe";2;"Antofagasta";13
+"14";2203;"San Pedro de Atacama";2;"Antofagasta";980
+"15";2301;"Tocopilla";2;"Antofagasta";1591
+"16";2302;"María Elena";2;"Antofagasta";614
+"17";3101;"Copiapó";3;"Atacama";9342
+"18";3102;"Caldera";3;"Atacama";1757
+"19";3103;"Tierra Amarilla";3;"Atacama";1023
+"20";3201;"Chañaral";3;"Atacama";923
+"21";3202;"Diego de Almagro";3;"Atacama";1157
+"22";3301;"Vallenar";3;"Atacama";3364
+"23";3302;"Alto del Carmen";3;"Atacama";200
+"24";3303;"Freirina";3;"Atacama";421
+"25";3304;"Huasco";3;"Atacama";774
+"26";4101;"La Serena";4;"Coquimbo";14760
+"27";4102;"Coquimbo";4;"Coquimbo";17242
+"28";4103;"Andacollo";4;"Coquimbo";808
+"29";4104;"La Higuera";4;"Coquimbo";313
+"30";4105;"Paiguano";4;"Coquimbo";507
+"31";4106;"Vicuña";4;"Coquimbo";2118
+"32";4201;"Illapel";4;"Coquimbo";1482
+"33";4202;"Canela";4;"Coquimbo";291
+"34";4203;"Los Vilos";4;"Coquimbo";1770
+"35";4204;"Salamanca";4;"Coquimbo";1391
+"36";4301;"Ovalle";4;"Coquimbo";6759
+"37";4302;"Combarbalá";4;"Coquimbo";518
+"38";4303;"Monte Patria";4;"Coquimbo";1469
+"39";4304;"Punitaqui";4;"Coquimbo";466
+"40";4305;"Río Hurtado";4;"Coquimbo";137
+"41";5101;"Valparaíso";5;"Valparaíso";18886
+"42";5102;"Casablanca";5;"Valparaíso";1794
+"43";5103;"Concón";5;"Valparaíso";2660
+"44";5104;"Juan Fernández";5;"Valparaíso";105
+"45";5105;"Puchuncaví";5;"Valparaíso";2078
+"46";5107;"Quintero";5;"Valparaíso";2739
+"47";5109;"Viña del Mar";5;"Valparaíso";19649
+"48";5201;"Isla de Pascua";5;"Valparaíso";556
+"49";5301;"Los Andes";5;"Valparaíso";3916
+"50";5302;"Calle Larga";5;"Valparaíso";692
+"51";5303;"Rinconada";5;"Valparaíso";587
+"52";5304;"San Esteban";5;"Valparaíso";825
+"53";5401;"La Ligua";5;"Valparaíso";2199
+"54";5402;"Cabildo";5;"Valparaíso";909
+"55";5403;"Papudo";5;"Valparaíso";347
+"56";5404;"Petorca";5;"Valparaíso";349
+"57";5405;"Zapallar";5;"Valparaíso";585
+"58";5501;"Quillota";5;"Valparaíso";4197
+"59";5502;"Calera";5;"Valparaíso";2190
+"60";5503;"Hijuelas";5;"Valparaíso";798
+"61";5504;"La Cruz";5;"Valparaíso";671
+"62";5506;"Nogales";5;"Valparaíso";981
+"63";5601;"San Antonio";5;"Valparaíso";5831
+"64";5602;"Algarrobo";5;"Valparaíso";1290
+"65";5603;"Cartagena";5;"Valparaíso";3352
+"66";5604;"El Quisco";5;"Valparaíso";2006
+"67";5605;"El Tabo";5;"Valparaíso";2035
+"68";5606;"Santo Domingo";5;"Valparaíso";660
+"69";5701;"San Felipe";5;"Valparaíso";4170
+"70";5702;"Catemu";5;"Valparaíso";616
+"71";5703;"Llaillay";5;"Valparaíso";1322
+"72";5704;"Panquehue";5;"Valparaíso";374
+"73";5705;"Putaendo";5;"Valparaíso";719
+"74";5706;"Santa María";5;"Valparaíso";706
+"75";5801;"Quilpué";5;"Valparaíso";7001
+"76";5802;"Limache";5;"Valparaíso";2306
+"77";5803;"Olmué";5;"Valparaíso";869
+"78";5804;"Villa Alemana";5;"Valparaíso";4511
+"79";6101;"Rancagua";6;"Libertador Gral. Bernardo O'Higgins";18311
+"80";6102;"Codegua";6;"Libertador Gral. Bernardo O'Higgins";768
+"81";6103;"Coinco";6;"Libertador Gral. Bernardo O'Higgins";379
+"82";6104;"Coltauco";6;"Libertador Gral. Bernardo O'Higgins";769
+"83";6105;"Doñihue";6;"Libertador Gral. Bernardo O'Higgins";938
+"84";6106;"Graneros";6;"Libertador Gral. Bernardo O'Higgins";2597
+"85";6107;"Las Cabras";6;"Libertador Gral. Bernardo O'Higgins";1529
+"86";6108;"Machalí";6;"Libertador Gral. Bernardo O'Higgins";2642
+"87";6109;"Malloa";6;"Libertador Gral. Bernardo O'Higgins";680
+"88";6110;"Mostazal";6;"Libertador Gral. Bernardo O'Higgins";2051
+"89";6111;"Olivar";6;"Libertador Gral. Bernardo O'Higgins";560
+"90";6112;"Peumo";6;"Libertador Gral. Bernardo O'Higgins";621
+"91";6113;"Pichidegua";6;"Libertador Gral. Bernardo O'Higgins";782
+"92";6114;"Quinta de Tilcoco";6;"Libertador Gral. Bernardo O'Higgins";740
+"93";6115;"Rengo";6;"Libertador Gral. Bernardo O'Higgins";3621
+"94";6116;"Requínoa";6;"Libertador Gral. Bernardo O'Higgins";1898
+"95";6117;"San Vicente";6;"Libertador Gral. Bernardo O'Higgins";2388
+"96";6201;"Pichilemu";6;"Libertador Gral. Bernardo O'Higgins";1623
+"97";6202;"La Estrella";6;"Libertador Gral. Bernardo O'Higgins";244
+"98";6203;"Litueche";6;"Libertador Gral. Bernardo O'Higgins";458
+"99";6204;"Marchihue";6;"Libertador Gral. Bernardo O'Higgins";296
+"100";6205;"Navidad";6;"Libertador Gral. Bernardo O'Higgins";527
+"101";6206;"Paredones";6;"Libertador Gral. Bernardo O'Higgins";332
+"102";6301;"San Fernando";6;"Libertador Gral. Bernardo O'Higgins";4579
+"103";6302;"Chépica";6;"Libertador Gral. Bernardo O'Higgins";664
+"104";6303;"Chimbarongo";6;"Libertador Gral. Bernardo O'Higgins";1975
+"105";6304;"Lolol";6;"Libertador Gral. Bernardo O'Higgins";268
+"106";6305;"Nancagua";6;"Libertador Gral. Bernardo O'Higgins";865
+"107";6306;"Palmilla";6;"Libertador Gral. Bernardo O'Higgins";530
+"108";6307;"Peralillo";6;"Libertador Gral. Bernardo O'Higgins";620
+"109";6308;"Placilla";6;"Libertador Gral. Bernardo O'Higgins";411
+"110";6309;"Pumanque";6;"Libertador Gral. Bernardo O'Higgins";232
+"111";6310;"Santa Cruz";6;"Libertador Gral. Bernardo O'Higgins";2350
+"112";7101;"Talca";7;"Maule";12941
+"113";7102;"Constitución";7;"Maule";2557
+"114";7103;"Curepto";7;"Maule";286
+"115";7104;"Empedrado";7;"Maule";160
+"116";7105;"Maule";7;"Maule";2220
+"117";7106;"Pelarco";7;"Maule";372
+"118";7107;"Pencahue";7;"Maule";477
+"119";7108;"Río Claro";7;"Maule";591
+"120";7109;"San Clemente";7;"Maule";2299
+"121";7110;"San Rafael";7;"Maule";558
+"122";7201;"Cauquenes";7;"Maule";1981
+"123";7202;"Chanco";7;"Maule";263
+"124";7203;"Pelluhue";7;"Maule";674
+"125";7301;"Curicó";7;"Maule";10322
+"126";7302;"Hualañé";7;"Maule";532
+"127";7303;"Licantén";7;"Maule";542
+"128";7304;"Molina";7;"Maule";2832
+"129";7305;"Rauco";7;"Maule";406
+"130";7306;"Romeral";7;"Maule";964
+"131";7307;"Sagrada Familia";7;"Maule";781
+"132";7308;"Teno";7;"Maule";1638
+"133";7309;"Vichuquén";7;"Maule";274
+"134";7401;"Linares";7;"Maule";5095
+"135";7402;"Colbún";7;"Maule";773
+"136";7403;"Longaví";7;"Maule";1352
+"137";7404;"Parral";7;"Maule";2304
+"138";7405;"Retiro";7;"Maule";874
+"139";7406;"San Javier";7;"Maule";2390
+"140";7407;"Villa Alegre";7;"Maule";829
+"141";7408;"Yerbas Buenas";7;"Maule";651
+"142";8101;"Concepción";8;"Biobío";16820
+"143";8102;"Coronel";8;"Biobío";4796
+"144";8103;"Chiguayante";8;"Biobío";2557
+"145";8104;"Florida";8;"Biobío";556
+"146";8105;"Hualqui";8;"Biobío";1116
+"147";8106;"Lota";8;"Biobío";2080
+"148";8107;"Penco";8;"Biobío";2189
+"149";8108;"San Pedro de la Paz";8;"Biobío";5311
+"150";8109;"Santa Juana";8;"Biobío";758
+"151";8110;"Talcahuano";8;"Biobío";7447
+"152";8111;"Tomé";8;"Biobío";2931
+"153";8112;"Hualpén";8;"Biobío";4042
+"154";8201;"Lebu";8;"Biobío";4199
+"155";8202;"Arauco";8;"Biobío";2330
+"156";8203;"Cañete";8;"Biobío";1748
+"157";8204;"Contulmo";8;"Biobío";278
+"158";8205;"Curanilahue";8;"Biobío";1293
+"159";8206;"Los Alamos";8;"Biobío";1339
+"160";8207;"Tirúa";8;"Biobío";509
+"161";8301;"Los Angeles";8;"Biobío";12011
+"162";8302;"Antuco";8;"Biobío";181
+"163";8303;"Cabrero";8;"Biobío";2215
+"164";8304;"Laja";8;"Biobío";1170
+"165";8305;"Mulchén";8;"Biobío";2120
+"166";8306;"Nacimiento";8;"Biobío";1151
+"167";8307;"Negrete";8;"Biobío";603
+"168";8308;"Quilaco";8;"Biobío";189
+"169";8309;"Quilleco";8;"Biobío";351
+"170";8310;"San Rosendo";8;"Biobío";240
+"171";8311;"Santa Bárbara";8;"Biobío";735
+"172";8312;"Tucapel";8;"Biobío";815
+"173";8313;"Yumbel";8;"Biobío";1541
+"174";8314;"Alto Biobío";8;"Biobío";303
+"175";9101;"Temuco";9;"La Araucanía";19580
+"176";9102;"Carahue";9;"La Araucanía";999
+"177";9103;"Cunco";9;"La Araucanía";877
+"178";9104;"Curarrehue";9;"La Araucanía";454
+"179";9105;"Freire";9;"La Araucanía";1507
+"180";9106;"Galvarino";9;"La Araucanía";631
+"181";9107;"Gorbea";9;"La Araucanía";731
+"182";9108;"Lautaro";9;"La Araucanía";2337
+"183";9109;"Loncoche";9;"La Araucanía";1621
+"184";9110;"Melipeuco";9;"La Araucanía";293
+"185";9111;"Nueva Imperial";9;"La Araucanía";1855
+"186";9112;"Padre Las Casas";9;"La Araucanía";2826
+"187";9113;"Perquenco";9;"La Araucanía";344
+"188";9114;"Pitrufquén";9;"La Araucanía";1442
+"189";9115;"Pucón";9;"La Araucanía";2887
+"190";9116;"Saavedra";9;"La Araucanía";642
+"191";9117;"Teodoro Schmidt";9;"La Araucanía";759
+"192";9118;"Toltén";9;"La Araucanía";431
+"193";9119;"Vilcún";9;"La Araucanía";1330
+"194";9120;"Villarrica";9;"La Araucanía";3699
+"195";9121;"Cholchol";9;"La Araucanía";523
+"196";9201;"Angol";9;"La Araucanía";2087
+"197";9202;"Collipulli";9;"La Araucanía";1373
+"198";9203;"Curacautín";9;"La Araucanía";760
+"199";9204;"Ercilla";9;"La Araucanía";441
+"200";9205;"Lonquimay";9;"La Araucanía";491
+"201";9206;"Los Sauces";9;"La Araucanía";372
+"202";9207;"Lumaco";9;"La Araucanía";436
+"203";9208;"Purén";9;"La Araucanía";495
+"204";9209;"Renaico";9;"La Araucanía";556
+"205";9210;"Traiguén";9;"La Araucanía";935
+"206";9211;"Victoria";9;"La Araucanía";1805
+"207";10101;"Puerto Montt";10;"Los Lagos";22862
+"208";10102;"Calbuco";10;"Los Lagos";2236
+"209";10103;"Cochamó";10;"Los Lagos";196
+"210";10104;"Fresia";10;"Los Lagos";917
+"211";10105;"Frutillar";10;"Los Lagos";1219
+"212";10106;"Los Muermos";10;"Los Lagos";786
+"213";10107;"Llanquihue";10;"Los Lagos";1425
+"214";10108;"Maullín";10;"Los Lagos";836
+"215";10109;"Puerto Varas";10;"Los Lagos";2621
+"216";10201;"Castro";10;"Los Lagos";3281
+"217";10202;"Ancud";10;"Los Lagos";2009
+"218";10203;"Chonchi";10;"Los Lagos";777
+"219";10204;"Curaco de Vélez";10;"Los Lagos";101
+"220";10205;"Dalcahue";10;"Los Lagos";718
+"221";10206;"Puqueldón";10;"Los Lagos";148
+"222";10207;"Queilén";10;"Los Lagos";279
+"223";10208;"Quellón";10;"Los Lagos";1843
+"224";10209;"Quemchi";10;"Los Lagos";250
+"225";10210;"Quinchao";10;"Los Lagos";331
+"226";10301;"Osorno";10;"Los Lagos";10509
+"227";10302;"Puerto Octay";10;"Los Lagos";480
+"228";10303;"Purranque";10;"Los Lagos";1017
+"229";10304;"Puyehue";10;"Los Lagos";637
+"230";10305;"Río Negro";10;"Los Lagos";665
+"231";10306;"San Juan de la Costa";10;"Los Lagos";533
+"232";10307;"San Pablo";10;"Los Lagos";514
+"233";10401;"Chaitén";10;"Los Lagos";221
+"234";10402;"Futaleufú";10;"Los Lagos";146
+"235";10403;"Hualaihué";10;"Los Lagos";579
+"236";10404;"Palena";10;"Los Lagos";67
+"237";11101;"Coihaique";11;"Aysén del General Carlos Ibáñez del Campo";2506
+"238";11102;"Lago Verde";11;"Aysén del General Carlos Ibáñez del Campo";54
+"239";11201;"Aisén";11;"Aysén del General Carlos Ibáñez del Campo";1551
+"240";11202;"Cisnes";11;"Aysén del General Carlos Ibáñez del Campo";376
+"241";11203;"Guaitecas";11;"Aysén del General Carlos Ibáñez del Campo";250
+"242";11301;"Cochrane";11;"Aysén del General Carlos Ibáñez del Campo";376
+"243";11302;"O'Higgins";11;"Aysén del General Carlos Ibáñez del Campo";20
+"244";11303;"Tortel";11;"Aysén del General Carlos Ibáñez del Campo";39
+"245";11401;"Chile Chico";11;"Aysén del General Carlos Ibáñez del Campo";437
+"246";11402;"Río Ibáñez";11;"Aysén del General Carlos Ibáñez del Campo";147
+"247";12101;"Punta Arenas";12;"Magallanes y de la Antártica Chilena";3656
+"248";12102;"Laguna Blanca";12;"Magallanes y de la Antártica Chilena";12
+"249";12103;"Río Verde";12;"Magallanes y de la Antártica Chilena";4
+"250";12104;"San Gregorio";12;"Magallanes y de la Antártica Chilena";31
+"251";12201;"Cabo de Hornos";12;"Magallanes y de la Antártica Chilena";163
+"252";12301;"Porvenir";12;"Magallanes y de la Antártica Chilena";325
+"253";12302;"Primavera";12;"Magallanes y de la Antártica Chilena";61
+"254";12303;"Timaukel";12;"Magallanes y de la Antártica Chilena";6
+"255";12401;"Natales";12;"Magallanes y de la Antártica Chilena";971
+"256";12402;"Torres del Paine";12;"Magallanes y de la Antártica Chilena";27
+"257";13101;"Santiago";13;"Metropolitana de Santiago";44386
+"258";13102;"Cerrillos";13;"Metropolitana de Santiago";5767
+"259";13103;"Cerro Navia";13;"Metropolitana de Santiago";6588
+"260";13104;"Conchalí";13;"Metropolitana de Santiago";6235
+"261";13105;"El Bosque";13;"Metropolitana de Santiago";6380
+"262";13106;"Estación Central";13;"Metropolitana de Santiago";14877
+"263";13107;"Huechuraba";13;"Metropolitana de Santiago";4668
+"264";13108;"Independencia";13;"Metropolitana de Santiago";9028
+"265";13109;"La Cisterna";13;"Metropolitana de Santiago";6637
+"266";13110;"La Florida";13;"Metropolitana de Santiago";15523
+"267";13111;"La Granja";13;"Metropolitana de Santiago";5938
+"268";13112;"La Pintana";13;"Metropolitana de Santiago";7238
+"269";13113;"La Reina";13;"Metropolitana de Santiago";3891
+"270";13114;"Las Condes";13;"Metropolitana de Santiago";8638
+"271";13115;"Lo Barnechea";13;"Metropolitana de Santiago";2934
+"272";13116;"Lo Espejo";13;"Metropolitana de Santiago";4551
+"273";13117;"Lo Prado";13;"Metropolitana de Santiago";5885
+"274";13118;"Macul";13;"Metropolitana de Santiago";5986
+"275";13119;"Maipú";13;"Metropolitana de Santiago";21634
+"276";13120;"Ñuñoa";13;"Metropolitana de Santiago";11267
+"277";13121;"Pedro Aguirre Cerda";13;"Metropolitana de Santiago";4785
+"278";13122;"Peñalolén";13;"Metropolitana de Santiago";8734
+"279";13123;"Providencia";13;"Metropolitana de Santiago";14110
+"280";13124;"Pudahuel";13;"Metropolitana de Santiago";12689
+"281";13125;"Quilicura";13;"Metropolitana de Santiago";9152
+"282";13126;"Quinta Normal";13;"Metropolitana de Santiago";8569
+"283";13127;"Recoleta";13;"Metropolitana de Santiago";10877
+"284";13128;"Renca";13;"Metropolitana de Santiago";6731
+"285";13129;"San Joaquín";13;"Metropolitana de Santiago";5023
+"286";13130;"San Miguel";13;"Metropolitana de Santiago";7526
+"287";13131;"San Ramón";13;"Metropolitana de Santiago";4036
+"288";13132;"Vitacura";13;"Metropolitana de Santiago";2770
+"289";13201;"Puente Alto";13;"Metropolitana de Santiago";23087
+"290";13202;"Pirque";13;"Metropolitana de Santiago";1614
+"291";13203;"San José de Maipo";13;"Metropolitana de Santiago";1347
+"292";13301;"Colina";13;"Metropolitana de Santiago";7053
+"293";13302;"Lampa";13;"Metropolitana de Santiago";6076
+"294";13303;"Tiltil";13;"Metropolitana de Santiago";1246
+"295";13401;"San Bernardo";13;"Metropolitana de Santiago";16095
+"296";13402;"Buin";13;"Metropolitana de Santiago";5075
+"297";13403;"Calera de Tango";13;"Metropolitana de Santiago";1284
+"298";13404;"Paine";13;"Metropolitana de Santiago";3306
+"299";13501;"Melipilla";13;"Metropolitana de Santiago";6697
+"300";13502;"Alhué";13;"Metropolitana de Santiago";339
+"301";13503;"Curacaví";13;"Metropolitana de Santiago";1910
+"302";13504;"María Pinto";13;"Metropolitana de Santiago";504
+"303";13505;"San Pedro";13;"Metropolitana de Santiago";449
+"304";13601;"Talagante";13;"Metropolitana de Santiago";3475
+"305";13602;"El Monte";13;"Metropolitana de Santiago";1851
+"306";13603;"Isla de Maipo";13;"Metropolitana de Santiago";2460
+"307";13604;"Padre Hurtado";13;"Metropolitana de Santiago";2806
+"308";13605;"Peñaflor";13;"Metropolitana de Santiago";3447
+"309";14101;"Valdivia";14;"Los Ríos";10034
+"310";14102;"Corral";14;"Los Ríos";299
+"311";14103;"Lanco";14;"Los Ríos";660
+"312";14104;"Los Lagos";14;"Los Ríos";1156
+"313";14105;"Máfil";14;"Los Ríos";430
+"314";14106;"Mariquina";14;"Los Ríos";1573
+"315";14107;"Paillaco";14;"Los Ríos";1024
+"316";14108;"Panguipulli";14;"Los Ríos";1765
+"317";14201;"La Unión";14;"Los Ríos";2370
+"318";14202;"Futrono";14;"Los Ríos";985
+"319";14203;"Lago Ranco";14;"Los Ríos";643
+"320";14204;"Río Bueno";14;"Los Ríos";1445
+"321";15101;"Arica";15;"Arica y Parinacota";16360
+"322";15102;"Camarones";15;"Arica y Parinacota";60
+"323";15201;"Putre";15;"Arica y Parinacota";148
+"324";15202;"General Lagos";15;"Arica y Parinacota";15
+"325";16101;"Chillán";16;"Ñuble";11365
+"326";16102;"Bulnes";16;"Ñuble";1229
+"327";16103;"Chillán Viejo";16;"Ñuble";1652
+"328";16104;"El Carmen";16;"Ñuble";499
+"329";16105;"Pemuco";16;"Ñuble";437
+"330";16106;"Pinto";16;"Ñuble";549
+"331";16107;"Quillón";16;"Ñuble";1007
+"332";16108;"San Ignacio";16;"Ñuble";622
+"333";16109;"Yungay";16;"Ñuble";832
+"334";16201;"Quirihue";16;"Ñuble";547
+"335";16202;"Cobquecura";16;"Ñuble";313
+"336";16203;"Coelemu";16;"Ñuble";595
+"337";16204;"Ninhue";16;"Ñuble";208
+"338";16205;"Portezuelo";16;"Ñuble";161
+"339";16206;"Ranquil";16;"Ñuble";346
+"340";16207;"Treguaco";16;"Ñuble";268
+"341";16301;"San Carlos";16;"Ñuble";2636
+"342";16302;"Coihueco";16;"Ñuble";1345
+"343";16303;"Ñiquén";16;"Ñuble";437
+"344";16304;"San Fabián";16;"Ñuble";268
+"345";16305;"San Nicolás";16;"Ñuble";560
