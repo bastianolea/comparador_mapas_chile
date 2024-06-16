@@ -40,16 +40,9 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  
                  # cambiar el selector de variables en base a la categoría elegida
                  observeEvent(input$categoria, {
-                   # if (input$categoria == "Elecciones") {
-                   #   updateSelectInput(session, "variable",
-                   #                     choices = c("Plebiscito 2022: apruebo", "Plebiscito 2022: rechazo",
-                   #                                 "Plebiscito 2023: a favor", "Plebiscito 2023: en contra"))
-                   # } else {
-                   #   updateSelectInput(session, "variable",
-                   #                     choices = paste("preguntas", input$categoria))
-                   # }
-                   
-                   variables_categoria <- fuentes |> filter(categoria == input$categoria) |> pull(variable)
+                   # browser()
+                   variables_categoria <- fuentes |> filter(categoria == input$categoria) |> pull(variable) #variables de la categoría elegida
+                   # variables_categoria <- variable_fuente()$variable
                    
                    if (length(variables_categoria) > 0) {
                      updateSelectInput(session, "variable", choices = variables_categoria)
@@ -74,9 +67,9 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                      
                      mapa_datos <- mapa() |> 
                        # mutate(codigo_comuna = as.numeric(codigo_comuna)) |> 
-                       mutate(codigo_comuna = as.character(codigo_comuna)) |>
+                       mutate(codigo_comuna = as.numeric(codigo_comuna)) |>
                        left_join(datos() |> 
-                                   mutate(cut_comuna = as.character(cut_comuna)), 
+                                   mutate(cut_comuna = as.numeric(cut_comuna)), 
                                           by = c("codigo_comuna" = "cut_comuna"))
                      
                    } else {
@@ -89,8 +82,12 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  
                  # generar mapa
                  output$mapa <-  renderPlot({
+                   req(input$variable != "")
                    message("modulo: generando mapa")
                    
+                   # browser()
+                   variable_fuente <- fuentes |> filter(variable == input$variable)
+                                       
                    p <- mapa_datos() |>
                      ggplot(aes(geometry = geometry))
                    
@@ -106,8 +103,9 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    
                    # título del gráfico
                    p <- p +
-                     labs(title = str_wrap(input$variable, 20),
-                          caption = str_wrap(fuentes |> filter(categoria == input$categoria) |> pull(fuente), 30))
+                     labs(title = str_wrap(variable_fuente$variable, 20),
+                          caption = paste("Fuente:", str_wrap(variable_fuente$fuente, 30))
+                          )
                    
                    # barra a la izquierda si es el de la izquierda
                    if (id == "mapa_1") {

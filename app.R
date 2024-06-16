@@ -77,6 +77,17 @@ server <- function(input, output, session) {
   variable_elegida_1 <- reactiveVal()
   variable_elegida_2 <- reactiveVal()
   
+  # dataframe de 1 fila donde sale la metadata de la variable elegida, desde fuentes.csv
+  variable_fuente_1 <- reactive({
+    req(variable_elegida_1() != "")
+    fuentes |> filter(variable == variable_elegida_1()) |> try()
+  })
+  
+  variable_fuente_2 <- reactive({
+    req(variable_elegida_2() != "")
+    fuentes |> filter(variable == variable_elegida_2()) |> try()
+  })
+  
   observeEvent(variable_elegida_1(), {
     message("variable elegida para mapa 1: ", variable_elegida_1())
   })
@@ -255,33 +266,55 @@ server <- function(input, output, session) {
   
   
   
+  ### casen ----
+  # son tantas variables que vamos a usar un método distinto, se carga solo el df y en el cargador de datos se le dice qué variable quiere
+  d_casen <- reactive(read.csv2("datos/casen_comunas.csv"))
+
+  
   
   ## cargador de datos ----
   datos_1 <- eventReactive(variable_elegida_1(), {
     message("eligiendo datos para mapa 1")
     variable_elegida <- variable_elegida_1()
-    req(variable_elegida != "")
+    variable_fuente <- variable_fuente_1()
+    
+    req(variable_elegida != "", nrow(variable_fuente) == 1)
     
     # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
     objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
     
-    # transformar el nombre del objeto en el objeto mismo (magia)
-    if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
+    # cargar el objeto a partir del nombre de variable cruzado con lo que indica fuentes.csv
+    if (variable_fuente$proyecto == "casen") {
+      objeto_reactive <- casen_variable(d_casen(), variable_fuente$objeto) |> tibble()
+      
+    } else {
+      # transformar el nombre del objeto en el objeto mismo (magia)
+      if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
+    }
     
     # retornarlo si existe
     if (length(objeto) == 1) return(objeto_reactive) 
   })
   
+  
   datos_2 <- eventReactive(variable_elegida_2(), {
     message("eligiendo datos para mapa 2")
     variable_elegida <- variable_elegida_2()
-    req(variable_elegida != "")
+    variable_fuente <- variable_fuente_2()
+    
+    req(variable_elegida != "", nrow(variable_fuente) == 1)
     
     # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
     objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
     
-    # transformar el nombre del objeto en el objeto mismo (magia)
-    if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
+    # cargar el objeto a partir del nombre de variable cruzado con lo que indica fuentes.csv
+    if (variable_fuente$proyecto == "casen") {
+      objeto_reactive <- casen_variable(d_casen(), variable_fuente$objeto) |> tibble()
+      
+    } else {
+      # transformar el nombre del objeto en el objeto mismo (magia)
+      if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
+    }
     
     # retornarlo si existe
     if (length(objeto) == 1) return(objeto_reactive) 
@@ -299,6 +332,7 @@ server <- function(input, output, session) {
              mapa,
              fuentes,
              variable_elegida = variable_elegida_1,
+             # variable_fuente = variable_fuente_1,
              datos = datos_1
   )
   
@@ -308,6 +342,7 @@ server <- function(input, output, session) {
              mapa,
              fuentes,
              variable_elegida = variable_elegida_2,
+             # variable_fuente = variable_fuente_2,
              datos = datos_2
   )
 }

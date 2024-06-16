@@ -33,3 +33,20 @@ actualizador_variables <- function(id, input, session) {
   }) |> 
     bindEvent(input[[paste0("categoria_", id)]])
 }
+
+
+
+casen_variable <- function(casen, variable_elegida) {
+  # casen <- read.csv2("datos/casen_comunas.csv") |> tibble()
+  
+  # variable_elegida <- variable_elegida_1()
+  # variable_elegida <- "casen_pension_menor_salario_minimo_p" |> str_remove("^casen_")
+  variable_elegida <- variable_elegida |> str_remove("^casen_")
+  
+  casen_filtrada <- casen |> 
+    select(comuna, cut_comuna, 
+           variable = any_of(variable_elegida))
+  
+  return(casen_filtrada)
+}
+

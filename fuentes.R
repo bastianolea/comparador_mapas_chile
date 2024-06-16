@@ -1,1 +1,0 @@
-fuentes <- read.csv2("fuentes.csv")
