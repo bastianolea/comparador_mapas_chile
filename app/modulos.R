@@ -7,16 +7,16 @@ mapaUI <- function(id, fuentes) {
   
   tagList(
     fluidRow(
-      column(12, 
+      column(12, #style = "max-width: 600px;",
              
              # div(style = "height: 150px;",
-             selectInput(ns("categoria"), NULL, 
+             selectInput(ns("categoria"), strong("Categoría:"), 
                          choices = unique(fuentes$categoria), #el contenido de los selectores viene de fuentes.csv
                          selected = sample(unique(fuentes$categoria), 1),
                          width = "100%"
              ),
              
-             selectInput(ns("variable"), NULL, 
+             selectInput(ns("variable"), strong("Variable:"), 
                          choices = NULL,
                          width = "100%"
                          # )
@@ -30,16 +30,23 @@ mapaUI <- function(id, fuentes) {
                             "border: 0px solid blue; padding: 0; padding-left: 10px; margin-left: auto; margin-right: 0;", #izquierdo
                             "border: 0px solid orange; padding: 0; padding-right: 10px; margin-right: auto; margin-left: 4px;" #derecho
              ),
-             div(style = "height: 80px; 
-                          display: flex; flex-direction: column; overflow: visible;",
-                 div(style = "margin-top: auto; font-size: 120%;", #alineado abajo
-                     textOutput(ns("titulo"))
+             
+             # título
+             div(style = "height: 80px; display: flex; flex-direction: column; overflow: visible;", #alinear texto abajo, para que si crece el texto, suba
+                 div(style = "margin-top: auto; font-size: 110%;", 
+                     # max-width: 500px; inline-size: 500px; overflow-wrap: break-word;",
+                     textOutput(ns("titulo"), inline = TRUE)
                  )
              ),
              
              div(style = "border: 0px solid white; margin: 0;", #margin-left: auto; padding-right: 0; margin-right: 0;",
-                 plotOutput(ns("mapa"))  |> withSpinner()
+                 girafeOutput(ns("mapa_interactivo")) |> withSpinner()
+             ),
+             # fuente
+             div(style = "font-size: 70%; text-align: right; opacity: 0.4;",
+               textOutput(ns("fuente"))
              )
+               
              # hr(),
              # div(style = "max-height: 300px; overflow-y: scroll;",
              #   gt_output(ns("tabla"))
@@ -51,7 +58,7 @@ mapaUI <- function(id, fuentes) {
 }
 
 
-mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, datos) {
+mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, datos, colores) {
   moduleServer(id = id, session = session,
                
                module = function(input, output, session) {
@@ -83,8 +90,13 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  output$titulo <- renderText(input$variable)
                  
                  # fuente
-                 output$fuente <- renderText(variable_fuente$fuente)
+                 output$fuente <- renderText({
+                   fuente <- fuentes |> filter(variable == input$variable) |> pull(fuente)
+                   fuente_2 <- paste("Fuente: ", str_wrap(fuente, 50))
+                   return(fuente_2)
+                 })
                  
+                 # datos ----
                  # une el mapa con los datos, si es que existen
                  mapa_datos <- reactive({
                    if (length(datos()) > 0) {
@@ -105,32 +117,50 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  })
                  
                  
-                 # generar mapa
-                 output$mapa <-  renderPlot({
+                 # mapa ----
+                 # output$mapa <- renderPlot({
+                 # output$mapa_interactivo <- renderGirafe({
+                 grafico <- reactive({
                    req(input$variable != "")
                    message("modulo: generando mapa")
                    
-                   # browser()
-                   variable_fuente <- fuentes |> filter(variable == input$variable)
+                   # metadatos de la variable (definido en fuentes.csv)
+                   variable_fuente <- fuentes |> filter(variable == input$variable) |> tibble()
                    
+                   # definir escala de la leyenda del gráfico en base al tipo de variable (definido en fuentes.csv)
+                   if (variable_fuente$tipo == "porcentaje") {
+                     escala = scales::percent
+                   } else if (variable_fuente$tipo == "numero decimal") {
+                     escala = scales::label_comma(accuracy = 0.1, decimal.mark = ",")
+                   } else {
+                     escala = scales::label_comma(accuracy = 1, big.mark = ".")
+                   }
+                   
+                   # gráfico base
                    p <- mapa_datos() |>
                      ggplot(aes(geometry = geometry))
                    
                    # colorizar fill si existe la variable
                    if ("variable" %in% names(mapa_datos())) {
                      p <- p +
-                       geom_sf(aes(fill = variable),
-                               color = "black")
+                       geom_sf_interactive(aes(fill = variable,
+                                               # texto de tooltip al posar cursor sobre una comuna
+                                               tooltip = paste0(comuna, ": ", 
+                                                                case_when(variable_fuente$tipo == "porcentaje" ~ scales::percent(variable, accuracy = 0.1),
+                                                                          variable_fuente$tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, decimal.mark = ","),
+                                                                          .default = scales::comma(variable, accuracy = 1, big.mark = ".")
+                                                                )), 
+                                               data_id = comuna),
+                               color = "black") +
+                       scale_fill_gradient(low = colores$texto,
+                                           high = colores$principal, 
+                                           na.value = colores$detalle,
+                                           labels = escala)
+
                    } else {
                      p <- p +
                        geom_sf(color = "black")
                    }
-                   
-                   # # título del gráfico
-                   # p <- p +
-                   #   labs(title = str_wrap(variable_fuente$variable, 45),
-                   #        caption = paste("Fuente:", str_wrap(variable_fuente$fuente, 60))
-                   #        )
                    
                    # tema general
                    p <- p +
@@ -147,9 +177,26 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    # si es celular, que sea arriba y abajo
                    
                    return(p)
-                 }, res = 90)
+                 })
                  
-                 # tabla ----
+                 # interactividad ----
+                 # gráfico interactivo con tooltip
+                 output$mapa_interactivo <- renderGirafe({
+                 girafe(ggobj = grafico(), 
+                        bg = colores$fondo,
+                        width_svg = 7,
+                        height_svg = 6,
+                        options = list(
+                          opts_toolbar(hidden = "selection", saveaspng = FALSE),
+                          opts_hover(css = paste0("fill: ", colores$principal, ";")),
+                          opts_tooltip(
+                            opacity = 0.8,
+                            css = paste0("background-color: ", colores$fondo, "; color: ", colores$texto, ";
+                               padding: 4px; max-width: 200px; border-radius: 4px; font-size: 80%;")) 
+                        ))
+                 })
+                 
+                 # tabla 
                  # tabla de diagnóstico
                  # output$tabla <- render_gt({
                  #   color_fondo = "#181818"

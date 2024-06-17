@@ -1,6 +1,7 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
+library(ggiraph)
 library(sf)
 library(thematic)
 library(bslib)
@@ -14,6 +15,7 @@ cut_comunas <- read.csv2("datos/comunas_chile_cut.csv")
 fuentes <- read.csv2("fuentes.csv") #manda el contenido de los selectores y la carga de sus datos
 regiones <- cut_comunas |> select(region, cut_region) |> distinct() |> tibble::deframe()
 
+# setwd("app")
 source("funciones.R")
 source("modulos.R")
 
@@ -25,6 +27,7 @@ color_fondo = "#181818"
 color_detalle = "#505050"
 color_texto = "white"
 color_principal = "#2AA198"
+colores <- list("fondo" = color_fondo, "detalle" = color_detalle, "texto" = color_texto, "principal" = color_principal)
 tema <- bs_theme(bg = color_fondo, fg = color_texto, primary = color_principal)
 options(spinner.type = 8, spinner.color = color_principal)
 
@@ -44,16 +47,22 @@ ui <- fluidPage(
   div(
     titlePanel(h1("Datos comunales comparados")),
     
-    p("Esta aplicación permite elegir dos variables de nivel comunal distintas para poder comparar visualmente las diferencias entre las comunas."),
+    div(markdown("[Bastián Olea Herrera](https://bastianolea.github.io/shiny_apps/)"), style = "opacity: 0.4;"),
     
-    p("Seleccione una región del país, y luego seleccione entre más de 90 variables de datos sociales, separadas en 10 categorías, abarcando temas como datos de salud, educación, ingreso, seguridad, delincuencia, urbanismo, y otros.")
+    markdown("Esta aplicación permite visualizar interactivamente las **diferencias y desigualdades territoriales** de Chile a través de mapas."),
+    
+    p("Seleccione una región del país, y luego elija dos variables para compararlas a nivel comunal. Por defecto, la aplicación le mostrará categorías y variables al azar, esperando que surja una relación interesante."),
+    
+    p("Puedes elegir entre más de 90 datos sociales, organizados en 10 categorías, que incluyen datos de salud, educación, ingresos, seguridad, delincuencia, urbanismo, y otros."),
+    
+    hr()
   ),
   
   fluidRow(
     column(12,
            
            # este selector afecta a todos los módulos
-           selectInput("region", label = NULL,
+           selectInput("region", label = strong("Elija una región:"),
                        choices = c("Santiago" = 99, regiones),
                        selected = c("Santiago" = 99),
                        width = "100%"),
@@ -76,8 +85,12 @@ ui <- fluidPage(
   # tabla ----
   fluidRow(
     column(12,
+           hr(),
            h4("Comparación de datos"),
+           
+           div(style = "max-height: 400px; overflow-y: scroll;",
            gt_output("tabla_comparativa") |> withSpinner()
+           )
     )
   ),
   
@@ -85,15 +98,11 @@ ui <- fluidPage(
   fluidRow(
     column(12, style = "opacity: 1; font-size: 80%;",
            hr(),
-           p("Diseñado y programado por",
-             tags$a("Bastián Olea Herrera.", target = "_blank", href = "https://bastian.olea.biz")),
-           p("Puedes explorar mis otras",
-             tags$a("aplicaciones interactivas sobre datos sociales aquí.",
-                    href = "https://bastianolea.github.io/shiny_apps/", target = "_blank")
-           ),
-           p("Código de fuente de esta app y del procesamiento de los datos",
-             tags$a("disponible en GitHub.", target = "_blank", href = "https://github.com/bastianolea/comparador_mapas_chile")
-           ),
+           markdown("Desarrollado y programado por [Bastián Olea Herrera.](https://bastian.olea.biz) en el lenguaje de programación estadístico R."),
+           
+           markdown("Puedes explorar mis otras [aplicaciones interactivas sobre datos sociales en mi portafolio.](https://bastianolea.github.io/shiny_apps/)"),
+           
+           markdown("Código de fuente de esta app y del procesamiento de los datos [disponible en el repositorio de GitHub.](https://github.com/bastianolea/comparador_mapas_chile)"),
            
            div(style = "height: 40px")
            
@@ -366,7 +375,8 @@ server <- function(input, output, session) {
              fuentes,
              variable_elegida = variable_elegida_1,
              # variable_fuente = variable_fuente_1,
-             datos = datos_1
+             datos = datos_1,
+             colores = colores
   )
   
   mapaServer("mapa_2",
@@ -376,7 +386,8 @@ server <- function(input, output, session) {
              fuentes,
              variable_elegida = variable_elegida_2,
              # variable_fuente = variable_fuente_2,
-             datos = datos_2
+             datos = datos_2,
+             colores = colores
   )
   
   
@@ -405,11 +416,27 @@ server <- function(input, output, session) {
         method = "numeric", 
         palette = c(color_fondo, color_detalle, color_principal),
       ) |> 
+      # decimales
       fmt_number(columns = starts_with("variable"),
                  sep_mark = ",",
                  drop_trailing_zeros = T, 
                  decimals = 2) |> 
-      tab_options(table.font.size = 10) |> 
+      # alineación
+      cols_align(align = "center",
+                 columns = starts_with("variable")) |>
+      #bordes de celdas
+      tab_style(
+        style = cell_borders(color = color_fondo, side = "right", weight = px(3), style = "solid"),
+        locations = cells_body()) |> 
+      #nombre de columnas
+      tab_style(style = cell_text(weight = "bold", size = px(12)),
+                locations = cells_column_labels(everything())
+      ) |> 
+      # primera columna
+      tab_style(style = cell_text(weight = "bold", size = px(12)),
+                locations = cells_body(column = "comuna")
+      ) |> 
+      tab_options(table.font.size = 11) |> 
       tab_options(table.font.color = color_texto, table.font.color.light = color_texto,
                   table_body.hlines.color = color_detalle,
                   table_body.vlines.color = color_detalle, 

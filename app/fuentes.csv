@@ -1,54 +1,56 @@
-categoria;proyecto;variable;objeto;;fuente
-Elecciones;plebiscito;Plebiscito 2022: apruebo;d_plebiscito_22_apruebo;;Servel, Resultados electorales históricos (2022)
-Elecciones;plebiscito;Plebiscito 2022: rechazo;d_plebiscito_22_rechazo;;Servel, Resultados electorales históricos (2022)
-Elecciones;plebiscito;Plebiscito 2023: en contra;d_plebiscito_23_encontra;;Servel, Resultados electorales históricos (2023)
-Elecciones;plebiscito;Plebiscito 2023: a favor;d_plebiscito_23_afavor;;Servel, Resultados electorales históricos (2023)
-Educación;paes;Promedio de notas de educación media;d_promedio_notas;;Ministerio de Educación, Centro de Estudios Mineduc (2024)
-Educación;paes;Puntaje PAES 2024 en la prueba de Competencia Lectora;d_paes_lectura;;Ministerio de Educación, Centro de Estudios Mineduc (2024)
-Educación;paes;Puntaje PAES 2024 en la prueba de Competencia Matemática 1;d_paes_mate1;;Ministerio de Educación, Centro de Estudios Mineduc (2024)
-Educación;paes;Puntaje PAES 2024 en la prueba de Competencia Matemática 2;d_paes_mate2;;Ministerio de Educación, Centro de Estudios Mineduc (2024)
-Educación;paes;Puntaje PAES 2024 en la prueba de Historia y Ciencias Sociales;d_paes_historia;;Ministerio de Educación, Centro de Estudios Mineduc (2024)
-Educación;paes;Puntaje PAES 2024 en la prueba de Ciencias;d_paes_ciencias;;Ministerio de Educación, Centro de Estudios Mineduc (2024)
-Urbanismo;sinim;Parques urbanos (metros²);d_sinim_1;;Sinim
-Urbanismo;sinim;Plazas existentes (metros²);d_sinim_2;;Sinim
-Urbanismo;sinim;Cantidad de plazas;d_sinim_3;;Sinim
-Urbanismo;sinim;Cantidad de parques urbanos;d_sinim_4;;Sinim
-Seguridad;sinim;Cantidad de cámaras de vigilancia;d_sinim_5;;Sinim
-Seguridad;sinim;Cantidad de guardias, inspectores o vigilantes municipales;d_sinim_6;;Sinim
-Seguridad;sinim;Cantidad de automóviles de seguridad municipal o patrullaje;d_sinim_7;;Sinim
-Seguridad;sinim;Cantidad de motos de seguridad municipal o patrullaje;d_sinim_8;;Sinim
-Urbanismo;sinim;Superficie de áreas verdes con mantenimiento (metros²);d_sinim_9;;Sinim
-Ingresos;sinim;Porcentaje de hogares con menos del 40% de ingresos respecto del total regional (RSH);d_sinim_10;;Sinim, Registro Social de Hogares
-Educación;sinim;Docentes de aula contratados;d_sinim_11;;Sinim, Ministerio de Educación
-Educación;sinim;Alumnos por docente de aula;d_sinim_12;;Sinim, Ministerio de Educación
-Educación;sinim;Cantidad de personal docente;d_sinim_13;;Sinim, Ministerio de Educación
-Educación;sinim;Establecimientos de Educación Municipal;d_sinim_14;;Sinim, Ministerio de Educación
-Economía;sinim;Monto percibido por Fondo Común Municipal;d_sinim_15;;Sinim
-Economía;sinim;Participación de Ingresos Propios Permanentes en el Ingreso Total del municipio;d_sinim_16;;Sinim
-Economía;sinim;Dependencia del Fondo Común Municipal sobre los Ingresos Propios del municipio;d_sinim_17;;Sinim
-Salud;sinim;Cantidad de Ambulancias;d_sinim_18;;Sinim
-Salud;sinim;Cantidad de CESFAM en la comuna;d_sinim_19;;Sinim
-Salud;sinim;Cantidad de COSAM en la comuna;d_sinim_20;;Sinim
-Salud;sinim;Cantidad de Consultorios (urbanos y rurales);d_sinim_21;;Sinim
-Salud;sinim;Cantidad de SAPU en la comuna;d_sinim_22;;Sinim
-Seguridad;cead;Cantidad de delitos denunciados (total anual);d_delinc_total_cantidad;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Delitos de mayor connotación social denunciados (total anual);d_delinc_mcs_cantidad;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Aumento de delitos anuales reportados respecto a 2 años atrás;d_delinc_total_aumento_2a;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Aumento de delitos anuales reportados respecto a 3 años atrás;d_delinc_total_aumento_3a;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Aumento de delitos anuales reportados respecto a 5 años atrás;d_delinc_total_aumento_5a;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportados respecto a 2 años atrás;d_delinc_mcs_aumento_2a;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportados respecto a 3 años atrás;d_delinc_mcs_aumento_3a;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportados respecto a 5 años atrás;d_delinc_mcs_aumento_5a;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+categoria;proyecto;variable;objeto;tipo;fuente
+Elecciones;plebiscito;Plebiscito 2022: apruebo;d_plebiscito_22_apruebo;porcentaje;Servel, Resultados electorales históricos (2022)
+Elecciones;plebiscito;Plebiscito 2022: rechazo;d_plebiscito_22_rechazo;porcentaje;Servel, Resultados electorales históricos (2022)
+Elecciones;plebiscito;Plebiscito 2023: en contra;d_plebiscito_23_encontra;porcentaje;Servel, Resultados electorales históricos (2023)
+Elecciones;plebiscito;Plebiscito 2023: a favor;d_plebiscito_23_afavor;porcentaje;Servel, Resultados electorales históricos (2023)
+Educación;paes;Promedio de notas de educación media;d_promedio_notas;numero decimal;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;paes;Puntaje PAES 2024 en la prueba de Competencia Lectora;d_paes_lectura;numero chico;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;paes;Puntaje PAES 2024 en la prueba de Competencia Matemática 1;d_paes_mate1;numero chico;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;paes;Puntaje PAES 2024 en la prueba de Competencia Matemática 2;d_paes_mate2;numero chico;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;paes;Puntaje PAES 2024 en la prueba de Historia y Ciencias Sociales;d_paes_historia;numero chico;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Educación;paes;Puntaje PAES 2024 en la prueba de Ciencias;d_paes_ciencias;numero chico;Ministerio de Educación, Centro de Estudios Mineduc (2024)
+Urbanismo;sinim;Parques urbanos (metros²);d_sinim_1;numero grande;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Urbanismo;sinim;Plazas existentes (metros²);d_sinim_2;numero grande;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Urbanismo;sinim;Cantidad de plazas;d_sinim_3;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Urbanismo;sinim;Cantidad de parques urbanos;d_sinim_4;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Seguridad;sinim;Cantidad de cámaras de vigilancia;d_sinim_5;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Seguridad;sinim;Cantidad de guardias, inspectores o vigilantes municipales;d_sinim_6;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Seguridad;sinim;Cantidad de automóviles de seguridad municipal o patrullaje;d_sinim_7;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Seguridad;sinim;Cantidad de motos de seguridad municipal o patrullaje;d_sinim_8;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Urbanismo;sinim;Superficie de áreas verdes con mantenimiento (metros²);d_sinim_9;numero grande;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Ingresos;sinim;Porcentaje de hogares con menos del 40% de ingresos respecto del total regional (RSH);d_sinim_10;porcentaje;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Registro Social de Hogares
+Educación;sinim;Docentes de aula contratados;d_sinim_11;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
+Educación;sinim;Alumnos por docente de aula;d_sinim_12;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
+Educación;sinim;Cantidad de personal docente;d_sinim_13;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
+Educación;sinim;Establecimientos de Educación Municipal;d_sinim_14;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
+Economía;sinim;Monto percibido por Fondo Común Municipal;d_sinim_15;numero grande;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Economía;sinim;Participación de Ingresos Propios Permanentes en el Ingreso Total del municipio;d_sinim_16;porcentaje;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Economía;sinim;Dependencia del Fondo Común Municipal sobre los Ingresos Propios del municipio;d_sinim_17;porcentaje;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Salud;sinim;Cantidad de Ambulancias;d_sinim_18;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Salud;sinim;Cantidad de CESFAM en la comuna;d_sinim_19;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Salud;sinim;Cantidad de COSAM en la comuna;d_sinim_20;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Salud;sinim;Cantidad de Consultorios (urbanos y rurales);d_sinim_21;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Salud;sinim;Cantidad de SAPU en la comuna;d_sinim_22;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
+Seguridad;cead;Cantidad de delitos denunciados (total anual);d_delinc_total_cantidad;numero chico;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Delitos de mayor connotación social denunciados (total anual);d_delinc_mcs_cantidad;numero chico;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Aumento de delitos anuales reportados respecto a 2 años atrás;d_delinc_total_aumento_2a;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Aumento de delitos anuales reportados respecto a 3 años atrás;d_delinc_total_aumento_3a;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Aumento de delitos anuales reportados respecto a 5 años atrás;d_delinc_total_aumento_5a;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportados respecto a 2 años atrás;d_delinc_mcs_aumento_2a;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportados respecto a 3 años atrás;d_delinc_mcs_aumento_3a;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportados respecto a 5 años atrás;d_delinc_mcs_aumento_5a;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
 Seguridad;cead;Porcentaje del total de delitos anuales denunciados que son de mayor connotación social;d_delinc_mcs_porcentaje;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Tasa de delitos denunciados anualmente por cada 1.000 habitantes;d_delinc_total_tasa;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Seguridad;cead;Tasa de delitos de mayor connotación social denunciados anualmente por cada 1.000 habitantes;d_delinc_mcs_tasa;;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Social;casen;Hogares en situación de hacinamiento (4 personas o más);casen_hacinamiento_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Seguridad;cead;Tasa de delitos denunciados anualmente por cada 1.000 habitantes;d_delinc_total_tasa;numero chico;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Seguridad;cead;Tasa de delitos de mayor connotación social denunciados anualmente por cada 1.000 habitantes;d_delinc_mcs_tasa;numero chico;Centro de Estudios y Análisis del Delito (CEAD) (2023)
+Social;casen;Hogares en situación de hacinamiento (4 personas o más);casen_hacinamiento_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Población;casen;Hogares con personas menores de 18 años;casen_men18c_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Población;casen;Hogares con personas mayores de 60 años;casen_may60c_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas propias;casen_vivienda_propia_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas arrendadas;casen_vivienda_arrendada_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Metros cuadrados aproximados de la vivienda;casen_v12mt;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas pequeñas (30m cuadrados o menos);casen_vivienda_pequeña_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Urbanismo;casen;Viviendas medianas (entre 30 y 100m cuadrados;casen_vivienda_mediana_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Urbanismo;casen;Viviendas grandes (más de 100m cuadrados);casen_vivienda_grande_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Hogares en sectores en mal estado;casen_sector_malo_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Hogares en sectores con mucho daño deliberado a la propiedad;casen_sector_dañado_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Hogares en zonas rurales;casen_rural_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
@@ -59,8 +61,8 @@ Ingresos;casen;Hogares con ingresos totales menores a la mediana ($1.110
 Ingresos;casen;Hogares con ingresos producto del trabajo menores a la mediana ($700.000);casen_ingreso_trabajo_hogar_menor_mediana_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingresos promedio;casen_ytotcor;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso ocupación principal;casen_yoprcor;numero grande;Casen (2022), Ministerio de Desarrollo Social
-Educación;casen;Años de escolaridad promedio;casen_esc;numero chico;Casen (2022), Ministerio de Desarrollo Social
-Población;casen;Edad promedio;casen_edad;numero chico;Casen (2022), Ministerio de Desarrollo Social
+Educación;casen;Años de escolaridad promedio;casen_esc;numero decimal;Casen (2022), Ministerio de Desarrollo Social
+Población;casen;Edad promedio;casen_edad;numero decimal;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso del trabajo;casen_ytrabajocor;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Jubilación o pensión de vejez;casen_y2803;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Decil autónomo regional;casen_dautr;numero grande;Casen (2022), Ministerio de Desarrollo Social
@@ -72,7 +74,7 @@ Ingresos;casen;Ingresos personales producto del trabajo menores a $1.000.
 Ingresos;casen;Ingresos promedio de los hogares;casen_ytotcorh;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso del trabajo del hogar;casen_ytrabajocorh;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso autónomo per cápita;casen_ypchautcor;numero grande;Casen (2022), Ministerio de Desarrollo Social
-Urbanismo;casen;Numero de personas en el hogar;casen_numper;numero chico;Casen (2022), Ministerio de Desarrollo Social
+Urbanismo;casen;Numero de personas en el hogar;casen_numper;numero decimal;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso total per cápita del hogar;casen_ypc;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Trabajo;casen;Trabajadores independientes;casen_independientes_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Trabajo;casen;Personas en situación laboral inactiva;casen_inactivos_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
