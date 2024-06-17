@@ -116,27 +116,39 @@ write.csv2(datos_delinc_mcs_tasa, "datos/delincuencia_mcs_tasa.csv")
 # población ----
 
 # población por años
-datos_poblac_años <- datos_poblac |> 
-  pivot_wider(names_from = año, values_from = población, names_prefix = "poblacion_")
+# datos_poblac_años <- datos_poblac |>
+#   pivot_wider(names_from = año, values_from = población, names_prefix = "poblacion_")
+
+# datos_poblac_2024 <- datos_poblac |> 
+#   filter(año == 2024)
+# 
+# datos_poblac_2017 <- datos_poblac |> 
+#   filter(año == 2017)
+# 
+# datos_poblac_2030 <- datos_poblac |> 
+#   filter(año == 2030)
+  
+write.csv2(datos_poblac, "datos/poblacion_chile_comunas.csv")
 
 # crecimiento poblacional
-datos_poblac_crecim <- datos_poblac_años |> 
-  mutate(pob_crecimiento_5a = poblacion_2023/poblacion_2019,
-         pob_crecimiento_10a = poblacion_2023/poblacion_2013,
-         pob_crecimiento_20a = poblacion_2023/poblacion_2003) |> 
+datos_poblac_crecim <- datos_poblac_años |>
+  mutate(pob_crecimiento_5a = poblacion_2024/poblacion_2019,
+         pob_crecimiento_10a = poblacion_2024/poblacion_2013,
+         pob_crecimiento_20a = poblacion_2024/poblacion_2003) |>
   select(1:6, matches("crecimiento"))
 
+write.csv2(datos_poblac_crecim, "datos/poblacion_chile_comunas_crecimiento.csv")
 
 # casen ----
 
-# casen viene sin cut_comunas
-casen <- read.csv2("datos/casen_comunas.csv") |> 
-  tibble() |> 
-  select(-region) |> 
-  left_join(cut_comunas, by = "comuna") |> 
-  relocate(cut_comuna, .after = comuna)
-
-write.csv2(casen, "datos/casen_comunas.csv")
+# # casen viene sin cut_comunas
+# casen <- read.csv2("datos/casen_comunas.csv") |> 
+#   tibble() |> 
+#   select(-region) |> 
+#   left_join(cut_comunas, by = "comuna") |> 
+#   relocate(cut_comuna, .after = comuna)
+# 
+# write.csv2(casen, "datos/casen_comunas.csv")
 
 # variables_casen <- list(
 #   "Viviendas" = c(

@@ -1,4 +1,10 @@
 categoria;proyecto;variable;objeto;tipo;fuente
+Población;censo;Población total al año 2017;d_poblacion_2017;numero grande;Instituto Nacional de Estadísticas (INE)
+Población;censo;Población total al año 2024;d_poblacion_2024;numero grande;Instituto Nacional de Estadísticas (INE)
+Población;censo;Población proyectada al año 2030;d_poblacion_2030;numero grande;Instituto Nacional de Estadísticas (INE)
+Población;censo;Aumento de población en 2024 respecto a 5 años atrás;d_poblacion_aumento_5a;porcentaje;Instituto Nacional de Estadísticas (INE)
+Población;censo;Aumento de población en 2024 respecto a 10 años atrás;d_poblacion_aumento_10a;porcentaje;Instituto Nacional de Estadísticas (INE)
+Población;censo;Aumento de población en 2024 respecto a 20 años atrás;d_poblacion_aumento_20a;porcentaje;Instituto Nacional de Estadísticas (INE)
 Elecciones;plebiscito;Plebiscito 2022: apruebo;d_plebiscito_22_apruebo;porcentaje;Servel, Resultados electorales históricos (2022)
 Elecciones;plebiscito;Plebiscito 2022: rechazo;d_plebiscito_22_rechazo;porcentaje;Servel, Resultados electorales históricos (2022)
 Elecciones;plebiscito;Plebiscito 2023: en contra;d_plebiscito_23_encontra;porcentaje;Servel, Resultados electorales históricos (2023)
@@ -20,7 +26,7 @@ Seguridad;sinim;Cantidad de motos de seguridad municipal o patrullaje;d_sinim_8;
 Urbanismo;sinim;Superficie de áreas verdes con mantenimiento (metros²);d_sinim_9;numero grande;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
 Ingresos;sinim;Porcentaje de hogares con menos del 40% de ingresos respecto del total regional (RSH);d_sinim_10;porcentaje;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Registro Social de Hogares
 Educación;sinim;Docentes de aula contratados;d_sinim_11;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
-Educación;sinim;Alumnos por docente de aula;d_sinim_12;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
+Educación;sinim;Alumnos por docente de aula;d_sinim_12;numero decimal;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
 Educación;sinim;Cantidad de personal docente;d_sinim_13;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
 Educación;sinim;Establecimientos de Educación Municipal;d_sinim_14;numero chico;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023), Ministerio de Educación
 Economía;sinim;Monto percibido por Fondo Común Municipal;d_sinim_15;numero grande;Subsecretaría de Desarrollo Regional y Administrativo, Sistema Nacional de Información Municipal (Sinim) (2023)
@@ -47,7 +53,7 @@ Población;casen;Hogares con personas menores de 18 años;casen_men18c_p;p
 Población;casen;Hogares con personas mayores de 60 años;casen_may60c_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas propias;casen_vivienda_propia_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas arrendadas;casen_vivienda_arrendada_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
-Urbanismo;casen;Metros cuadrados aproximados de la vivienda;casen_v12mt;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Urbanismo;casen;Metros cuadrados aproximados de la vivienda;casen_v12mt;numero chico;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas pequeñas (30m cuadrados o menos);casen_vivienda_pequeña_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas medianas (entre 30 y 100m cuadrados;casen_vivienda_mediana_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas grandes (más de 100m cuadrados);casen_vivienda_grande_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social

@@ -125,17 +125,11 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    message("modulo: generando mapa")
                    
                    # metadatos de la variable (definido en fuentes.csv)
-                   variable_fuente <- fuentes |> filter(variable == input$variable) |> tibble()
+                   variable_fuente <- fuentes |> filter(variable == input$variable)
                    
                    ## escalas ----
                    # definir escala de la leyenda del gráfico en base al tipo de variable (definido en fuentes.csv)
-                   if (variable_fuente$tipo == "porcentaje") {
-                     escala = scales::percent
-                   } else if (variable_fuente$tipo == "numero decimal") {
-                     escala = scales::label_comma(accuracy = 0.1, decimal.mark = ",")
-                   } else {
-                     escala = scales::label_comma(accuracy = 1, big.mark = ".")
-                   }
+                   escala = elegir_escala(variable_fuente$tipo)
                    
                    ## colores ----
                    # unique(fuentes$categoria)
@@ -151,11 +145,12 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                      p <- p +
                        geom_sf_interactive(aes(fill = variable,
                                                # texto de tooltip al posar cursor sobre una comuna
-                                               tooltip = paste0(comuna, ": ", 
-                                                                case_when(variable_fuente$tipo == "porcentaje" ~ scales::percent(variable, accuracy = 0.1),
-                                                                          variable_fuente$tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, decimal.mark = ","),
-                                                                          .default = scales::comma(variable, accuracy = 1, big.mark = ".")
-                                                                )), 
+                                               # tooltip = paste0(comuna, ": ", 
+                                               #                  case_when(variable_fuente$tipo == "porcentaje" ~ scales::percent(variable, accuracy = 0.1),
+                                               #                            variable_fuente$tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, decimal.mark = ","),
+                                               #                            .default = scales::comma(variable, accuracy = 1, big.mark = ".")
+                                               #                  )), 
+                                               tooltip = paste0(comuna, ": ", formatear_escala(variable, variable_fuente$tipo)),
                                                data_id = comuna),
                                color = "black") +
                        scale_fill_gradient(low = colores$texto,

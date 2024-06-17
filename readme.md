@@ -39,6 +39,8 @@ El aspecto de los datos de la aplicación son controlados por una [planilla llam
 
 **Estadísticas socioeconómicas:** Encuesta CASEN 2022, datos procesados en el repositorio [`casen_relacionador`](https://github.com/bastianolea/casen_relacionador), y también disponibles en detalle como aplicación web: [Relacionador Casen](https://bastianoleah.shinyapps.io/casen_relacionador)
 
+**Población y proyecciones:** INE, datos procesados en el repositorio [`censo_proyecciones_poblacion`](https://github.com/bastianolea/censo_proyecciones_poblacion), y también disponibles en detalle como aplicación web: [Censo de población: proyecciones](https://bastianoleah.shinyapps.io/censo_proyecciones/)
+
 
 ## Pendientes
 

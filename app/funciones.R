@@ -50,3 +50,23 @@ casen_variable <- function(casen, variable_elegida) {
   return(casen_filtrada)
 }
 
+
+# recibe tipo, y devuelve función de formateo
+elegir_escala <- function(tipo = variable_fuente$tipo) {
+  if (tipo == "porcentaje") {
+    escala = scales::percent
+  } else if (tipo == "numero decimal") {
+    escala = scales::label_comma(accuracy = 0.1, decimal.mark = ",")
+  } else {
+    escala = scales::label_comma(accuracy = 1, big.mark = ".")
+  }
+  return(escala)
+}
+
+# recibe numero y tipo, retorna numero formateado
+formatear_escala <- function(variable, tipo) {
+  case_when(tipo == "porcentaje" ~ scales::percent(variable, accuracy = 0.1),
+            tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, decimal.mark = ","),
+            .default = scales::comma(variable, accuracy = 1, big.mark = ".")
+  )
+}

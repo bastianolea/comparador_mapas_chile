@@ -83,6 +83,19 @@ ui <- fluidPage(
     )
   ),
   
+  # gráfico dispersión ----
+  fluidRow(
+    column(12,
+           hr(),
+           h4("Relación entre datos"),
+           
+           div(style = "max-width: 700px; margin-left: auto; margin-right: auto;",
+               girafeOutput("grafico_dispersion") |> withSpinner()
+           )
+    )
+  ),
+  
+  
   # tabla ----
   fluidRow(
     column(12,
@@ -153,7 +166,7 @@ server <- function(input, output, session) {
     readRDS("mapas/mapas_regiones.rds")
   })
   
-  region <- reactive(input$region)
+  region <- reactive(as.numeric(input$region))
   
   
   ## selector de mapas ----
@@ -163,7 +176,9 @@ server <- function(input, output, session) {
     if (region() == 99) {
       return(mapa_urbano_rm())
     } else {
-      return(mapas_regiones()[[as.numeric(region())]])
+      # elegir región filtrando la lista
+      mapa_region <- mapas_regiones()[[region()]]
+      return(mapa_region)
     }
   }) |> 
     bindEvent(region())
@@ -176,7 +191,8 @@ server <- function(input, output, session) {
   ## datos individuales ----
   # cada uno de estos reactives carga una fuente de datos distinta,
   # que corresponde a una variable del selector de variables
-  # para agregar una al selector de variables, de categorias y al mecanismo que los carga, hay que editar fuentes.R
+  # para agregar una al selector de variables, de categorias y al mecanismo que los carga, hay que editar fuentes.csv
+  # en fuentes.csv hay una columna que son los nombres de los objetos que se hacen a continuación, y que son cargados por el cargador de datos
   
   d_plebiscito_22 <- reactive({
     readr::read_csv2("datos/resultados_plebiscito_2022_comuna.csv", show_col_types = F) |> 
@@ -215,6 +231,19 @@ server <- function(input, output, session) {
       filter(tolower(opciones) == "a favor") |> 
       mutate(variable = porcentaje)
   })
+  
+  
+  ### población ----
+  d_poblacion <- reactive(read.csv2("datos/poblacion_chile_comunas.csv"))
+  d_poblacion_aumento <- reactive(read.csv2("datos/poblacion_chile_comunas_crecimiento.csv"))
+  
+  d_poblacion_2017 <- reactive(d_poblacion() |> filter(año == 2017) |> rename(variable = población))
+  d_poblacion_2024 <- reactive(d_poblacion() |> filter(año == 2024) |> rename(variable = población))
+  d_poblacion_2030 <- reactive(d_poblacion() |> filter(año == 2030) |> rename(variable = población))
+  
+  d_poblacion_aumento_5a <- reactive(d_poblacion_aumento() |> rename(variable = pob_crecimiento_5a))
+  d_poblacion_aumento_10a <- reactive(d_poblacion_aumento() |> rename(variable = pob_crecimiento_10a))
+  d_poblacion_aumento_20a <- reactive(d_poblacion_aumento() |> rename(variable = pob_crecimiento_20a))
   
   
   ### sinim ----
@@ -391,10 +420,8 @@ server <- function(input, output, session) {
              colores = colores
   )
   
-  
-  # tabla comparativa ----
-  
-  output$tabla_comparativa <- render_gt({
+  # une las dos variables elegidas en un dataframe
+  datos_unidos <- reactive({
     req(variable_elegida_1() != "",
         variable_elegida_2() != "")
     
@@ -402,7 +429,7 @@ server <- function(input, output, session) {
     dato_2 <- datos_2() |> select(cut_comuna, variable_2 = variable) |> mutate(cut_comuna = as.numeric(cut_comuna))
     
     datos <- left_join(dato_1,
-              dato_2, by = "cut_comuna")
+                       dato_2, by = "cut_comuna")
     
     datos_2 <- datos |> 
       left_join(cut_comunas, by = "cut_comuna") |> 
@@ -410,7 +437,71 @@ server <- function(input, output, session) {
       ungroup() |> 
       select(comuna, starts_with("variable"))
     
-    datos_2 |> 
+    return(datos_2)
+  })
+  
+  
+  
+  # gráfico dispersión ----
+  
+  grafico_dispersion <- reactive({
+    req(nrow(datos_unidos() > 1))
+    
+    plot <- datos_unidos() |> 
+      ggplot(aes(x = variable_1, y = variable_2)) +
+      stat_smooth(method = "lm", 
+                  se = TRUE, fullrange = TRUE, 
+                  alpha = .1, color = colores$detalle) +
+      # geom_point(color = colores$principal,
+      #            size = 3, alpha = .8) +
+      geom_point_interactive(color = colores$principal,
+                             size = 3.5, alpha = .8,
+                             aes(
+                              # texto de tooltip al posar cursor sobre una comuna
+                               tooltip = paste0(comuna, ":\n", 
+                                                "y: ", formatear_escala(variable_2, variable_fuente_1()$tipo), "\n", 
+                                                "x: ", formatear_escala(variable_1, variable_fuente_2()$tipo)
+                               ),
+                               data_id = comuna)) +
+      # escalas
+      scale_x_continuous(labels = elegir_escala(variable_fuente_1()$tipo), expand = c(0, 0)) +
+      scale_y_continuous(labels = elegir_escala(variable_fuente_2()$tipo), expand = c(0, 0)) +
+      coord_cartesian(clip = "off") +
+      # textos
+      labs(x = variable_elegida_1() |> str_wrap(70),
+           y = variable_elegida_2() |> str_wrap(45), 
+           caption = paste("Fuentes:", 
+                           variable_fuente_1()$fuente |> str_wrap(90), "\n",
+                           variable_fuente_2()$fuente |> str_wrap(90))) +
+      theme(plot.caption = element_text(color = "#707070", size = 10, margin = margin(t = 10)),
+            axis.title.y = element_text(margin = margin(r = 7)),
+            axis.title.x = element_text(margin = margin(t = 6)),
+            axis.ticks = element_blank())
+    return(plot)
+  })
+  
+  # gráfico interactivo con tooltip
+  output$grafico_dispersion <- renderGirafe({
+    girafe(ggobj = grafico_dispersion(), 
+           bg = colores$fondo,
+           width_svg = 8,
+           height_svg = 7,
+           options = list(
+             opts_sizing(rescale = TRUE),
+             opts_toolbar(hidden = "selection", saveaspng = FALSE),
+             opts_hover(css = paste0("fill: ", colores$principal, ";")),
+             opts_tooltip(
+               opacity = 0.8,
+               css = paste0("background-color: ", colores$fondo, "; color: ", colores$texto, ";
+                               padding: 4px; max-width: 200px; border-radius: 4px; font-size: 80%;")) 
+           ))
+  })
+  
+  # tabla comparativa ----
+  output$tabla_comparativa <- render_gt({
+    req(nrow(datos_unidos() > 1))
+    
+    datos_unidos() |> 
       arrange(desc(variable_1)) |> 
       gt() |> 
       data_color(
