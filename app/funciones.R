@@ -67,6 +67,7 @@ elegir_escala <- function(tipo = variable_fuente$tipo) {
 formatear_escala <- function(variable, tipo) {
   case_when(tipo == "porcentaje" ~ scales::percent(variable, accuracy = 0.1),
             tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, decimal.mark = ","),
+            tipo == "numero grande" ~ scales::comma(variable, accuracy = 1, big.mark = "."),
             .default = scales::comma(variable, accuracy = 1, big.mark = ".")
   )
 }

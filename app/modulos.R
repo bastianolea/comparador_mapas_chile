@@ -163,17 +163,15 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                        geom_sf(color = "black")
                    }
                    
-                   # tema general
+                   # temas ----
                    p <- p +
                      theme_void(base_family = "sans") +
                      theme(legend.title = element_blank()) +
                      theme(legend.key.width = unit(3, "mm"),
-                           legend.key = element_rect(colour = colores$texto)) +
+                           legend.key = element_rect(colour = colores$texto),
+                           legend.ticks = element_line(colour = colores$fondo),
+                           legend.ticks.length = unit(3, "mm")) +
                      theme(text = element_text(colour = colores$texto)) +
-                   #   theme(plot.title.position = "plot", 
-                   #         legend.title = element_blank(), 
-                   #         legend.key.width = unit(3, "mm")
-                   #         ) +
                      theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
                      theme(plot.background = colores$fondo,
                            panel.background = colores$fondo)

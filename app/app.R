@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(ggiraph)
 library(sf)
-library(thematic)
+# library(thematic)
 library(bslib)
 library(stringr)
 library(shinyjs)
@@ -21,7 +21,7 @@ source("modulos.R")
 
 
 # tema ----
-thematic_shiny()
+# thematic_shiny()
 color_fondo = "#181818"
 color_detalle = "#505050"
 color_texto = "white"
@@ -30,15 +30,10 @@ colores <- list("fondo" = color_fondo, "detalle" = color_detalle, "texto" = colo
 tema <- bs_theme(bg = color_fondo, fg = color_texto, primary = color_principal)
 options(spinner.type = 8, spinner.color = color_principal)
 
-# css ----
-# tags$head(
-#   tags$style(HTML(".selectize-input {
-# max-height: 20px !important;
-# overflow-y: hidden !important;
-# }")))
-
 
 ui <- fluidPage(
+  title = "Datos comunales comparados", 
+  lang = "es",
   theme = tema,
   shinyjs::useShinyjs(),
   
@@ -103,7 +98,7 @@ ui <- fluidPage(
            h4("Comparación de datos"),
            
            div(style = "max-height: 400px; overflow-y: scroll;",
-           gt_output("tabla_comparativa") |> withSpinner()
+               gt_output("tabla_comparativa") |> withSpinner()
            )
     )
   ),
@@ -112,11 +107,11 @@ ui <- fluidPage(
   fluidRow(
     column(12, style = "opacity: 1; font-size: 80%;",
            hr(),
-           markdown("Desarrollado y programado por [Bastián Olea Herrera.](https://bastian.olea.biz) en el lenguaje de programación estadístico R."),
+           markdown("Desarrollado y programado por [Bastián Olea Herrera,](https://bastian.olea.biz) usando el lenguaje de programación estadístico R."),
            
            markdown("Puedes explorar mis otras [aplicaciones interactivas sobre datos sociales en mi portafolio.](https://bastianolea.github.io/shiny_apps/)"),
            
-           markdown("Código de fuente de esta app y del procesamiento de los datos [disponible en el repositorio de GitHub.](https://github.com/bastianolea/comparador_mapas_chile)"),
+           markdown("Datos, código de fuente de esta app, y código del procesamiento de los datos [disponible en el repositorio de GitHub.](https://github.com/bastianolea/comparador_mapas_chile)"),
            
            div(style = "height: 40px")
            
@@ -446,8 +441,10 @@ server <- function(input, output, session) {
   
   grafico_dispersion <- reactive({
     req(nrow(datos_unidos() > 1))
+    # browser()
     
     plot <- datos_unidos() |> 
+      # mutate(variable_1_etiqueta = formatear_escala(variable_2, variable_fuente_1()$tipo))
       ggplot(aes(x = variable_1, y = variable_2)) +
       stat_smooth(method = "lm", 
                   se = TRUE, fullrange = TRUE, 
@@ -457,10 +454,10 @@ server <- function(input, output, session) {
       geom_point_interactive(color = colores$principal,
                              size = 3.5, alpha = .8,
                              aes(
-                              # texto de tooltip al posar cursor sobre una comuna
+                               # texto de tooltip al posar cursor sobre una comuna
                                tooltip = paste0(comuna, ":\n", 
-                                                "y: ", formatear_escala(variable_2, variable_fuente_1()$tipo), "\n", 
-                                                "x: ", formatear_escala(variable_1, variable_fuente_2()$tipo)
+                                                "Vertical: ", formatear_escala(variable_2, variable_fuente_2()$tipo), "\n", 
+                                                "Horizontal: ", formatear_escala(variable_1, variable_fuente_1()$tipo)
                                ),
                                data_id = comuna)) +
       # escalas
@@ -470,13 +467,19 @@ server <- function(input, output, session) {
       # textos
       labs(x = variable_elegida_1() |> str_wrap(70),
            y = variable_elegida_2() |> str_wrap(45), 
-           caption = paste("Fuentes:", 
-                           variable_fuente_1()$fuente |> str_wrap(90), "\n",
-                           variable_fuente_2()$fuente |> str_wrap(90))) +
+           caption = paste0("Fuentes: ", 
+                            "Horizontal: ", variable_fuente_1()$fuente |> str_wrap(90), "\n",
+                            "Vertical: ", variable_fuente_2()$fuente |> str_wrap(90))) +
       theme(plot.caption = element_text(color = "#707070", size = 10, margin = margin(t = 10)),
             axis.title.y = element_text(margin = margin(r = 7)),
             axis.title.x = element_text(margin = margin(t = 6)),
-            axis.ticks = element_blank())
+            axis.ticks = element_blank()) +
+      theme(text = element_text(colour = colores$texto),
+            axis.text = element_text(colour = "#808080")) +
+      theme(plot.background = element_rect(fill = colores$fondo, colour = colores$fondo, linewidth = 0),
+            panel.background = element_rect(fill = "#252525"),
+            panel.grid = element_line(colour = colores$fondo)
+      )
     return(plot)
   })
   
