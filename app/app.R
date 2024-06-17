@@ -22,7 +22,6 @@ source("modulos.R")
 
 # tema ----
 thematic_shiny()
-theme_set(theme_void())
 color_fondo = "#181818"
 color_detalle = "#505050"
 color_texto = "white"
@@ -42,6 +41,8 @@ options(spinner.type = 8, spinner.color = color_principal)
 ui <- fluidPage(
   theme = tema,
   shinyjs::useShinyjs(),
+  
+  tags$head(tags$style(type="text/css", "text {font-family: sans-serif}")), #corregir tipografía de ggiraph
   
   # header ----
   div(

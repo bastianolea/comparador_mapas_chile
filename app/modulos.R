@@ -27,7 +27,7 @@ mapaUI <- function(id, fuentes) {
     fluidRow(
       column(12, #align = "right",
              style = ifelse(id == "mapa_1",
-                            "border: 0px solid blue; padding: 0; padding-left: 10px; margin-left: auto; margin-right: 0;", #izquierdo
+                            "border: 0px solid blue; padding: 0; padding-left: 10px; margin-left: auto; margin-right: 4px;", #izquierdo
                             "border: 0px solid orange; padding: 0; padding-right: 10px; margin-right: auto; margin-left: 4px;" #derecho
              ),
              
@@ -127,6 +127,7 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    # metadatos de la variable (definido en fuentes.csv)
                    variable_fuente <- fuentes |> filter(variable == input$variable) |> tibble()
                    
+                   ## escalas ----
                    # definir escala de la leyenda del gráfico en base al tipo de variable (definido en fuentes.csv)
                    if (variable_fuente$tipo == "porcentaje") {
                      escala = scales::percent
@@ -136,7 +137,12 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                      escala = scales::label_comma(accuracy = 1, big.mark = ".")
                    }
                    
-                   # gráfico base
+                   ## colores ----
+                   # unique(fuentes$categoria)
+                   # color_alto <- case_when(input$categoria == "Elecciones" ~ colores$principal,
+                   #                         input$categoria == "Elecciones" ~ colores$principal,
+                     
+                   # gráfico base ----
                    p <- mapa_datos() |>
                      ggplot(aes(geometry = geometry))
                    
@@ -164,9 +170,18 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    
                    # tema general
                    p <- p +
-                     theme(plot.title.position = "plot", 
-                           legend.title = element_blank(), legend.key.width = unit(3, "mm")) +
+                     theme_void(base_family = "sans") +
+                     theme(legend.title = element_blank()) +
+                     theme(legend.key.width = unit(3, "mm"),
+                           legend.key = element_rect(colour = colores$texto)) +
+                     theme(text = element_text(colour = colores$texto)) +
+                   #   theme(plot.title.position = "plot", 
+                   #         legend.title = element_blank(), 
+                   #         legend.key.width = unit(3, "mm")
+                   #         ) +
                      theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+                     theme(plot.background = colores$fondo,
+                           panel.background = colores$fondo)
                    
                    # barra a la izquierda si es el de la izquierda
                    if (id == "mapa_1") {
@@ -187,6 +202,7 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                         width_svg = 7,
                         height_svg = 6,
                         options = list(
+                          opts_sizing(rescale = TRUE),
                           opts_toolbar(hidden = "selection", saveaspng = FALSE),
                           opts_hover(css = paste0("fill: ", colores$principal, ";")),
                           opts_tooltip(
