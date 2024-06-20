@@ -7,9 +7,7 @@ mapaUI <- function(id, fuentes) {
   
   tagList(
     fluidRow(
-      column(12, #style = "max-width: 600px;",
-             
-             # div(style = "height: 150px;",
+      column(12, 
              selectInput(ns("categoria"), strong("Categoría:"), 
                          choices = unique(fuentes$categoria), #el contenido de los selectores viene de fuentes.csv
                          selected = sample(unique(fuentes$categoria), 1),
@@ -22,6 +20,10 @@ mapaUI <- function(id, fuentes) {
                          # )
              ),
              
+             div(style = "margin-bottom: 4px;",
+             actionButton(ns("aleatorio"), label = "variable al azar")
+             )
+             
       )
     ),
     fluidRow(
@@ -32,9 +34,9 @@ mapaUI <- function(id, fuentes) {
              ),
              
              # título
-             div(style = "height: 80px; display: flex; flex-direction: column; overflow: visible;", #alinear texto abajo, para que si crece el texto, suba
+             #alinear texto abajo, para que si crece el texto, suba
+             div(style = "height: 90px; display: flex; flex-direction: column; overflow: visible;", 
                  div(style = "margin-top: auto; font-size: 110%;", 
-                     # max-width: 500px; inline-size: 500px; overflow-wrap: break-word;",
                      textOutput(ns("titulo"), inline = TRUE)
                  )
              ),
@@ -63,14 +65,12 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                
                module = function(input, output, session) {
                  
+                 # al elegir una categoría, actualiza el selector de variables para que sean las de la categoría, y elige una variable al azar
                  # cambiar el selector de variables en base a la categoría elegida
                  observeEvent(input$categoria, {
-                   # browser()
                    variables_categoria <- fuentes |> filter(categoria == input$categoria) |> pull(variable) #variables de la categoría elegida
-                   # variables_categoria <- variable_fuente()$variable
                    
                    if (length(variables_categoria) > 0) {
-                     # browser()
                      updateSelectInput(session, "variable", 
                                        choices = variables_categoria,
                                        selected = sample(variables_categoria, 1)
@@ -78,9 +78,14 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    } else {
                      updateSelectInput(session, "variable", choices = paste("preguntas", input$categoria))
                    }
-                   
-                   
-                   
+                 })
+                 
+                 # variable al azar
+                 observeEvent(input$aleatorio, {
+                   # cambia el selector de categorías, y ese por defecto elige una variable al azar
+                   updateSelectInput(session, "categoria", 
+                                     selected = sample(unique(fuentes$categoria), 1)
+                   )
                  })
                  
                  # sacar la variable elegida al valor reactivo correspondiente (variable_elegida_1 o variable_elegida_2)
@@ -147,8 +152,8 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                                                # texto de tooltip al posar cursor sobre una comuna
                                                tooltip = paste0(nombre_comuna, ": ", formatear_escala(variable, variable_fuente$tipo)),
                                                data_id = nombre_comuna),
-                               color = "black") +
-                       scale_fill_gradient(low = colores$texto,
+                               color = colores$fondo, linewidth = 0.7) +
+                       scale_fill_gradient(low = colores$texto, #colores$fondo, 
                                            high = colores$principal, 
                                            na.value = colores$detalle,
                                            labels = escala)

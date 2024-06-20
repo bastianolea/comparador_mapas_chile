@@ -39,6 +39,26 @@ ui <- fluidPage(
   
   tags$head(tags$style(type="text/css", "text {font-family: sans-serif}")), #corregir tipografía de ggiraph
   
+  
+  #botones, botones hover
+  tags$style(paste0("
+    .action-button {
+    font-size: 75%; padding: 3px; padding-left: 8px; padding-right: 8px;
+    color: ", colores$detalle, "; 
+    border: 1px solid", colores$detalle, ";
+    }
+    .action-button:hover, .action-button:active, .action-button:focus {
+    color: ", colores$fondo, "; 
+    border: 1px solid", colores$principal, ";
+    background-color: ", colores$principal, ";
+    }")),
+  
+  tags$style(paste0("
+    .selectize-input {
+    background-color: ", "#252525", " !important;
+    }")),
+  
+  
   # header ----
   div(
     titlePanel(h1("Datos comunales comparados")),
@@ -174,7 +194,7 @@ server <- function(input, output, session) {
       return(mapa_urbano_rm())
     } else {
       # elegir región filtrando la lista
-      mapa_region <- mapas_regiones()[[input$region]]
+      mapa_region <- mapas_regiones()[[as.numeric(input$region)]]
       return(mapa_region)
     }
   }) |> 
