@@ -2,11 +2,11 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 library(ggiraph)
-library(sf)
+library(sf) |> suppressPackageStartupMessages()
 # library(thematic)
 library(bslib)
 library(stringr)
-library(shinyjs)
+library(shinyjs) |> suppressPackageStartupMessages()
 library(gt)
 library(shinycssloaders)
 
@@ -161,23 +161,34 @@ server <- function(input, output, session) {
     readRDS("mapas/mapas_regiones.rds")
   })
   
-  region <- reactive(as.numeric(input$region))
+  
   
   
   ## selector de mapas ----
+  # si la región elegida es el gran santiago, pasa como 99 y elige el mapa específico;
+  # de lo contrario, simplemente carga el mapa de la región correspondiente
   mapa <- reactive({
-    message("mapa region ", region())
+    message("mapa region ", input$region)
     
-    if (region() == 99) {
+    if (input$region == 99) {
       return(mapa_urbano_rm())
     } else {
       # elegir región filtrando la lista
-      mapa_region <- mapas_regiones()[[region()]]
+      mapa_region <- mapas_regiones()[[input$region]]
       return(mapa_region)
     }
   }) |> 
-    bindEvent(region())
+    bindEvent(input$region)
   
+  
+  # input region, pero considerando al gran santiago como region 13 en vez de 99
+  region <- reactive({
+    region <- as.numeric(input$region)
+    
+    region_2 <- ifelse(region == 99, 13, region)
+    
+    return(region_2)
+  })
   
   
   
@@ -338,6 +349,30 @@ server <- function(input, output, session) {
   d_casen <- reactive(read.csv2("datos/casen_comunas.csv"))
   
   
+  ### cuarteles carabineros ----
+  
+  d_cuarteles_carabineros <- reactive(read.csv2("datos/cuarteles_carabineros_itrend.csv"))
+  
+  d_cuarteles_carabineros_region <- reactive(d_cuarteles_carabineros() |> filter(cut_region == region()))
+  
+  d_cuarteles_carabineros_total <- reactive({
+    d_cuarteles_carabineros_region() |> 
+      group_by(cut_comuna) |> 
+      summarize(variable = sum(n))
+  })
+  
+  d_cuarteles_carabineros_comisaria <- reactive({
+    d_cuarteles_carabineros_region() |> 
+      filter(tipo == "Comisaria") |> 
+      rename(variable = n)
+  })
+  
+  d_cuarteles_carabineros_reten <- reactive({
+    d_cuarteles_carabineros_region() |> 
+      filter(tipo == "Reten") |> 
+      rename(variable = n)
+  })
+  
   
   ## cargador de datos ----
   datos_1 <- eventReactive(variable_elegida_1(), {
@@ -351,6 +386,7 @@ server <- function(input, output, session) {
     objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
     
     # cargar el objeto a partir del nombre de variable cruzado con lo que indica fuentes.csv
+    # si es de casen, el proceso es levemente distinto
     if (variable_fuente$proyecto == "casen") {
       objeto_reactive <- casen_variable(d_casen(), variable_fuente$objeto) |> tibble()
       
@@ -428,7 +464,7 @@ server <- function(input, output, session) {
     
     datos_2 <- datos |> 
       left_join(cut_comunas, by = "cut_comuna") |> 
-      filter(cut_region == ifelse(input$region == 99, 13, input$region)) |>
+      filter(cut_region == region()) |>
       ungroup() |> 
       select(comuna, starts_with("variable"))
     

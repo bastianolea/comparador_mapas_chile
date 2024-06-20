@@ -48,7 +48,7 @@ Seguridad;cead;Aumento de delitos de mayor connotación social anuales reportado
 Seguridad;cead;Porcentaje del total de delitos anuales denunciados que son de mayor connotación social;d_delinc_mcs_porcentaje;porcentaje;Centro de Estudios y Análisis del Delito (CEAD) (2023)
 Seguridad;cead;Tasa de delitos denunciados anualmente por cada 1.000 habitantes;d_delinc_total_tasa;numero chico;Centro de Estudios y Análisis del Delito (CEAD) (2023)
 Seguridad;cead;Tasa de delitos de mayor connotación social denunciados anualmente por cada 1.000 habitantes;d_delinc_mcs_tasa;numero chico;Centro de Estudios y Análisis del Delito (CEAD) (2023)
-Social;casen;Hogares en situación de hacinamiento (4 personas o más);casen_hacinamiento_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Urbanismo;casen;Hogares en situación de hacinamiento (4 personas o más);casen_hacinamiento_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Población;casen;Hogares con personas menores de 18 años;casen_men18c_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Población;casen;Hogares con personas mayores de 60 años;casen_may60c_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Urbanismo;casen;Viviendas propias;casen_vivienda_propia_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
@@ -80,7 +80,7 @@ Ingresos;casen;Ingresos personales producto del trabajo menores a $1.000.
 Ingresos;casen;Ingresos promedio de los hogares;casen_ytotcorh;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso del trabajo del hogar;casen_ytrabajocorh;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso autónomo per cápita;casen_ypchautcor;numero grande;Casen (2022), Ministerio de Desarrollo Social
-Urbanismo;casen;Numero de personas en el hogar;casen_numper;numero decimal;Casen (2022), Ministerio de Desarrollo Social
+Urbanismo;casen;Numero de personas por hogar;casen_numper;numero decimal;Casen (2022), Ministerio de Desarrollo Social
 Ingresos;casen;Ingreso total per cápita del hogar;casen_ypc;numero grande;Casen (2022), Ministerio de Desarrollo Social
 Trabajo;casen;Trabajadores independientes;casen_independientes_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Trabajo;casen;Personas en situación laboral inactiva;casen_inactivos_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
@@ -97,7 +97,10 @@ Educación;casen;Nivel educacional máximo: media incompleta o menor;casen
 Educación;casen;Nivel educacional máximo: estudios superiores incompletos;casen_estudios_superiores_incompletos_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Social;casen;Personas en situación de pobreza;casen_pobreza_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Social;casen;Personas en situación de pobreza multidimensional;casen_pobreza_multi_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
-Social;casen;Personas pertenecientes a pueblos originarios;casen_originario_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Población;casen;Personas pertenecientes a pueblos originarios;casen_originario_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Población;casen;Personas de origen extranjero;casen_extranjero_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Salud;casen;Afiliados a previsión de salud Fonasa;casen_fonasa_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
 Salud;casen;Afiliados a previsión de salud Isapre;casen_isapre_p;porcentaje;Casen (2022), Ministerio de Desarrollo Social
+Seguridad;comisarias;Cuarteles totales de Carabineros de Chile (comisarías, retenes, subcomisarías, tenencias, etc.);d_cuarteles_carabineros_total;numero chico;Plataforma de Datos Abiertos de Itrend (Instituto para la Resiliencia ante Desastres)
+Seguridad;comisarias;Retenes de Carabineros de Chile;d_cuarteles_carabineros_reten;numero chico;Plataforma de Datos Abiertos de Itrend (Instituto para la Resiliencia ante Desastres)
+Seguridad;comisarias;Comisarías de Carabineros de Chile;d_cuarteles_carabineros_comisaria;numero chico;Plataforma de Datos Abiertos de Itrend (Instituto para la Resiliencia ante Desastres)

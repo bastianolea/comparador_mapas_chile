@@ -101,9 +101,9 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  mapa_datos <- reactive({
                    if (length(datos()) > 0) {
                      message("modulo: uniendo mapa con datos")
+                     # browser()
                      
                      mapa_datos <- mapa() |> 
-                       # mutate(codigo_comuna = as.numeric(codigo_comuna)) |> 
                        mutate(codigo_comuna = as.numeric(codigo_comuna)) |>
                        left_join(datos() |> 
                                    mutate(cut_comuna = as.numeric(cut_comuna)), 
@@ -145,13 +145,8 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                      p <- p +
                        geom_sf_interactive(aes(fill = variable,
                                                # texto de tooltip al posar cursor sobre una comuna
-                                               # tooltip = paste0(comuna, ": ", 
-                                               #                  case_when(variable_fuente$tipo == "porcentaje" ~ scales::percent(variable, accuracy = 0.1),
-                                               #                            variable_fuente$tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, decimal.mark = ","),
-                                               #                            .default = scales::comma(variable, accuracy = 1, big.mark = ".")
-                                               #                  )), 
-                                               tooltip = paste0(comuna, ": ", formatear_escala(variable, variable_fuente$tipo)),
-                                               data_id = comuna),
+                                               tooltip = paste0(nombre_comuna, ": ", formatear_escala(variable, variable_fuente$tipo)),
+                                               data_id = nombre_comuna),
                                color = "black") +
                        scale_fill_gradient(low = colores$texto,
                                            high = colores$principal, 
