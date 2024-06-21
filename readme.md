@@ -9,6 +9,17 @@ Seleccione una región del país, y luego elija dos variables para compararlas a
 Se puede elegir entre más de 90 datos sociales, organizados en 10 categorías, que incluyen datos de salud, educación, ingresos, seguridad, delincuencia, urbanismo, y otros.
 
 
+## Actualizaciones
+
+**Changelog 20/06/24:**
+- Agregadas 71 variables sobre desarrollo urbano desde datos del Sistema de Indicadores y Estándares de Desarrollo Urbano (SIEDU)
+- Agregadas variables de cuarteles y comisarías de Carabineros (obtenida a través de la Plataforma de Datos Abiertos de Itrend)
+- Corrección en cálculo de aumento de delitos y de población
+- Unidades en algunas variables (especificando que se trata de metros cuadrados, kilowatts, etc.)
+- Estabilidad con algunos casos de error comunes
+- Cambios estéticos leves para mejorar contraste
+
+
 ## Aspectos metodológicos
 
 La app contiene más de 90 variables individuales de datos a nivel comunal, las cuales provienen de fuentes oficiales, y que se detallan en la sección "Fuentes de los datos" y en el archivo `app/fuentes.csv`. Cada dato disponible en la aplicación posee su fuente oficial detallada debajo de cada mapa.

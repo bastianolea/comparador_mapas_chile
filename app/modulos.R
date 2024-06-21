@@ -8,16 +8,17 @@ mapaUI <- function(id, fuentes) {
   tagList(
     fluidRow(
       column(12, 
-             selectInput(ns("categoria"), strong("Categoría:"), 
+             selectizeInput(ns("categoria"), strong("Categoría:"), 
                          choices = unique(fuentes$categoria), #el contenido de los selectores viene de fuentes.csv
                          selected = sample(unique(fuentes$categoria), 1),
-                         width = "100%"
+                         width = "100%", #selectize = FALSE
+                         options = list(create = FALSE)
              ),
              
-             selectInput(ns("variable"), strong("Variable:"), 
+             selectizeInput(ns("variable"), strong("Variable:"), 
                          choices = NULL,
-                         width = "100%"
-                         # )
+                         width = "100%", #selectize = FALSE
+                         options = list(create = FALSE)
              ),
              
              div(style = "margin-bottom: 4px;",
@@ -42,7 +43,7 @@ mapaUI <- function(id, fuentes) {
                  )
              ),
              
-             div(style = "border: 0px solid white; margin: 0;", #margin-left: auto; padding-right: 0; margin-right: 0;",
+             div(style = "border: 0px solid white; margin: 0; margin-top: 8px;", #margin-left: auto; padding-right: 0; margin-right: 0;",
                  girafeOutput(ns("mapa_interactivo")) |> withSpinner()
              ),
              # fuente
@@ -108,7 +109,7 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  # output$titulo <- renderText(input$variable)
                  output$titulo <- renderUI({
                    if (nchar(input$variable) > 80) {
-                     div(input$variable, style = "font-size: 85%;")
+                     div(input$variable, style = "font-size: 90%;")
                    } else {
                      div(input$variable)
                    }

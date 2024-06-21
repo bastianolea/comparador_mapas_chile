@@ -9,6 +9,7 @@ library(stringr)
 library(shinyjs) |> suppressPackageStartupMessages()
 library(gt)
 library(shinycssloaders)
+# library(shinyWidgets)
 
 # setup ----
 cut_comunas <- read.csv2("datos/comunas_chile_cut.csv")
@@ -53,9 +54,11 @@ ui <- fluidPage(
     background-color: ", colores$principal, ";
     }")),
   
+  # selectores
   tags$style(paste0("
     .selectize-input {
     background-color: ", "#252525", " !important;
+    max-height: 58px; overflow-y: hidden;
     }")),
   
   
@@ -78,7 +81,7 @@ ui <- fluidPage(
     column(12,
            
            # este selector afecta a todos los módulos
-           selectInput("region", label = strong("Elija una región:"),
+           selectizeInput("region", label = strong("Elija una región:"),
                        choices = c("Santiago" = 99, regiones),
                        selected = c("Santiago" = 99),
                        width = "100%"),
@@ -542,7 +545,7 @@ server <- function(input, output, session) {
       ggplot(aes(x = variable_1, y = variable_2)) +
       stat_smooth(method = "lm", 
                   se = TRUE, fullrange = TRUE, 
-                  formula = 'y ~ x',
+                  # formula = 'y ~ x',
                   alpha = .1, color = colores$detalle) +
       geom_point_interactive(color = colores$principal,
                              size = 3.5, alpha = .8,
