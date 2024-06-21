@@ -69,11 +69,11 @@ ui <- fluidPage(
     
     div(markdown("[Bastián Olea Herrera](https://bastianolea.github.io/shiny_apps/)"), style = "opacity: 0.6;"),
     
-    markdown("Esta aplicación permite visualizar interactivamente las **diferencias y desigualdades territoriales** de Chile a través de mapas."),
+    markdown("Esta aplicación permite visualizar interactivamente las **desigualdades territoriales** de Chile a través de mapas de sus regiones divididos en comunas."),
     
-    p("Seleccione una región del país, y luego elija dos variables para compararlas a nivel comunal. Por defecto, la aplicación le mostrará categorías y variables al azar, esperando que surja una relación interesante."),
+    p("Seleccione una región del país, y luego elija dos variables para compararlas visualmente a nivel comunal. Por defecto, la aplicación le mostrará categorías y variables al azar, esperando que surja una relación interesante."),
     
-    p("Puedes elegir entre más de 90 datos sociales, organizados en 10 categorías, que incluyen datos de salud, educación, ingresos, seguridad, delincuencia, urbanismo, y otros."),
+    p("Puede elegir entre más de 170 datos sociales, organizados en 10 categorías, que incluyen datos de salud, educación, ingresos, seguridad, delincuencia, urbanismo, y más."),
     
     hr()
   ),
@@ -83,9 +83,9 @@ ui <- fluidPage(
            
            # este selector afecta a todos los módulos
            selectizeInput("region", label = strong("Elija una región:"),
-                       choices = c("Santiago" = 99, regiones),
-                       selected = c("Santiago" = 99),
-                       width = "100%"),
+                          choices = c("Santiago" = 99, regiones),
+                          selected = c("Santiago" = 99),
+                          width = "100%"),
            hr()
     )
   ),
@@ -134,6 +134,8 @@ ui <- fluidPage(
            markdown("Desarrollado y programado por [Bastián Olea Herrera,](https://bastian.olea.biz) usando el lenguaje de programación estadístico R."),
            
            markdown("Puedes explorar mis otras [aplicaciones interactivas sobre datos sociales en mi portafolio.](https://bastianolea.github.io/shiny_apps/)"),
+           
+           markdown("Si deseas que incluya nuevas variables o fuentes de datos, no dudes en contactarme [por correo](mailto:bastianolea@gmail.com) o por [Twitter.](https://x.com/bastimapache)"),
            
            markdown("Datos, código de fuente de esta app, y código del procesamiento de los datos [disponible en el repositorio de GitHub.](https://github.com/bastianolea/comparador_mapas_chile)"),
            
@@ -408,6 +410,107 @@ server <- function(input, output, session) {
   # son tantas variables que vamos a usar un método distinto, se carga solo el df y en el cargador de datos se le dice qué variable quiere
   d_siedu <- reactive(read.csv2("datos/indicadores_desarrollo_urbano_siedu.csv"))
   
+  ### sermig ----
+  
+  d_sermig_estimacion <- reactive({
+    read.csv2("datos/extranjeros_estimacion_comuna_2022.csv")
+    })
+  
+  d_sermig_estimacion_total <- reactive({
+    d_sermig_estimacion() |> 
+      summarize(variable = sum(estimacion), .by = c(cut_comuna, año))
+  })
+  
+  d_sermig_estimacion_ven <- reactive({
+    d_sermig_estimacion() |> 
+      filter(pais == "VENEZUELA") |> 
+      summarize(variable = sum(estimacion), .by = c(cut_comuna, año))
+  })
+  
+  d_sermig_estimacion_col <- reactive({
+    d_sermig_estimacion() |> 
+      filter(pais == "COLOMBIA") |> 
+      summarize(variable = sum(estimacion), .by = c(cut_comuna, año))
+  })
+  
+  d_sermig_estimacion_per <- reactive({
+    d_sermig_estimacion() |> 
+      filter(pais == "PERÚ") |> 
+      summarize(variable = sum(estimacion), .by = c(cut_comuna, año))
+  })
+  
+  
+  d_sermig_residencias <- reactive(read.csv2("datos/extranjeros_residencias_comuna_2023.csv"))
+  
+  d_sermig_residencias_def <- reactive({
+    d_sermig_residencias() |> 
+      filter(residencia == "Definitiva")
+  })
+  
+  d_sermig_residencias_temp <- reactive({
+    d_sermig_residencias() |> 
+      filter(residencia == "Temporal")
+  })
+  
+  d_sermig_res_def_aco <- reactive({
+    d_sermig_residencias_def() |> 
+      filter(estado == "Acogidas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  d_sermig_res_def_oto <- reactive({
+    d_sermig_residencias_def() |> 
+      filter(estado == "Otorgadas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  d_sermig_res_temp_aco <- reactive({
+    d_sermig_residencias_temp() |> 
+      filter(estado == "Acogidas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  d_sermig_res_temp_oto <- reactive({
+    d_sermig_residencias_temp() |> 
+      filter(estado == "Otorgadas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  
+  # venezolanos
+  d_sermig_residencias_def_ven <- reactive({
+    d_sermig_residencias_def() |> 
+      filter(pais == "Venezuela")
+  })
+  
+  d_sermig_residencias_temp_ven <- reactive({
+    d_sermig_residencias_temp() |> 
+      filter(pais == "Venezuela")
+  })
+  
+  d_sermig_res_def_aco_ven <- reactive({
+    d_sermig_residencias_def_ven() |> 
+      filter(estado == "Acogidas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  d_sermig_res_def_oto_ven <- reactive({
+    d_sermig_residencias_def_ven() |> 
+      filter(estado == "Otorgadas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  d_sermig_res_temp_aco_ven <- reactive({
+    d_sermig_residencias_temp_ven() |> 
+      filter(estado == "Acogidas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
+  
+  d_sermig_res_temp_oto_ven <- reactive({
+    d_sermig_residencias_temp_ven() |> 
+      filter(estado == "Otorgadas") |> 
+      summarize(variable = sum(n), .by = c(cut_comuna))
+  })
   
   
   

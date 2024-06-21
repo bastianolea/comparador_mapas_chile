@@ -2,7 +2,7 @@ library(dplyr)
 
 # setwd("app")
 # fuentes <- read.csv2("app/fuentes.csv") |> tibble()
-fuentes <- read.csv2("fuentes.csv")
+fuentes <- read.csv2("app/fuentes.csv")
 
 fuentes |> 
   count(categoria) |> 
