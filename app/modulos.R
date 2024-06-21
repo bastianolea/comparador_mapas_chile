@@ -21,7 +21,7 @@ mapaUI <- function(id, fuentes) {
              ),
              
              div(style = "margin-bottom: 4px;",
-             actionButton(ns("aleatorio"), label = "variable al azar")
+                 actionButton(ns("aleatorio"), label = "variable al azar")
              )
              
       )
@@ -37,7 +37,8 @@ mapaUI <- function(id, fuentes) {
              #alinear texto abajo, para que si crece el texto, suba
              div(style = "height: 90px; display: flex; flex-direction: column; overflow: visible;", 
                  div(style = "margin-top: auto; font-size: 110%;", 
-                     textOutput(ns("titulo"), inline = TRUE)
+                     # textOutput(ns("titulo"), inline = TRUE)
+                     uiOutput(ns("titulo"), inline = TRUE)
                  )
              ),
              
@@ -46,9 +47,9 @@ mapaUI <- function(id, fuentes) {
              ),
              # fuente
              div(style = "font-size: 70%; text-align: right; opacity: 0.4;",
-               textOutput(ns("fuente"))
+                 textOutput(ns("fuente"))
              )
-               
+             
              # hr(),
              # div(style = "max-height: 300px; overflow-y: scroll;",
              #   gt_output(ns("tabla"))
@@ -88,18 +89,39 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    )
                  })
                  
+                 
+                 # variable_elegida ----
                  # sacar la variable elegida al valor reactivo correspondiente (variable_elegida_1 o variable_elegida_2)
-                 observe(variable_elegida(input$variable))
+                 observe(
+                   if (input$variable != "") {
+                     message("escribiendo variable elegida: ", input$variable)
+                     variable_elegida(input$variable)
+                   })
+                 
+                 # metadatos ----
+                 # metadatos de la variable (definido en fuentes.csv)
+                 variable_fuente <- reactive(fuentes |> filter(variable == input$variable) |> slice(1))
+                 
+                 # textos ----
                  
                  # título del módulo
-                 output$titulo <- renderText(input$variable)
+                 # output$titulo <- renderText(input$variable)
+                 output$titulo <- renderUI({
+                   if (nchar(input$variable) > 80) {
+                     div(input$variable, style = "font-size: 85%;")
+                   } else {
+                     div(input$variable)
+                   }
+                   })
                  
                  # fuente
                  output$fuente <- renderText({
-                   fuente <- fuentes |> filter(variable == input$variable) |> pull(fuente)
-                   fuente_2 <- paste("Fuente: ", str_wrap(fuente, 50))
-                   return(fuente_2)
+                   # if (fuentes |> filter(variable == input$variable) |> pull(proyecto) == "siedu") browser()
+                   
+                   fuente <- paste("Fuente: ", str_wrap(str_squish(variable_fuente()$fuente), 50))
+                   return(fuente)
                  })
+                 
                  
                  # datos ----
                  # une el mapa con los datos, si es que existen
@@ -129,52 +151,49 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                    req(input$variable != "")
                    message("modulo: generando mapa")
                    
-                   # metadatos de la variable (definido en fuentes.csv)
-                   variable_fuente <- fuentes |> filter(variable == input$variable)
+                   # browser()
+                   # if (variable_fuente()$proyecto == "siedu") browser()
                    
                    ## escalas ----
                    # definir escala de la leyenda del gráfico en base al tipo de variable (definido en fuentes.csv)
-                   escala = elegir_escala(variable_fuente$tipo)
+                   escala = elegir_escala(variable_fuente()$tipo)
                    
-                   ## colores ----
-                   # unique(fuentes$categoria)
-                   # color_alto <- case_when(input$categoria == "Elecciones" ~ colores$principal,
-                   #                         input$categoria == "Elecciones" ~ colores$principal,
-                     
-                   # gráfico base ----
+                   # definir si va un texto luego del tooltip, como "(metros)", "(kW/h)"
+                   sufijo = ifelse(variable_fuente()$unidad != "ninguna", 
+                                   paste0(" (", variable_fuente()$unidad, ")"), 
+                                   "")
+                   
+                   ## gráfico base ----
                    p <- mapa_datos() |>
-                     ggplot(aes(geometry = geometry))
+                     ggplot(aes(geometry = geometry)) +
+                     # colores de los polígonos
+                     geom_sf_interactive(aes(fill = variable,
+                                             # texto de tooltip al posar cursor sobre una comuna
+                                             tooltip = paste0(nombre_comuna, ": ", 
+                                                              formatear_escala(variable, variable_fuente()$tipo),
+                                                              sufijo
+                                             ),
+                                             data_id = nombre_comuna),
+                                         color = colores$fondo, linewidth = 0.6) +
+                     # colores del degradado
+                     scale_fill_gradient(low = "grey90", #colores$texto, #colores$fondo, 
+                                         high = colores$principal, 
+                                         na.value = colores$detalle,
+                                         labels = escala)
                    
-                   # colorizar fill si existe la variable
-                   if ("variable" %in% names(mapa_datos())) {
-                     p <- p +
-                       geom_sf_interactive(aes(fill = variable,
-                                               # texto de tooltip al posar cursor sobre una comuna
-                                               tooltip = paste0(nombre_comuna, ": ", formatear_escala(variable, variable_fuente$tipo)),
-                                               data_id = nombre_comuna),
-                               color = colores$fondo, linewidth = 0.7) +
-                       scale_fill_gradient(low = colores$texto, #colores$fondo, 
-                                           high = colores$principal, 
-                                           na.value = colores$detalle,
-                                           labels = escala)
-
-                   } else {
-                     p <- p +
-                       geom_sf(color = "black")
-                   }
-                   
-                   # temas ----
+                   ## temas ----
                    p <- p +
                      theme_void(base_family = "sans") +
                      theme(legend.title = element_blank()) +
                      theme(legend.key.width = unit(3, "mm"),
+                           legend.key.height = unit(1.6, "cm"),
                            legend.key = element_rect(colour = colores$texto),
                            legend.ticks = element_line(colour = colores$fondo),
                            legend.ticks.length = unit(3, "mm")) +
                      theme(text = element_text(colour = colores$texto)) +
-                     theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
-                     theme(plot.background = colores$fondo,
-                           panel.background = colores$fondo)
+                     theme(plot.margin = unit(c(0, 0, 0, 0), "cm")) +
+                     theme(plot.background = element_rect(fill = colores$fondo, color = colores$fondo),
+                           panel.background = element_rect(fill = colores$fondo, color = colores$fondo))
                    
                    # barra a la izquierda si es el de la izquierda
                    if (id == "mapa_1") {
@@ -190,19 +209,20 @@ mapaServer <- function(id, session, region, mapa, fuentes, variable_elegida, dat
                  # interactividad ----
                  # gráfico interactivo con tooltip
                  output$mapa_interactivo <- renderGirafe({
-                 girafe(ggobj = grafico(), 
-                        bg = colores$fondo,
-                        width_svg = 7,
-                        height_svg = 6,
-                        options = list(
-                          opts_sizing(rescale = TRUE),
-                          opts_toolbar(hidden = "selection", saveaspng = FALSE),
-                          opts_hover(css = paste0("fill: ", colores$principal, ";")),
-                          opts_tooltip(
-                            opacity = 0.8,
-                            css = paste0("background-color: ", colores$fondo, "; color: ", colores$texto, ";
+                   message("ggiraph")
+                   girafe(ggobj = grafico(), 
+                          bg = colores$fondo,
+                          width_svg = 7,
+                          height_svg = 6,
+                          options = list(
+                            opts_sizing(rescale = TRUE),
+                            opts_toolbar(hidden = "selection", saveaspng = FALSE),
+                            opts_hover(css = paste0("fill: ", colores$principal, ";")),
+                            opts_tooltip(
+                              opacity = 0.8,
+                              css = paste0("background-color: ", colores$fondo, "; color: ", colores$texto, ";
                                padding: 4px; max-width: 200px; border-radius: 4px; font-size: 80%;")) 
-                        ))
+                          ))
                  })
                  
                  # tabla 

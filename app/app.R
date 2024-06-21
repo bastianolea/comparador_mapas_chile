@@ -147,24 +147,29 @@ server <- function(input, output, session) {
   variable_elegida_1 <- reactiveVal()
   variable_elegida_2 <- reactiveVal()
   
-  # dataframe de 1 fila donde sale la metadata de la variable elegida, desde fuentes.csv
+  # observeEvent(variable_elegida_1(), {
+  #   message("variable elegida para mapa 1: ", variable_elegida_1())
+  # })
+  # 
+  # observeEvent(variable_elegida_2(), {
+  #   message("variable elegida para mapa 2: ", variable_elegida_2())
+  # })
+  
+  
+  ## fuente del dato ----
   variable_fuente_1 <- reactive({
     req(variable_elegida_1() != "")
-    fuentes |> filter(variable == variable_elegida_1()) |> try()
+    fuente <- fuentes |> filter(variable == variable_elegida_1()) |> tibble() |> slice(1)
+    return(fuente)
   })
   
   variable_fuente_2 <- reactive({
     req(variable_elegida_2() != "")
-    fuentes |> filter(variable == variable_elegida_2()) |> try()
+    fuente <- fuentes |> filter(variable == variable_elegida_2()) |> tibble() |> slice(1)
+    return(fuente)
   })
   
-  observeEvent(variable_elegida_1(), {
-    message("variable elegida para mapa 1: ", variable_elegida_1())
-  })
   
-  observeEvent(variable_elegida_2(), {
-    message("variable elegida para mapa 2: ", variable_elegida_2())
-  })
   
   
   
@@ -394,29 +399,50 @@ server <- function(input, output, session) {
   })
   
   
+  
+  ### siedu ----
+  # son tantas variables que vamos a usar un método distinto, se carga solo el df y en el cargador de datos se le dice qué variable quiere
+  d_siedu <- reactive(read.csv2("datos/indicadores_desarrollo_urbano_siedu.csv"))
+  
+  
+  
+  
+  
   ## cargador de datos ----
   datos_1 <- eventReactive(variable_elegida_1(), {
     message("eligiendo datos para mapa 1")
     variable_elegida <- variable_elegida_1()
     variable_fuente <- variable_fuente_1()
     
+    # browser()
     req(variable_elegida != "", nrow(variable_fuente) == 1)
     
-    # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
-    objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
-    
     # cargar el objeto a partir del nombre de variable cruzado con lo que indica fuentes.csv
-    # si es de casen, el proceso es levemente distinto
+    
+    # si es de casen, el proceso es levemente distinto: se carga casen y se selecciona su columna
     if (variable_fuente$proyecto == "casen") {
       objeto_reactive <- casen_variable(d_casen(), variable_fuente$objeto) |> tibble()
       
+      # si es de siedu, se carga siedu y se filtra la fila variable
+    } else if (variable_fuente$proyecto == "siedu") {
+      # browser()
+      objeto_reactive <- siedu_variable(d_siedu(), variable_elegida) |> tibble()
+      
     } else {
+      # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
+      objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
+      
       # transformar el nombre del objeto en el objeto mismo (magia)
       if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
     }
     
     # retornarlo si existe
-    if (length(objeto) == 1) return(objeto_reactive) 
+    if (length(objeto_reactive) >= 1) { 
+      return(objeto_reactive) 
+    } else {
+      warning("error en cargador de datos")
+      return(tibble)
+    }
   })
   
   
@@ -427,20 +453,32 @@ server <- function(input, output, session) {
     
     req(variable_elegida != "", nrow(variable_fuente) == 1)
     
-    # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
-    objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
-    
     # cargar el objeto a partir del nombre de variable cruzado con lo que indica fuentes.csv
+    
+    # si es de casen, el proceso es levemente distinto: se carga casen y se selecciona su columna
     if (variable_fuente$proyecto == "casen") {
       objeto_reactive <- casen_variable(d_casen(), variable_fuente$objeto) |> tibble()
       
+      # si es de siedu, se carga siedu y se filtra la fila variable
+    } else if (variable_fuente$proyecto == "siedu") {
+      # browser()
+      objeto_reactive <- siedu_variable(d_siedu(), variable_elegida) |> tibble()
+      
     } else {
+      # buscar la variable entre las fuentes de datos y obtener el nombre del objeto reactive qeu cargaría sus datos
+      objeto <- fuentes |> filter(variable == variable_elegida) |> pull(objeto)
+      
       # transformar el nombre del objeto en el objeto mismo (magia)
       if (length(objeto) == 1) objeto_reactive <- eval(as.symbol(objeto))() #wtf pero funciona
     }
     
     # retornarlo si existe
-    if (length(objeto) == 1) return(objeto_reactive) 
+    if (length(objeto_reactive) >= 1) { 
+      return(objeto_reactive) 
+    } else {
+      warning("error en cargador de datos")
+      return(tibble)
+    }
   })
   
   
@@ -504,9 +542,8 @@ server <- function(input, output, session) {
       ggplot(aes(x = variable_1, y = variable_2)) +
       stat_smooth(method = "lm", 
                   se = TRUE, fullrange = TRUE, 
+                  formula = 'y ~ x',
                   alpha = .1, color = colores$detalle) +
-      # geom_point(color = colores$principal,
-      #            size = 3, alpha = .8) +
       geom_point_interactive(color = colores$principal,
                              size = 3.5, alpha = .8,
                              aes(

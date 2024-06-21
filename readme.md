@@ -52,6 +52,5 @@ El aspecto de los datos de la aplicación son controlados por una [planilla llam
 - Datos sobre femicidios
 - Datos sobre pago de contribuciones
 - Colores a los mapas según categoría
-- Buscar datos sobre Carabineros
-- Buscar datos sobre ciclovías
 - Índice de desarrollo humano
+- Indicar unidades de las variables
