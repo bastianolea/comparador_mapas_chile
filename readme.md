@@ -27,6 +27,10 @@ El aspecto de los datos de la aplicación son controlados por una [planilla llam
 
 ## Fuentes de los datos
 
+**Indicadores y Estándares de Desarrollo Urbano:** [Sistema de Indicadores y Estándares de Desarrollo Urbano (SIEDU).](https://www.ine.gob.cl/herramientas/portal-de-mapas/siedu). Datos limpiados y procesados en el repositorio [indicadores_urbanos_siedu](https://github.com/bastianolea/indicadores_urbanos_siedu).
+
+**Cuarteles de Carabineros:** [Plataforma de Datos Abiertos de Itrend](https://www.plataformadedatos.cl) (Instituto para la Resiliencia ante Desastres). Carabineros de Chile, «Cuarteles de Carabineros». Obtenida a través de la Plataforma de Datos Abiertos de Itrend. Datos procesados en el repositorio [comisarias_chile](https://github.com/bastianolea/comisarias_chile)
+
 **Estadísticas sobre delitos:** [Centro de Estudios y Análisis del Delito](https://cead.spd.gov.cl/estadisticas-delictuales/), código de scraping y procesamiento [disponible en el repo `delincuencia_chile`](https://github.com/bastianolea/delincuencia_chile), y también disponibles en detalle como aplicación web: [Estadísticas de delincuencia en Chile](https://bastianoleah.shinyapps.io/delincuencia_chile/)
 
 **Resultados de los plebiscitos constitucionales:** [Servel](https://app.powerbi.com/view?r=eyJrIjoiNDI2ZWYxNmItYWIwNC00YzYzLWE1OTUtZTZhNjE5MWYzNDdlIiwidCI6ImVhZjg3OWJkLWQzZWMtNDY1MC1iMTI5LTEzZGZkZjQ4NTlmZSJ9), datos procesados en el [repositorio `plebiscitos_chile`](https://github.com/bastianolea/plebiscitos_chile)
