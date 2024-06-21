@@ -61,12 +61,13 @@ ui <- fluidPage(
     max-height: 58px; overflow-y: hidden;
     }")),
   
+  # —----
   
   # header ----
   div(
-    titlePanel(h1("Datos comunales comparados")),
+    titlePanel(h1("Comparador de mapas comunales")),
     
-    div(markdown("[Bastián Olea Herrera](https://bastianolea.github.io/shiny_apps/)"), style = "opacity: 0.4;"),
+    div(markdown("[Bastián Olea Herrera](https://bastianolea.github.io/shiny_apps/)"), style = "opacity: 0.6;"),
     
     markdown("Esta aplicación permite visualizar interactivamente las **diferencias y desigualdades territoriales** de Chile a través de mapas."),
     
