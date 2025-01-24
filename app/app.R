@@ -62,86 +62,88 @@ ui <- fluidPage(
     }")),
   
   # —----
-  
-  # header ----
-  div(
-    titlePanel(h1("Comparador de mapas comunales")),
-    
-    div(markdown("[Bastián Olea Herrera](https://bastianolea.github.io/shiny_apps/)"), style = "opacity: 0.6;"),
-    
-    markdown("Esta aplicación permite visualizar interactivamente las **desigualdades territoriales** de Chile a través de mapas de sus regiones divididos en comunas."),
-    
-    p("Seleccione una región del país, y luego elija dos variables para compararlas visualmente a nivel comunal. Por defecto, la aplicación le mostrará categorías y variables al azar, esperando que surja una relación interesante."),
-    
-    p("Puede elegir entre más de 170 datos sociales, organizados en 10 categorías, que incluyen datos de salud, educación, ingresos, seguridad, delincuencia, urbanismo, y más."),
-    
-    hr()
-  ),
-  
-  fluidRow(
-    column(12,
-           
-           # este selector afecta a todos los módulos
-           selectizeInput("region", label = strong("Elija una región:"),
-                          choices = c("Santiago" = 99, regiones),
-                          selected = c("Santiago" = 99),
-                          width = "100%"),
-           hr()
-    )
-  ),
-  
-  # módulos ui ----
-  fluidRow(
-    column(6, #align = "right",
-           style = "border: 0px solid green;", #display: flex;", # padding-right: 0; margin-right: 0;",
-           mapaUI(id = "mapa_1", fuentes)
-    ),
-    column(6, 
-           style = "border: 0px solid green;", # padding-left: 0; margin-left: 0;",
-           mapaUI(id = "mapa_2", fuentes)
-    )
-  ),
-  
-  # gráfico dispersión ----
-  fluidRow(
-    column(12,
-           hr(),
-           h4("Relación entre datos"),
-           
-           div(style = "max-width: 700px; margin-left: auto; margin-right: auto;",
-               girafeOutput("grafico_dispersion") |> withSpinner()
-           )
-    )
-  ),
-  
-  
-  # tabla ----
-  fluidRow(
-    column(12,
-           hr(),
-           h4("Comparación de datos"),
-           
-           div(style = "max-height: 400px; overflow-y: scroll;",
-               gt_output("tabla_comparativa") |> withSpinner()
-           )
-    )
-  ),
-  
-  # firma ----
-  fluidRow(
-    column(12, style = "opacity: 1; font-size: 80%;",
-           hr(),
-           markdown("Desarrollado y programado por [Bastián Olea Herrera,](https://bastian.olea.biz) usando el lenguaje de programación estadístico R."),
-           
-           markdown("Puedes explorar mis otras [aplicaciones interactivas sobre datos sociales en mi portafolio.](https://bastianolea.github.io/shiny_apps/)"),
-           
-           markdown("Si deseas que incluya nuevas variables o fuentes de datos, no dudes en contactarme [por correo](mailto:bastianolea@gmail.com) o por [Twitter.](https://x.com/bastimapache)"),
-           
-           markdown("Datos, código de fuente de esta app, y código del procesamiento de los datos [disponible en el repositorio de GitHub.](https://github.com/bastianolea/comparador_mapas_chile)"),
-           
-           div(style = "height: 40px")
-           
-    )
+  div(style = "max-width: 1000px; margin: auto;",
+      
+      # header ----
+      div(
+        titlePanel(h1("Comparador de mapas comunales")),
+        
+        div(markdown("[Bastián Olea Herrera](https://bastianolea.github.io/shiny_apps/)"), style = "opacity: 0.6;"),
+        
+        markdown("Esta aplicación permite visualizar interactivamente las **desigualdades territoriales** de Chile a través de mapas de sus regiones divididos en comunas."),
+        
+        p("Seleccione una región del país, y luego elija dos variables para compararlas visualmente a nivel comunal. Por defecto, la aplicación le mostrará categorías y variables al azar, esperando que surja una relación interesante."),
+        
+        p("Puede elegir entre más de 170 datos sociales, organizados en 10 categorías, que incluyen datos de salud, educación, ingresos, seguridad, delincuencia, urbanismo, y más."),
+        
+        hr()
+      ),
+      
+      fluidRow(
+        column(12,
+               
+               # este selector afecta a todos los módulos
+               selectizeInput("region", label = strong("Elija una región:"),
+                              choices = c("Santiago" = 99, regiones),
+                              selected = c("Santiago" = 99),
+                              width = "100%"),
+               hr()
+        )
+      ),
+      
+      # módulos ui ----
+      fluidRow(
+        column(6, #align = "right",
+               style = "border: 0px solid green;", #display: flex;", # padding-right: 0; margin-right: 0;",
+               mapaUI(id = "mapa_1", fuentes)
+        ),
+        column(6, 
+               style = "border: 0px solid green;", # padding-left: 0; margin-left: 0;",
+               mapaUI(id = "mapa_2", fuentes)
+        )
+      ),
+      
+      # gráfico dispersión ----
+      fluidRow(
+        column(12,
+               hr(),
+               h4("Relación entre datos"),
+               
+               div(style = "max-width: 700px; margin-left: auto; margin-right: auto;",
+                   girafeOutput("grafico_dispersion") |> withSpinner()
+               )
+        )
+      ),
+      
+      
+      # tabla ----
+      fluidRow(
+        column(12,
+               hr(),
+               h4("Comparación de datos"),
+               
+               div(style = "max-height: 400px; overflow-y: scroll;",
+                   gt_output("tabla_comparativa") |> withSpinner()
+               )
+        )
+      ),
+      
+      # firma ----
+      fluidRow(
+        column(12, style = "opacity: 1; font-size: 80%;",
+               hr(),
+               markdown("Desarrollado y programado por [Bastián Olea Herrera,](https://bastian.olea.biz) usando el lenguaje de programación estadístico R."),
+               
+               markdown("Puedes explorar mis otras [aplicaciones interactivas sobre datos sociales en mi portafolio.](https://bastianolea.github.io/shiny_apps/)"),
+               
+               markdown("Si deseas que incluya nuevas variables o fuentes de datos, no dudes en contactarme [por correo](mailto:bastianolea@gmail.com) o por [Twitter.](https://x.com/bastimapache)"),
+               
+               markdown("Datos, código de fuente de esta app, y código del procesamiento de los datos [disponible en el repositorio de GitHub.](https://github.com/bastianolea/comparador_mapas_chile)"),
+               
+               div(style = "height: 40px")
+               
+        )
+      )
   )
 )
 
@@ -414,7 +416,7 @@ server <- function(input, output, session) {
   
   d_sermig_estimacion <- reactive({
     read.csv2("datos/extranjeros_estimacion_comuna_2022.csv")
-    })
+  })
   
   d_sermig_estimacion_total <- reactive({
     d_sermig_estimacion() |> 
