@@ -83,6 +83,6 @@ formatear_escala <- function(variable, tipo) {
             tipo == "porcentaje * 100" ~ scales::comma(variable, accuracy = 0.1, suffix = "%", big.mark = ".", decimal.mark = ","),
             tipo == "numero decimal" ~ scales::comma(variable, accuracy = 0.1, big.mark = ".", decimal.mark = ","),
             tipo == "numero grande" ~ scales::comma(variable, accuracy = 1, big.mark = ".", decimal.mark = ","),
-            .default = scales::comma(variable, accuracy = 1, big.mark = ".", decimal.mark = ",")
+            .default = scales::comma(variable, accuracy = 0.1, big.mark = ".", decimal.mark = ",")
   )
 }
